@@ -1,0 +1,21 @@
+<header class="d-flex fixed-top justify-content-between align-items-center md:px-10 md:py-6 border-bottom ">
+  <div class="d-flex align-items-center gap-3">
+    <blockquote class="blockquote">
+      <p>Plantilla Pública</p>
+    </blockquote>
+  </div>
+  <div class="d-flex align-items-center gap-3">
+    <div dropdown="" container="body" class="prev-docs">
+      <div> v1.0 </div><!---->
+    </div>
+    <a [routerLink]="urlNagivate" class="text-uppercase">{{ strIconoLogin }}</a>
+  </div>
+</header>
+
+<main class="content-public">
+  <div class="bg-overlay bg-overlay-pattern"></div>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+  <app-footer></app-footer>
+</main>

@@ -1,0 +1,28 @@
+.button-actions-file-upload button:active,
+.button-actions-file-upload button:hover,
+.button-actions-file-upload button:focus {
+  border-color: transparent !important;
+}
+
+.button-actions-file-upload {
+  display: flex;
+}
+.card.card-file-upload {
+  margin-bottom: 0px;
+  border-radius: none;
+  box-shadow: 0 1px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+  transition: .5s;
+  max-height: 80vh;
+}
+
+
+.w-80 {
+  width: 80% !important;
+}
+
+
+
+.modal-file-upload {
+  height: 35px;
+
+}

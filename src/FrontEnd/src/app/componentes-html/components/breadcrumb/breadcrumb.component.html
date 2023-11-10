@@ -1,0 +1,18 @@
+<nav id="nav-bread">
+    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+      <h4 class="mb-sm-0">{{ title }}</h4>
+      <div>
+        <ol class="breadcrumb m-0">
+          <li *ngFor="let item of routes; let i = index" >
+            <a
+              [class.disabled]="item.disabled=== true"
+              [class]="classPath ? classPath : ''"
+              [routerLink]="item.path"
+              [state]="item.state"
+            >{{item.title}}</a>
+            <span class="breadcrumb-divider">{{ getDividerBreadcrumbs(i) }}</span>
+          </li>
+        </ol>
+      </div>
+    </div>
+</nav>

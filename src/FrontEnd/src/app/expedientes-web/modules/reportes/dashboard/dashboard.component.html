@@ -1,0 +1,52 @@
+<section class="p-3">
+  <div class="row">
+    <div class="col-xl-10  col-lg-8">
+      <h4>{{titulo}}</h4>
+    </div>
+    <div class="col-xl-2 col-lg-4">
+      <div class="d-flex justify-content-lg-end">
+        <button type="button" class="btn btn-primary btn-label" (click)="abrirFiltrosAvanzados()">
+          <i class="bi bi-sort-down label-icon">&nbsp;</i>
+          Filtros avanzados
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-2">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-xl-6">
+      <div class="card card-histograma overflow-hidden">
+        <div class="card-body">
+          <div class="chart-container_principal">
+            <h6 align="center">{{tituloGrafico}}</h6>
+            <canvas  id="MyChart" >{{ chart }}</canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3">
+      <div class="card card-dashboard overflow-hidden">
+        <div class="card-body">
+          <!-- <div class="chart-container"> -->
+            <h6 align="center">Expedientes por Fase</h6>
+          <div class="chart-container">
+            <canvas id="MyChartDoughnut"></canvas>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-3 col-xxl-3">
+      <div class="card card-dashboard overflow-hidden">
+        <app-dashboard-fases-lateral [items]="listaTotalFasesTipoExpedientes"></app-dashboard-fases-lateral>
+      </div>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-12 mb-2">
+      <h4>Cantidad de expedientes pendientes por Usuario</h4>
+    </div>
+    <app-dashboard-fases [items]="listaTotalUsuariosTipoExpedientes"></app-dashboard-fases>
+  </div>
+</section>

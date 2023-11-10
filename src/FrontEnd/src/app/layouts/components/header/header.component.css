@@ -1,0 +1,163 @@
+header {
+  margin: 0 auto;
+  height: 80px;
+  padding-left: calc(1.5rem / 2);
+  box-shadow: 0 2px 5px 1px rgb(64 60 67 / 16%);
+}
+
+.header-logo {
+  content: url('/assets/logo/logotipoheader.png');
+  width: auto;
+  height: 60px;
+}
+
+.topbar-user .dropdown-toggle::after{
+  content: none;
+}
+
+.icon-spin {
+  -webkit-animation: spin 5s linear infinite;
+  animation: spin 5s linear infinite;
+}
+
+
+@-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  100% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.header-item {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.btn-topbar {
+  height: 42px;
+  width: 42px;
+}
+
+.btn-icon {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: calc(1rem + 1.5em + 2px);
+  width: calc(1rem + 1.5em + 2px);
+  padding: 0;
+}
+
+
+.btn-ghost-secondary {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.btn-ghost-secondary:focus {
+  box-shadow: 53,119,241;
+}
+
+.btn-ghost-secondary:active {
+  color: #3577f1;
+  background: rgba(53, 119, 241, 0.1);
+  border-color: transparent;
+}
+
+.btn-ghost-secondary:hover {
+  color: #3577f1;
+  background: rgba(53, 119, 241, 0.1);
+  border-color: transparent;
+}
+
+
+.btn-user:active,
+.btn-user:focus {
+  border-color: transparent !important;
+  color: #fffd;
+}
+
+.btn-user {
+  color: #fffd;
+  height: 100%;
+}
+
+.system-title h5 {
+  line-height: 0.8;
+  margin-bottom: auto;
+}
+
+.system-title {
+  visibility: visible;
+  transition: all 0.4s ease-in;
+
+}
+
+.system-title-d-none {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-out
+}
+
+.header-profile-user {
+  height: 32px;
+  width: 32px;
+}
+
+@media (min-width: 992px) {
+  .topbar-user {
+      background-color: var(--bs-primary);
+  }
+}
+
+
+@media screen and (max-width: 991.98px) {
+  .system-title .form-text{
+    display: none;
+  }
+  .btn-user {
+    color: var(--bs-body-color);
+  }
+
+
+  .btn-user:focus,
+  .btn-user:active {
+    border-color: transparent !important;
+    color: var(--bs-body-color);
+  }
+}
+
+#info-direccion {
+  visibility:visible; opacity:1
+}
+
+.header-info-direccion {
+  transition:visibility 1s, opacity 1s;
+            visibility:hidden; opacity:0
+}
+
+
+.titulo-sistema {
+  color: #1c2b68;
+}
+
+
+.titulo-sistema {
+  border-left: 4px solid #a1d324;
+  height: 100%;
+  padding-left: 1.2rem;
+  margin-left: 1rem;
+}

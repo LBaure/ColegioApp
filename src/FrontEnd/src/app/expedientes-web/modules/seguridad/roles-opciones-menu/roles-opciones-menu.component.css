@@ -1,0 +1,41 @@
+.card-footer {
+  padding: 0;
+  height: 56px;
+  /* position: fixed; */
+
+}
+.card-footer .nav-content {
+  display: flex;
+  flex: none;
+  font-size: 0.75rem;
+  justify-content: center;
+  transition: inherit;
+  width: 100%;
+  height: 100%;
+}
+.card-footer .nav-content .nav-btn {
+  font-size: inherit;
+  height: 100%;
+  max-width: 168px;
+  min-width: 80px;
+  text-transform: none;
+  transition: inherit;
+  width: auto;
+  border-radius: 0;
+}
+
+.nav-content .nav-btn {
+  flex-grow: 1;
+  align-items: center;
+  font-size: inherit;
+  height: 100%;
+  max-width: 168px;
+  min-width: 80px;
+  text-transform: none;
+  transition: inherit;
+  width: auto;
+  border-radius: 0;
+}
+.btn-content {
+  display: inline-grid;
+}

@@ -1,0 +1,26 @@
+<div class="modal-content modal-minfin">
+  <div class="modal-body">
+    <h4 class="modal-title mb-2">Seleccione un tipo de Expediente </h4>
+    <div class="modal-body">
+      <div class="row">
+        <div class="col-xl-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let item of listaTiposExpedientes">
+          <div class="card card-tipo-exp overflow-hidden" (click)="setDatos(item)">
+            <div class="card-body">
+              <!-- <span class="fw-bold">{{ item.idTipoExpediente }}</span> -->
+              <p>{{ item.descripcion }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer" *ngIf="close">
+    <button
+      type="button"
+      class="btn btn-soft-danger"
+      (click)="bsModalRef.hide()"
+    >
+      Salir
+    </button>
+  </div>
+</div>

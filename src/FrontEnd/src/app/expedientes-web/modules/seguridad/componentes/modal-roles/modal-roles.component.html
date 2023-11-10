@@ -1,0 +1,50 @@
+
+
+<div class="modal-content modal-minfin">
+  <div class="modal-body">
+    <h4 class="modal-title mb-3">{{ tituloModal }}</h4>
+    <form class="row g-3" [formGroup]="formRoles">
+      <div class="col-md-12">
+        <label class="form-label">Nombre Rol</label>
+        <input type="text" class="form-control" formControlName="nombre" />
+        <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)">
+          <small *ngIf="nombre?.hasError('required')" style="color: red">
+            Campo obligatorio
+          </small>
+        </div>
+      </div>
+
+      <div class="col-md-12">
+        <label class="form-label">Descripción</label>
+        <textarea
+          class="form-control"
+          rows="3"
+          formControlName="descripcion"
+        ></textarea>
+      </div>
+
+      <div class="col-md-12">
+        <label class="form-label">Estado</label>
+        <select class="form-select" formControlName="activo">
+          <option *ngFor="let item of listadoEstados" [ngValue]="item.valor">{{ item.texto }}</option>
+        </select>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-success text-white"
+      (click)="guardarRegistro()"
+    >
+      Guardar Cambios
+    </button>
+    <button
+      type="button"
+      class="btn btn-soft-danger"
+      (click)="bsModalRef.hide()"
+    >
+      Cancelar
+    </button>
+  </div>
+</div>

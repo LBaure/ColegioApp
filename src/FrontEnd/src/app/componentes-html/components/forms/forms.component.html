@@ -1,0 +1,712 @@
+<div>
+  <div class="col-12">
+    <div
+      class="page-title-box d-sm-flex align-items-center justify-content-between"
+    >
+      <h4 class="mb-sm-0">Diseño de Inputs en Formularios</h4>
+      <div>
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"><a routerLink="/public">Inicio</a></li>
+          <li class="breadcrumb-item">Forms</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="p-3">
+    <div class="row">
+      <div class="col-xl-12">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Inputs</h4>
+          </div>
+          <div class="card-body">
+            <div class="row gy-4">
+              <div class="col-xxl-3 col-md-6">
+                <div>
+                  <label for="valueInput" class="form-label">Input Normal</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Ingrese algo"
+                  />
+                </div>
+              </div>
+              <div class="col-xxl-3 col-md-6">
+                <div>
+                  <label for="iconInput" class="form-label">Input con Icono</label>
+                  <div class="form-icon">
+                    <input
+                      type="email"
+                      class="form-control form-control-icon"
+                      id="iconInput"
+                      placeholder="example@gmail.com"
+                    />
+                    <i class="bi bi-envelope-at"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xxl-3 col-md-6">
+                <div>
+                  <label for="iconInput" class="form-label"
+                    >Input con Icono a la derecha</label
+                  >
+                  <div class="form-icon right">
+                    <input
+                      type="email"
+                      class="form-control form-control-icon"
+                      id="iconInput"
+                      placeholder="example@gmail.com"
+                    />
+                    <i class="bi bi-envelope-at"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-xxl-3 col-md-6">
+                <div>
+                  <label for="exampleInputdate" class="form-label"
+                    >Input Date</label
+                  >
+                  <input type="date" class="form-control" id="exampleInputdate" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-xl-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">DatePicker</h4>
+            <div class="form-check form-switch form-switch-right form-switch-md">
+              <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+              <input class="form-check-input code-switcher" type="checkbox" href="#DataPicker" data-bs-toggle="collapse">
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">Use el componente <code>&lt;input&gt;</code> y agregue la directiva <code>bsDatepicker</code> para agregar un Datapicker personalizado<br></p>
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <label class="form-label">Datepicker sin Icono</label>
+                <input
+                  type="text"
+                  placeholder="Datepicker"
+                  class="form-control"
+                  bsDatepicker
+                >
+              </div>
+              <div class="col-md-6 form-group">
+                <label class="form-label">Datepicker con Icono</label>
+                <div class="form-icon right">
+                  <input
+                    type="text"
+                    placeholder="Datepicker"
+                    class="form-control"
+                    bsDatepicker
+                  >
+                  <i class="bi bi-calendar" ></i>
+                </div>
+              </div>
+            </div>
+            <div class="collapse mt-2" id="DataPicker">
+              <ul class="nav nav-tabs">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#DataPickerContent"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptDataPickerContent"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Api</button>
+                </li>
+              </ul>
+              <div class="tab-content" >
+                <div class="tab-pane fade show active" id="DataPickerContent" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                  <div class="code-view">
+                    <pre>
+                      <code>
+                        <span class="tag">&lt;div class="col-md-6 form-group"&gt;</span>
+                        <span class="tag">  &lt;label <span class="key">class=</span><span class="value">"form-label"</span>&gt;<span class="value">Datepicker sin Icono</span>&lt;/label&gt;</span>
+                        <span class="tag">  &lt;input</span>
+                        <span class="key">    type=</span><span class="value">"text"</span>
+                        <span class="key">    placeholder=</span><span class="value">"Datepicker"</span>
+                        <span class="key">    class=</span><span class="value">"form-control"</span>
+                        <span class="key">    bsDatepicker</span><!-- <span class="key">  &#91;bsConfig&#93;=</span><span class="value">&#123; isAnimated: true&#125;</span> -->
+                        <span class="tag">  &gt;</span>
+                        <span class="tag">&lt;/div&gt;</span>
+                        <span class="tag">&lt;div class="col-md-6 form-group"&gt;</span>
+                        <span class="tag">  &lt;label <span class="key">class=</span><span class="value">"form-label"</span>&gt;<span class="value">Datepicker con Icono</span>&lt;/label&gt;</span>
+                        <span class="tag">  &lt;div <span class="key">class=<span class="text-primary">"form-icon right"</span></span>&gt;</span>
+                        <span class="tag">    &lt;input</span>
+                        <span class="key">      type=</span><span class="value">"text"</span>
+                        <span class="key">      placeholder=</span><span class="value">"Datepicker"</span>
+                        <span class="key">      class=</span><span class="value">"form-control"</span>
+                        <span class="key">      bsDatepicker</span><!-- <span class="key">  &#91;bsConfig&#93;=</span><span class="value">&#123; isAnimated: true&#125;</span> -->
+                        <span class="tag">    &gt;</span>
+                        <span class="tag">    &lt;i <span class="text-success">class=<span class="text-secondary">"bi bi-calendar"</span></span> &gt;&lt;/i&gt;</span>
+                        <span class="tag">  &lt;/div&gt;</span>
+                        <span class="tag">&lt;/div&gt;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="TypeScriptDataPickerContent" role="tabpanel" aria-labelledby="profile-tab"
+                  tabindex="0">
+                  <div class="code-view">
+                    <pre>
+                      <code>
+                        <span class="key">// Inyección de Dependencias</span>
+                        <span class="key">// Debemos de importar <code>BrowserAnimationsModule</code> para la animacion del componente.</span>
+                        <span class="key">// Debemos de importar BsDatepickerModule ambos para usar el componente Datepicker </span>
+                        <span class="key">// en los modulos que queremos implementarlo.</span>
+
+                        <span class="tag">import &#123; BrowserAnimationsModule &#125; from '@angular/platform-browser/animations';</span>
+
+                        <span class="tag">import &#123; BsDatepickerModule &#125; from 'ngx-bootstrap/datepicker';</span>
+
+                        <span class="key">&#64;NgModule(&#123;</span>
+                        <span class="value">  imports: &#91;</span>
+                        <span class="value">    BrowserAnimationsModule,</span>
+                        <span class="value">    BsDatepickerModule.forRoot(),</span>
+                        <span class="value">   ...</span>
+                        <span class="value">  &#93;</span>
+                        <span class="value">)&#125;</span>
+                        <span class="tag">export class AppModule()&#123;&#125;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">DatePicker Theme</h4>
+            <div class="form-check form-switch form-switch-right form-switch-md">
+              <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+              <input class="form-check-input code-switcher" type="checkbox" href="#DataPickerTheme" data-bs-toggle="collapse">
+            </div>
+          </div>
+          <div class="card-body">
+            <p>Datepicker viene con algunos temas de color predeterminados. Puede cambiarlo manipulando la propiedad <code>containerClass</code> en el objeto <code>bsConfig</code></p>
+            <p>Actualmente cuenta con 6 temas para el color: <code> theme-default, theme-green, theme-blue, theme-dark-blue, theme-red, theme-orange</code> </p>
+            <div class="row">
+              <div class="col-xs-12 col-12 col-md-6 form-group mb-3">
+                <label class="form-label">Fecha</label>
+                <div class="form-icon right">
+                  <input
+                    type="text"
+                    placeholder="Datepicker"
+                    class="form-control form-control-icon"
+                    bsDatepicker
+                    [bsConfig]="bsConfig"
+                    #dp="bsDatepicker"
+                  >
+                  <i class="bi bi-calendar"></i>
+                </div>
+              </div>
+              <div class="col-xs-12 col-12 col-md-6 form-group mb-3">
+                <label class="form-label">Color de Tema:</label>
+                <select class="form-select" [(ngModel)]="colorTheme" (ngModelChange)="applyTheme(dp);">
+                  <option value="theme-default">default</option>
+                  <option value="theme-green">green</option>
+                  <option value="theme-blue">blue</option>
+                  <option value="theme-dark-blue">dark-blue</option>
+                  <option value="theme-red">red</option>
+                  <option value="theme-orange">orange</option>
+                </select>
+              </div>
+            </div>
+            <div class="collapse" id="DataPickerTheme">
+              <ul class="nav nav-tabs">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#DataPickerThemeHtml"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#DataPickerThemeTs"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+                </li>
+              </ul>
+              <div class="tab-content" >
+                <div class="tab-pane fade show active" id="DataPickerThemeHtml" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                  <div class="code-view">
+                    <pre>
+                      <code>
+                        <span class="tag">&lt;div class="col-md-6 form-group"&gt;</span>
+                        <span class="tag">  &lt;label <span class="key">class=</span><span class="value">"form-label"</span>&gt;<span class="value">Fecha</span>&lt;/label&gt;</span>
+                        <span class="tag">  &lt;input</span>
+                        <span class="key">    type=</span><span class="value">"text"</span>
+                        <span class="key">    placeholder=</span><span class="value">"Datepicker"</span>
+                        <span class="key">    class=</span><span class="value">"form-control"</span>
+                        <span class="key">    bsDatepicker</span>
+                        <span class="key">    &#91;bsConfig&#93;=</span><span class="value">"bsConfig"</span>
+                        <span class="key">    #dp=</span><span class="value">"bsDatepicker"</span>
+                        <span class="tag">  &gt;</span>
+                        <span class="tag">&lt;/div&gt;</span>
+                        <span class="tag">&lt;div class="col-md-6 form-group"&gt;</span>
+                        <span class="tag">  &lt;label <span class="key">class=</span><span class="value">"form-label"</span>&gt;<span class="value">Color de Tema:</span>&lt;/label&gt;</span>
+                        <span class="tag">  &lt;select</span>
+                        <span class="text-success">     class=<span class="text-secondary">"custom-select form-control from-select"</span> </span>
+                        <span class="text-success">     [(ngModel)]=<span class="text-secondary">"colorTheme"</span> </span>
+                        <span class="text-success">     (ngModelChange)=<span class="text-secondary">"<span class="text-danger">applyTheme</span>(dp);"</span> </span>
+                        <span class="tag">  &gt;</span>
+                        <span class="tag">     &lt;option <span class="text-success">value="theme-default"</span>&gt;<span class="text-secondary">default</span>&lt;/option&gt;</span>
+                        <span class="tag">     &lt;option <span class="text-success">value="theme-green"</span>&gt;<span class="text-secondary">green</span>&lt;/option&gt;</span>
+                        <span class="tag">     &lt;option <span class="text-success">value="theme-blue"</span>&gt;<span class="text-secondary">blue</span>&lt;/option&gt;</span>
+                        <span class="tag">     &lt;option <span class="text-success">value="theme-dark-blue"</span>&gt;<span class="text-secondary">dark-blue</span>&lt;/option&gt;</span>
+                        <span class="tag">     &lt;option <span class="text-success">value="theme-red"</span>&gt;<span class="text-secondary">red</span>&lt;/option&gt;</span>
+                        <span class="tag">     &lt;option <span class="text-success">value="theme-orange"</span>&gt;<span class="text-secondary">orange</span>&lt;/option&gt;</span>
+                        <span class="tag">  &lt;/select&gt;</span>
+                        <span class="tag">&lt;/div&gt;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="DataPickerThemeTs" role="tabpanel" aria-labelledby="profile-tab"
+                  tabindex="0">
+                  <div class="code-view">
+                    <pre>
+                      <code>
+                        <span class="tag">import &#123; <span class="att-value">Component </span> &#125; from '@angular/core';</span>
+                        <span class="tag">import &#123; <span class="att-value">BsDatepickerConfig  </span> &#125; from 'ngx-bootstrap/datepicker';</span>
+
+                        <span class="text-success">&#64;Component(&#123;</span>
+
+                        <span class="value">)&#125;</span>
+
+                        <span class="tag">export class <span class="key">DemoDataPickerThemeComponent</span> &#123;</span>
+
+                        <span class="text-primary"> colorTheme=<span class="text-danger">"theme-green"</span>;</span>
+                        <span class="text-primary"> bsConfig?=<span class="text-danger">Partial&#60;BsDatepickerConfig&#62;</span>;</span>
+
+                        <span class="text-danger"> applyTheme(<span class="text-warning">pop: any</span>) &#123;</span>
+                        <span class="key">// crea un nuevo objeto en cada cambio de propiedad</span>
+                        <span class="key">// para que Angular pueda detectar el cambio de referencia del objeto</span>
+                        <span class="text-secondary">   this.bsConfig = Object.assign(&#123;&#125;, &#123; containerClass: this.colorTheme &#125;);</span>
+                        <span class="text-dark">   setTimeout(() => &#123;</span>
+                        <span class="text-secondary">     pop.show();</span>
+                        <span class="text-dark">   &#125;);</span>
+                        <span class="text-danger"> &#125;</span>
+                        <span class="tag">&#125;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">DatePicker con Formato Fecha</h4>
+            <div class="form-check form-switch form-switch-right form-switch-md">
+              <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+              <input class="form-check-input code-switcher" type="checkbox" href="#DataPickerFormat" data-bs-toggle="collapse">
+            </div>
+          </div>
+          <div class="card-body">
+            <p>Datepicker viene con el formato <code>MM-DD-YYYY</code>. Puede cambiarlo manipulando la propiedad <code>dateInputFormat</code> en el objeto <code>bsConfig</code> establezca el formato <code>DD/MM/YYYY</code>. <br> Se recomienda establecerlo en el documento TypeScript y enviarle la variable a la propiedad <code>bsConfig</code></p>
+            <div class="row">
+              <div class="col-xs-12 col-12 col-md-6 form-group mb-3">
+                <label for="">Fecha</label>
+                <div class="form-icon right">
+                  <input
+                    type="text"
+                    placeholder="Datepicker"
+                    class="form-control form-control-icon"
+                    bsDatepicker
+                    [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY'}"
+                  >
+                  <i class="bi bi-calendar"></i>
+                </div>
+              </div>
+            </div>
+            <div class="collapse" id="DataPickerFormat">
+              <ul class="nav nav-tabs">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#DataPickerFormatHtml"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#DataPickerFormatTs"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+                </li>
+              </ul>
+              <div class="tab-content" >
+                <div class="tab-pane fade show active" id="DataPickerFormatHtml" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                  <div class="code-view">
+                    <pre>
+                      <code><span class="tag">&lt;div class="col-md-6 form-group"&gt;</span>
+                        <span class="tag">  &lt;label&gt;<span class="value">Fecha</span>&lt;/label&gt;</span>
+                        <span class="tag">  &lt;input</span>
+                        <span class="key">    type=</span><span class="value">"text"</span>
+                        <span class="key">    placeholder=</span><span class="value">"Datepicker"</span>
+                        <span class="key">    class=</span><span class="value">"form-control"</span>
+                        <span class="key">    bsDatepicker</span>
+                        <span class="key">    &#91;bsConfig&#93;=</span><span class="value">&#123; dateInputFormat: <span class="text-success">'DD/MM/YYYY'</span> &#125;</span>
+                        <span class="tag">  &gt;</span>
+                        <span class="tag">&lt;/div&gt;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="DataPickerFormatTs" role="tabpanel" aria-labelledby="profile-tab"
+                  tabindex="0">
+                  <div class="code-view">
+                    <pre>
+                      <code><span class="tag">import &#123; <span class="att-value">Component </span> &#125; from '@angular/core';</span>
+                        <span class="tag">import &#123; <span class="att-value">BsDatepickerConfig  </span> &#125; from 'ngx-bootstrap/datepicker';</span>
+
+                        <span class="text-success">&#64;Component(&#123;</span>
+
+                        <span class="value">)&#125;</span>
+
+                        <span class="tag">export class <span class="key">DemoDataPickerFormatComponent</span> &#123;</span>
+
+                        <span class="text-primary"> colorTheme=<span class="text-danger">"theme-green"</span>;</span>
+                        <span class="text-primary"> bsConfig?=<span class="text-danger">Partial&#60;BsDatepickerConfig&#62; = <span class="text-warning">Object</span><span class="text-dark">.assign(&#123;&#125;, &#123; dateInputFormat: 'DD/MM/YYYY'&#125;) </span> </span>;</span>
+
+                        <span class="tag">&#125;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">DatePicker con Time</h4>
+            <div class="form-check form-switch form-switch-right form-switch-md">
+              <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+              <input class="form-check-input code-switcher" type="checkbox" (change)="DataPickerTimePicker = !DataPickerTimePicker">
+            </div>
+          </div>
+          <div class="card-body">
+            <div *ngIf="DataPickerTimePicker; else DataPickerTimePickerCode">
+              <figure>
+                <blockquote >
+                  <p>Puede habilitar el selector de tiempo a través de la opción <code>withTimepicker</code> con valor <span class="text-primary">true</span> en el objeto de configuración <code>bsConfig</code></p>
+                </blockquote>
+                <figcaption class="blockquote-footer">
+                  Se recomienda que estas configuraciones se realicen en el <cite>Archivo TS</cite> como buenas practicas de programación.
+                </figcaption>
+              </figure>
+              <div class="row justify-content-center">
+                <div class="col-xs-12 col-12 col-md-6 form-group mb-3">
+                  <label for="">Fecha con Hora</label>
+                  <div class="form-icon right">
+                    <input
+                      type="text"
+                      placeholder="Datepicker"
+                      class="form-control form-control-icon"
+                      bsDatepicker
+                      [bsConfig]="{withTimepicker: true, initCurrentTime: true, rangeInputFormat : 'MMMM Do YYYY, h:mm:ss a', dateInputFormat: 'MMMM Do YYYY, h:mm:ss a'}"
+                    >
+                    <i class="bi bi-calendar"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+          <ng-template #DataPickerTimePickerCode>
+            <ul class="nav nav-tabs">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#htmlDatePickerTime"
+                  type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptDatePickerTime"
+                  type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+              </li>
+            </ul>
+
+            <div class="tab-content">
+              <div class="tab-pane fade show active" id="htmlDatePickerTime">
+                <div class="code-view">
+                  <pre>
+                    <code class="default-markup">
+                      <span>&lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">d-flex flex-wrap gap-3</span>"&gt;</span>
+                        <span>  &lt;<span class="tag">input</span></span>
+                        <span>    <span class="attr-name">type</span>="<span class="attr-value">text</span>"</span>
+                        <span>    <span class="attr-name">placeholder</span>="<span class="attr-value">Datepicker</span>"</span>
+                        <span>    <span class="attr-name">class</span>="<span class="attr-value">form-control form-control-icon</span>"</span>
+                        <span>    <span class="attr-name">bsDatepicker</span></span>
+                        <span>    <span class="attr-name">[bsConfig]</span>="<span class="string">bsConfigTime</span>"</span>
+                        <span>  &gt;</span>
+                        <span>  &lt;<span class="tag">i</span> <span class="attr-name">class</span>="<span class="attr-value">bi bi-calendar</span>"&gt;&lt;/<span class="tag">i</span>&gt;</span>
+                      <span>&lt;<span class="tag">div</span>&gt;</span>
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="TypeScriptDatePickerTime">
+                <div class="code-view">
+                  <pre>
+                    <code class="default-markup">
+                      <span class="import">import &#123; <span class="attr-value">Component, OnInit </span>&#125; from <span class="string">'@angular/core';</span></span>
+                      <span class="import">import &#123; <span class="attr-value">BsDatepickerConfig </span>&#125; from <span class="string">'ngx-bootstrap/datepicker';</span></span>
+
+                      <span><span class="import">export </span><span class="attr-value">class <span class="attr-name">MyComponent </span>implements</span><span class="attr-name"> OnInit </span>&#123;</span>
+
+                        <span>  <span class="string">bsConfigTime</span> : <span class="text-success"> Partial&#60;BsDatepickerConfig&#62;</span> = <span class="text-success">Object</span>.<span class="string">assign</span>(&#123;&#125;, &#123;</span>
+                        <span>    <span class="attr-name">withTimepicker</span> : <span class="attr-value">true</span>,</span>
+                        <span>    <span class="attr-name">dateInputFormat</span> : '<span class="attr-value">DD/MM/YYYY h:mm:ss a</span>'</span>
+                        <span>  &#125;</span>
+
+                        <span>  <span class="tag">ngOnInit</span>() : <span class="attr-name"></span> &#123;</span>
+
+                        <span>  &#125;</span>
+                      <span>&#125;</span>
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-xl-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Input File</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+                <input class="form-check-input code-switcher" type="checkbox" href="#InputFile" data-bs-toggle="collapse">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row justify-content-center">
+              <p class="text-muted">Use el componente <code>&lt;file-upload&gt;&lt;/file-upload&gt;</code> para cargar un archivo<br></p>
+              <div class="collapse" id="InputFile">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#htmlForm"
+                      type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptForm"
+                      type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="htmlForm" role="tabpanel" aria-labelledby="home-tab"
+                    tabindex="0">
+                    <div class="code-view">
+                      <pre>
+                        <code>
+                          <span class="tag">&lt;file-upload</span>
+                          <span class="key">  accept=</span><span class="value">"image/png"</span>
+                          <span class="key">  &#91;required&#93;=</span><span class="value">"true"</span>
+                          <span class="key">  &#40;model&#41;=</span><span class="value">"save($event)"</span>
+                          <span class="key">  classBtnUpload=</span><span class="value">"btn-file-upload"</span>
+                          <span class="key">  colorModalViewFile=</span><span class="value">"danger"</span>
+                          <span class="tag">&gt;&lt;/file-upload&gt;</span>
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="TypeScriptForm" role="tabpanel" aria-labelledby="profile-tab"
+                    tabindex="0">
+                    <div class="code-view">
+                      <pre>
+                        <code>
+                          <span class="tag">save&#40;file : any &#41; &#123;</span>
+                          <span class="key">  console.log</span><span class="value">&#40;"fileModel", file&#41; &#47;&#47; retorna un array de archivos </span>
+                          <span class="tag">&#125;</span>
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-6">
+                <file-upload
+                  accept="image/png"
+                  [required]="true"
+                  (model)="save($event)"
+                  classBtnUpload="btn-file-upload"
+                  colorModalViewFile="dark"
+                ></file-upload>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-xl-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Input File</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+                <input class="form-check-input code-switcher" type="checkbox" href="#InputFileMultiple" data-bs-toggle="collapse">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row justify-content-center">
+              <p class="text-muted">Use el componente <code>&lt;file-upload&gt;&lt;/file-upload&gt;</code> y agregue el atributo <code>&#91;multiple&#93;="true"</code> para cargar multiples archivo<br></p>
+              <div class="collapse" id="InputFileMultiple">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#htmlFormMultiple"
+                      type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptFormMultiple"
+                      type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="htmlFormMultiple" role="tabpanel" aria-labelledby="home-tab"
+                    tabindex="0">
+                    <div class="code-view">
+                      <pre>
+                        <code>
+                          <span class="tag">&lt;file-upload</span>
+                          <span class="key">  accept=</span><span class="value">"image/png"</span>
+                          <span class="key">  &#91;required&#93;=</span><span class="value">"true"</span>
+                          <span class="key">  &#40;model&#41;=</span><span class="value">"save($event)"</span>
+                          <span class="key">  &#91;multiple&#93;=</span><span class="value">"true"</span>
+                          <span class="key">  classBtnUpload=</span><span class="value">"btn-file-upload"</span>
+                          <span class="key">  colorModalViewFile=</span><span class="value">"danger"</span>
+                          <span class="tag">&gt;&lt;/file-upload&gt;</span>
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="TypeScriptFormMultiple" role="tabpanel" aria-labelledby="profile-tab"
+                    tabindex="0">
+                    <div class="code-view">
+                      <pre>
+                        <code>
+                          <span class="tag">save&#40;file : any &#41; &#123;</span>
+                          <span class="key">  console.log</span><span class="value">&#40;"fileModel", file&#41; &#47;&#47; retorna un array de archivos </span>
+                          <span class="tag">&#125;</span>
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-xl-6 col-sm-12 col-xs-12">
+                <file-upload
+                  accept="image/png"
+                  [required]="true"
+                  (model)="save($event)"
+                  [multiple]="true"
+                  classBtnUpload="btn-file-upload"
+                  colorModalViewFile="dark"
+                ></file-upload>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Input File - Acepta multiples tipos de archivos</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+                <input class="form-check-input code-switcher" type="checkbox" href="#InputFileMultipleType" data-bs-toggle="collapse">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="row justify-content-center">
+              <p class="text-muted">Agregue el atributo <code>accept="application/pdf, image/png"</code> entre comillas, todos los tipos de archivos que desea agregar, separados por una coma<br></p>
+              <div class="collapse" id="InputFileMultipleType">
+                <ul class="nav nav-tabs">
+                  <li class="nav-item light" role="presentation">
+                    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#htmlFormMultipleType"
+                      type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptFormMultipleType"
+                      type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+                  </li>
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                  <div class="tab-pane fade show active" id="htmlFormMultipleType" role="tabpanel" aria-labelledby="home-tab"
+                    tabindex="0">
+                    <div class="code-view">
+                      <pre>
+                        <code>
+                          <span class="tag">&lt;file-upload</span>
+                          <span class="key">  accept=</span><span class="value">"application/pdf, image/png"</span>
+                          <span class="key">  &#91;required&#93;=</span><span class="value">"true"</span>
+                          <span class="key">  &#40;model&#41;=</span><span class="value">"save($event)"</span>
+                          <span class="key">  &#91;multiple&#93;=</span><span class="value">"true"</span>
+                          <span class="key">  classBtnUpload=</span><span class="value">"btn-file-upload"</span>
+                          <span class="key">  colorModalViewFile=</span><span class="value">"danger"</span>
+                          <span class="tag">&gt;&lt;/file-upload&gt;</span>
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="TypeScriptFormMultipleType" role="tabpanel" aria-labelledby="profile-tab"
+                    tabindex="0">
+                    <div class="code-view">
+                      <pre>
+                        <code>
+                          <span class="tag">save&#40;file : any &#41; &#123;</span>
+                          <span class="key">  console.log</span><span class="value">&#40;"fileModel", file&#41; &#47;&#47; retorna un array de archivos </span>
+                          <span class="tag">&#125;</span>
+                        </code>
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="col-xl-6 col-sm-12 col-xs-12">
+                <file-upload
+                  accept="application/pdf, image/png, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel, application/json "
+                  [required]="true"
+                  (model)="save($event)"
+                  [multiple]="true"
+                  classBtnUpload="btn-file-upload"
+                  colorModalViewFile="danger"
+                ></file-upload>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

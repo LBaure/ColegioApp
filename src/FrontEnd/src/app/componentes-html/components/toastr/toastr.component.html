@@ -1,0 +1,470 @@
+
+<loading-minfin [loading]="loading"></loading-minfin>
+<div>
+  <div class="col-12">
+    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+      <h4 class="mb-sm-0">Diseño de Notificaciones Toastr</h4>
+      <div>
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"><a routerLink="/public">Inicio</a></li>
+          <li class="breadcrumb-item">toastr</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="p-3">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card overdflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Notificación</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+                <input class="form-check-input code-switcher" type="checkbox" data-bs-toggle="collapse" (change)="showNotifications = !showNotifications">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div *ngIf="showNotifications; else elseBlockNoti" class="d-flex flex-wrap gap-3">
+              <button
+                type="button"
+                class="btn btn-success btn-label"
+                (click)="notify('success')"
+              >
+                <i class="bi bi-check2-all label-icon"></i>
+                Notify Success
+              </button>
+
+              <button type="button" class="btn btn-danger btn-label" (click)="notify('failure')">
+                <i class="bi bi-x-circle label-icon"></i>
+                Notify Cancel
+              </button>
+
+              <button type="button" class="btn btn-warning btn-label" (click)="notify('warning')">
+                <i class="bi bi-exclamation-triangle label-icon"></i>
+                Notify Warning
+              </button>
+
+              <button type="button" class="btn btn-info btn-label" (click)="notify('info')">
+                <i class="bi bi-info-circle label-icon"></i>
+                Notify Info
+              </button>
+            </div>
+
+
+            <ng-template #elseBlockNoti>
+
+            <ul class="nav nav-tabs">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#htmlNotificacion"
+                  type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptotificacion"
+                  type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent4">
+              <div class="tab-pane fade show active" id="htmlNotificacion" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                <div class="code-view">
+                  <pre>
+                    <code class="default-markup">
+                      <span>&lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">d-flex flex-wrap gap-3</span>"&gt;</span>
+                      <span>  &lt;<span class="tag">button</span></span>
+                      <span>    <span class="attr-name">type</span>="<span class="attr-value">button</span>"</span>
+                      <span>    <span class="attr-name">class</span>="<span class="attr-value">btn btn-success</span>"</span>
+                      <span>    <span class="attr-name">(click)</span>="<span class="string">notifySuccess</span>()"</span>
+                      <span>  &gt;</span>
+                      <span>    &lt;<span class="tag">i</span> <span class="attr-name">class</span>="<span class="attr-value">bi bi-check2-all label-icon</span>"&gt;&lt;/<span class="tag">i</span>&gt;</span>
+                      <span>  &lt;/<span class="tag">button</span>&gt;</span>
+
+                      <span>  &lt;<span class="tag">button</span></span>
+                      <span>    <span class="attr-name">type</span>="<span class="attr-value">button</span>"</span>
+                      <span>    <span class="attr-name">class</span>="<span class="attr-value">btn btn-danger</span>"</span>
+                      <span>    <span class="attr-name">(click)</span>="<span class="string">notifyFailure</span>()"</span>
+                      <span>  &gt;</span>
+                      <span>    &lt;<span class="tag">i</span> <span class="attr-name">class</span>="<span class="attr-value">bi bi-x-circle label-icon</span>"&gt;&lt;/<span class="tag">i</span>&gt;</span>
+                      <span>  &lt;/<span class="tag">button</span>&gt;</span>
+
+                      <span>  &lt;<span class="tag">button</span></span>
+                      <span>    <span class="attr-name">type</span>="<span class="attr-value">button</span>"</span>
+                      <span>    <span class="attr-name">class</span>="<span class="attr-value">btn btn-warning</span>"</span>
+                      <span>    <span class="attr-name">(click)</span>="<span class="string">notifyWarning</span>()"</span>
+                      <span>  &gt;</span>
+                      <span>    &lt;<span class="tag">i</span> <span class="attr-name">class</span>="<span class="attr-value">bi bi-exclamation-triangle label-icon</span>"&gt;&lt;/<span class="tag">i</span>&gt;</span>
+                      <span>  &lt;/<span class="tag">button</span>&gt;</span>
+
+                      <span>  &lt;<span class="tag">button</span></span>
+                      <span>    <span class="attr-name">type</span>="<span class="attr-value">button</span>"</span>
+                      <span>    <span class="attr-name">class</span>="<span class="attr-value">btn btn-info</span>"</span>
+                      <span>    <span class="attr-name">(click)</span>="<span class="string">notifyInfo</span>()"</span>
+                      <span>  &gt;</span>
+                      <span>    &lt;<span class="tag">i</span> <span class="attr-name">class</span>="<span class="attr-value">bi bi-info-circle label-icon</span>"&gt;&lt;/<span class="tag">i</span>&gt;</span>
+                      <span>  &lt;/<span class="tag">button</span>&gt;</span>
+                      <span>&lt;<span class="tag">div</span>&gt;</span>
+                    </code>
+                  </pre>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="TypeScriptotificacion" role="tabpanel" aria-labelledby="home-tab" tabindex="1">
+                <div class="code-view ">
+                  <pre>
+                    <code class="default-markup">
+                      <span class="import">import &#123; <span class="attr-value">Notify </span>&#125; from <span class="string">'notiflix/build/notiflix-notify-aio';</span></span>
+
+
+                      <span><span class="tag">ngOnInit</span>() : <span class="attr-name"></span> &#123;</span>
+
+                      <span>&#125;</span>
+
+                      <span class="attr-value">public</span> <span class="tag">notifySuccess</span><span class="import">() &#123;</span>
+                      <span class="attr-name">  Notify</span>.<span class="attr-value">success</span>(<span class="string">'Notificación estilo Success'</span>);
+                      <span class="import">&#125;</span>
+
+                      <span class="attr-value">public</span> <span class="tag">notifyFailure</span><span class="import">() &#123;</span>
+                      <span class="attr-name">  Notify</span>.<span class="attr-value">failure</span>(<span class="string">'Notificación estilo failure'</span>);
+                      <span class="import">&#125;</span>
+
+                      <span class="attr-value">public</span> <span class="tag">notifyWarning</span><span class="import">() &#123;</span>
+                      <span class="attr-name">  Notify</span>.<span class="attr-value">warning</span>(<span class="string">'Notificación estilo Warning'</span>);
+                      <span class="import">&#125;</span>
+
+                      <span class="attr-value">public</span> <span class="tag">notifyInfo</span><span class="import">() &#123;</span>
+                      <span class="attr-name">  Notify</span>.<span class="attr-value">info</span>(<span class="string">'Notificación estilo Info'</span>);
+                      <span class="import">&#125;</span>
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card overdflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Notificación Personalizada</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+                <input class="form-check-input code-switcher" type="checkbox" data-bs-toggle="collapse" (change)="showNotifyCustom = !showNotifyCustom">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div *ngIf="showNotifyCustom; else elseBlockNotiCustom" class="d-flex flex-wrap gap-3">
+              <button
+                type="button"
+                class="btn btn-dark btn-label"
+                (click)="notifyCustom()"
+              >
+                <i class="bi bi-check2-all label-icon"></i>
+                Notificación Personalizada
+              </button>
+
+              <a type="button" class="btn btn-link" target="_blank" href="https://notiflix.github.io/documentation">Ver todas las opciones</a>
+            </div>
+            <ng-template #elseBlockNotiCustom>
+              <ul class="nav nav-tabs">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#htmlNotificacionCustom"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptotificacionCustom"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent2">
+                <div class="tab-pane fade show active" id="htmlNotificacionCustom" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                  <div class="code-view">
+                    <pre>
+                      <code class="default-markup">
+                        <span>&lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">d-flex flex-wrap gap-3</span>"&gt;</span>
+                        <span>  &lt;<span class="tag">button</span></span>
+                        <span>    <span class="attr-name">type</span>="<span class="attr-value">button</span>"</span>
+                        <span>    <span class="attr-name">class</span>="<span class="attr-value">btn btn-dark</span>"</span>
+                        <span>    <span class="attr-name">(click)</span>="<span class="string">notifyCustom</span>()"</span>
+                        <span>  &gt;</span>
+                        <span>    &lt;<span class="tag">i</span> <span class="attr-name">class</span>="<span class="attr-value">bi bi-check2-all label-icon</span>"&gt;&lt;/<span class="tag">i</span>&gt;</span>
+                        <span>  &lt;/<span class="tag">button</span>&gt;</span>
+                        <span>&lt;<span class="tag">div</span>&gt;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="TypeScriptotificacionCustom" role="tabpanel" aria-labelledby="home-tab" tabindex="1">
+                  <div class="code-view ">
+                    <pre>
+                      <code class="default-markup">
+                        <span class="import">import &#123; <span class="attr-value">Notify </span>&#125; from <span class="string">'notiflix/build/notiflix-notify-aio';</span></span>
+
+                        <span><span class="tag">ngOnInit</span>() : <span class="attr-name"></span> &#123;</span>
+
+                        <span>&#125;</span>
+
+                        <span class="attr-value">public</span> <span class="tag">notifyCustom</span><span class="import">() &#123;</span>
+                        <span>  <span class="attr-name">Notify</span>.<span class="attr-value">sucess</span>('<span class="string">Notificación personalizada, posición, tiempo, borde radius, boton cerrar</span>', &#123;</span>
+                        <span>    <span class="attr-name">position</span>='<span class="attr-value">center</span>',</span>
+                        <span>    <span class="attr-name">borderRadius</span>='<span class="attr-value">4px</span>',</span>
+                        <span>    <span class="attr-name">timeout</span>=<span class="attr-value">6000</span>,</span>
+                        <span>    <span class="attr-name">closeButton</span>=<span class="attr-value">true</span>,</span>
+                        <span>  &#125;)</span>
+                        <span>&#125;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card overdflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Loadings</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+                <input class="form-check-input code-switcher" type="checkbox" data-bs-toggle="collapse" (change)="showLoading = !showLoading">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div *ngIf="showLoading; else elseBlockLoading" class="d-flex flex-wrap gap-3">
+              <button
+                type="button"
+                class="btn btn-success btn-label"
+                (click)="loadingStart()"
+              >
+                <i class="bi bi-check2-all label-icon"></i>
+                Loading Default
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-success btn-label"
+                (click)="loadingDots()"
+              >
+                <i class="bi bi-check2-all label-icon"></i>
+                Loading Dots
+              </button>
+
+            </div>
+            <ng-template #elseBlockLoading>
+              <ul class="nav nav-tabs">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#htmlNotificacionCustom"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptotificacionCustom"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent2">
+                <div class="tab-pane fade show active" id="htmlNotificacionCustom" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                  <div class="code-view">
+                    <pre>
+                      <code class="default-markup">
+                        <span>&lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">d-flex flex-wrap gap-3</span>"&gt;</span>
+                        <span>  &lt;<span class="tag">button</span></span>
+                        <span>    <span class="attr-name">type</span>="<span class="attr-value">button</span>"</span>
+                        <span>    <span class="attr-name">class</span>="<span class="attr-value">btn btn-dark</span>"</span>
+                        <span>    <span class="attr-name">(click)</span>="<span class="string">notifyCustom</span>()"</span>
+                        <span>  &gt;</span>
+                        <span>    &lt;<span class="tag">i</span> <span class="attr-name">class</span>="<span class="attr-value">bi bi-check2-all label-icon</span>"&gt;&lt;/<span class="tag">i</span>&gt;</span>
+                        <span>  &lt;/<span class="tag">button</span>&gt;</span>
+                        <span>&lt;<span class="tag">div</span>&gt;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="TypeScriptotificacionCustom" role="tabpanel" aria-labelledby="home-tab" tabindex="1">
+                  <div class="code-view ">
+                    <pre>
+                      <code class="default-markup">
+                        <span class="import">import &#123; <span class="attr-value">Notify </span>&#125; from <span class="string">'notiflix/build/notiflix-notify-aio';</span></span>
+
+                        <span><span class="tag">ngOnInit</span>() : <span class="attr-name"></span> &#123;</span>
+
+                        <span>&#125;</span>
+
+                        <span class="attr-value">public</span> <span class="tag">notifyCustom</span><span class="import">() &#123;</span>
+                        <span>  <span class="attr-name">Notify</span>.<span class="attr-value">sucess</span>('<span class="string">Notificación personalizada, posición, tiempo, borde, boton cerrar</span>', &#123;</span>
+                        <span>    <span class="attr-name">position</span>='<span class="attr-value">center</span>',</span>
+                        <span>    <span class="attr-name">borderRadius</span>='<span class="attr-value">4px</span>',</span>
+                        <span>    <span class="attr-name">timeout</span>=<span class="attr-value">6000</span>,</span>
+                        <span>    <span class="attr-name">closeButton</span>=<span class="attr-value">true</span>,</span>
+                        <span>  &#125;)</span>
+                        <span>&#125;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Loadings Personalizado</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+                <input class="form-check-input code-switcher" type="checkbox" data-bs-toggle="collapse" (change)="showLoadingCustom = !showLoadingCustom">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div *ngIf="showLoadingCustom; else elseBlockLoadingCustom" class="d-flex flex-wrap gap-3">
+              <div class="col-12">
+                <button
+                  type="button"
+                  class="btn btn-dark"
+                  (click)="openCustomLoad()"
+                >
+                  Cargando
+                </button>
+              </div>
+
+              <div class="table-responsive d-none d-sm-block" >
+                <h6>Documentación</h6>
+                <table class="table table-core">
+                  <thead>
+                    <tr>
+                      <th width="15%">Opcion</th>
+                      <th width="10%">Tipo</th>
+                      <th width="20%">Valor Defecto</th>
+                      <th width="55%">Descripción</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let item of documentacion">
+                      <td>{{ item.opcion }}</td>
+                      <td><span class="badge badge-soft-primary">{{ item.tipo }}</span></td>
+                      <td><a href="javascript:void(0);" class="link-secondary">{{ item.valorDefecto }}</a></td>
+                      <td>{{ item.descripcion }}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-12 d-block d-sm-none">
+                <div class="list-group list-group-flush">
+                  <h6>Documentación</h6>
+                  <div *ngFor="let item of documentacion">
+                    <h5 class="list-title fs-15 mb-1 text-muted px-3 py-1">{{ item.opcion }}</h5>
+                    <a href="javascript:void(0)" class="list-group-item list-group-item-action mb-2">
+                      <div class="d-flex align-items-center justify-content-between mb-2 border-bottom">
+                        <h6 class="list-title fs-12">Tipo</h6>
+                        <h6 class="list-text fs-12 text-muted">{{ item.tipo }}</h6>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between mb-2 border-bottom">
+                        <h6 class="list-title fs-12">Valor defecto</h6>
+                        <h6 class="list-text fs-12 text-muted">{{ item.valorDefecto }}</h6>
+                      </div>
+                      <div class="d-flex align-items-center justify-content-between mb-2 border-bottom">
+                        <h6 class="list-title fs-12 me-2">Descripción</h6>
+                        <h6 class="list-text fs-12 text-muted text-end">{{ item.descripcion }}</h6>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ng-template #elseBlockLoadingCustom>
+              <ul class="nav nav-tabs">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#htmlLoadingCustom"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptLoadingCustom"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#ApiLoadingCustom"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Api</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent3">
+                <div class="tab-pane fade show active" id="htmlLoadingCustom" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                  <div class="code-view">
+                    <pre>
+                      <code class="default-markup">
+                        <span>&lt;<span class="tag">loading-minfin</span> <span class="attr-name">[loading]</span>="<span class="attr-value">loading</span>" <span class="attr-name">label</span>="<span class="attr-value">Cargando</span>" <span class="attr-name">src</span>="<span class="attr-value">../../../../assets/logo/logo-sirbie-gris17012023.png</span>"&gt;</span><span>&lt;<span class="tag">loading-minfin</span>&gt;</span>
+                        <span>&lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">d-flex flex-wrap gap-3</span>"&gt;</span>
+                        <span>  &lt;<span class="tag">button</span></span>
+                        <span>    <span class="attr-name">type</span>="<span class="attr-value">button</span>"</span>
+                        <span>    <span class="attr-name">class</span>="<span class="attr-value">btn btn-dark</span>"</span>
+                        <span>    <span class="attr-name">(click)</span>="<span class="string">openCustomLoad</span>()"</span>
+                        <span>  &gt;</span>
+                        <span>  &lt;/<span class="tag">button</span>&gt;</span>
+                        <span>&lt;<span class="tag">div</span>&gt;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="TypeScriptLoadingCustom" role="tabpanel" aria-labelledby="home-tab" tabindex="1">
+                  <div class="code-view ">
+                    <pre>
+                      <code class="default-markup"><!-- <span class="import">import &#123; <span class="attr-value">Notify </span>&#125; from <span class="string">'notiflix/build/notiflix-notify-aio';</span></span> -->
+                        <span><span class="import">export </span><span class="attr-value">class <span class="attr-name">MyComponent </span>implements</span><span class="attr-name"> OnInit </span>&#123;</span>
+                        <span>  <span class="tag">ngOnInit</span>() : <span class="attr-name"></span> &#123;</span>
+
+                        <span>  &#125;</span>
+
+                        <span>  <span class="attr-value">public</span> <span class="tag">openCustomLoad</span>() &#123;</span>
+                        <span>    <span class="attr-value">this</span>.<span class="attr-name">loading</span> = <span class="attr-value">true</span></span>
+                        <span>    <span class="tag">setTimeout</span>(() => &#123;</span>
+                        <span>      <span class="attr-value">this</span>.<span class="attr-name">loading</span> = <span class="attr-value">false</span></span>
+                        <span>    &#125;, <span class="tag">3000</span>);</span>
+                        <span>  &#125;</span>
+                        <span>&#125;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+
+                <div class="tab-pane fade" id="ApiLoadingCustom" role="tabpanel" aria-labelledby="profile-tab"
+                  tabindex="0">
+                  <div class="code-view">
+                    <pre>
+                      <code class="default-markup">
+                        <span class="attr-name">// Inyección de Dependencias</span>
+                        <span class="attr-name">// Debemos de importar el componente <code>LoadingMinfinComponent</code></span>
+                        <span class="attr-name">// en los modulos que queremos implementarlo.</span>
+
+                        <span class="import">import &#123; <span class="attr-value">LoadingMinfinComponent </span>&#125; from <span class="string">'./components/loading-minfin/loading-minfin.component';</span></span>
+
+                        <span><span class="attr-name">&#64;NgModule</span> (&#123;</span>
+                        <span>  <span class="attr-value">declarations:</span> &#91;</span>
+                        <span class="attr-name">    LoadingMinfinComponent,</span>
+                        <span class="attr-name">   ...</span>
+                        <span >  &#93;</span>
+                        <span class="value">)&#125;</span>
+                        <span><span class="tag">export <span class="attr-value">class</span> <span class="attr-name">AppModule</span></span> &#123; &#125;</span>
+                      </code>
+                    </pre>
+                  </div>
+                </div>
+              </div>
+
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

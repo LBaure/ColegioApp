@@ -1,0 +1,72 @@
+[
+  {
+    "idOpcionMenu":20,
+    "idOpcionPadre":null,
+    "nombre":"Seguridad",
+    "url":"",
+    "icon": "admin_panel_settings",
+    "opciones":[
+      {
+          "idOpcionMenu":21,
+          "idOpcionPadre":20,
+          "nombre":"Usuarios",
+          "url":"settings/users",
+          "opciones":[
+          ]
+      },
+      {
+        "idOpcionMenu":22,
+        "idOpcionPadre":20,
+        "nombre":"Roles",
+        "url":"settings/roles",
+        "opciones":[
+        ]
+      },
+      {
+        "idOpcionMenu":23,
+        "idOpcionPadre":20,
+        "nombre":"Opciones Menú",
+        "url":"settings/access-route",
+        "opciones":[
+        ]
+      }
+    ]
+  },
+  {
+    "idOpcionMenu": 0,
+    "idOpcionPadre": null,
+    "nombre": "Componentes Publicos",
+    "url": "/publico/home",
+    "icon": "construction",
+    "opciones":[
+      {
+          "idOpcionMenu":2,
+          "idOpcionPadre":1,
+          "nombre":"Botones",
+          "url":"/public/buttons",
+          "opciones":[]
+      },
+      {
+          "idOpcionMenu":3,
+          "idOpcionPadre":1,
+          "nombre":"Inputs",
+          "url":"/public/inputs",
+          "opciones":[]
+      },
+      {
+          "idOpcionMenu":4,
+          "idOpcionPadre":1,
+          "nombre":"Alerts",
+          "url":"/public/alerts",
+          "opciones":[]
+      },
+      {
+          "idOpcionMenu":5,
+          "idOpcionPadre":1,
+          "nombre":"Formularios basicos",
+          "url":"/public/forms",
+          "opciones":[]
+      }
+    ]
+  }
+]

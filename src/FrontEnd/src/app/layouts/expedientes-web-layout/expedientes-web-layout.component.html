@@ -1,0 +1,20 @@
+<div [class.dark-mode]="isDark">
+  <app-loading></app-loading>
+  <app-header
+    class="toolbar"
+    [class.sideBar]="sideBar"
+    [ngClass]="isDark ? 'dark-mode' : ''"
+    (open)="onOpen($event)"
+    (dark)="onDark($event)"
+    [iconMenu]="iconNavBar"
+  ></app-header>
+  <app-side-bar (closeSide)="onOpen($event)"></app-side-bar>
+  <main [class.sideBar]="sideBar" id="contain">
+    <section class="flex">
+      <div class="flex-child">
+        <router-outlet></router-outlet>
+      </div>
+    </section>
+    <app-footer [class.dark-mode]="isDark" class="static"></app-footer>
+  </main>
+</div>

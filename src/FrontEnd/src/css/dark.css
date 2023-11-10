@@ -1,0 +1,282 @@
+:root {
+	--dark-border: rgba(255, 255, 255, .15);
+	--dark-body: #2c2f3e;
+	--dark-text: #fffd;
+  --vz-dropdown-link-hover-bg: #2f343a;
+  --vz-dropdown-link-hover-color: #b9bfc4;
+}
+
+
+.dark-mode {
+	color: var(--dark-text) !important;
+	background-color: var(--dark-body) !important;
+}
+
+.dark-mode header {
+	color: var(--dark-text) !important;
+	background-color: var(--dark-body) !important;
+}
+
+/* .dark-mode .bg-light,
+.dark-mode .table-light th,
+.dark-mode .table-light td {
+	background: transparent !important;
+	color: var(--dark-text) !important;
+} */
+
+.dark-mode :where(.bg-light, .table-light th, .table-light td) {
+	background: transparent !important;
+	color: var(--dark-text) !important;
+}
+
+.dark-mode .border-bottom {
+	border-bottom: 1px solid var(--dark-border) !important;
+	color: var(--dark-text) !important;
+}
+
+.dark-mode .border-top {
+  border-top: 1px solid var(--dark-border) !important;
+}
+
+.dark-mode .bordered {
+  border: 1px solid var(--dark-border) !important;
+}
+
+.dark-mode .page-title-box {
+	background-color: var(--dark-body) !important;
+	border-bottom: 1px solid var(--dark-border) !important;
+	box-shadow: 0 4px 16px #0000001a;
+}
+
+@media (min-width: 992px) {
+  .dark-mode .header-item.topbar-user {
+      background-color: #3e4254
+  }
+
+  .dark-mode .header-item.topbar-user .user-name-text {
+	  color: var(--dark-text) !important;
+  }
+}
+
+.dark-mode .offcanvas {
+	background-color: var(--dark-body) !important;
+}
+
+.dark-mode .btn-toggle {
+	color: var(--dark-text);
+}
+
+.dark-mode app-footer {
+
+	background-color: transparent !important;
+}
+
+/* .dark-mode .btn-toggle::before {
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e") !important;
+
+} */
+
+
+.dark-mode .dark-text {
+	color: var(--dark-text) !important;
+}
+
+
+.dark-mode :is(.text-muted, .form-text, i) {
+  color: #ffffff80!important;
+}
+
+.dark-mode .form-control {
+	background-color: transparent !important;
+	color: var(--dark-text);
+}
+.dark-mode input {
+	border: 1px solid var(--dark-border)!important;
+	transition: inherit;
+}
+
+.dark-mode button {
+	color: var(--dark-text);
+}
+
+
+/*inputs*/
+.dark-mode input,
+.dark-mode textarea {
+  background-color: transparent;
+  color: var(--dark-text);
+}
+
+.dark-mode input[type="number"] {
+	color: var(--dark-text);
+}
+
+.dark-mode input[type="date" i] {
+	color: var(--dark-text);
+}
+
+.dark-mode select {
+  background-color: transparent;
+  color: var(--dark-text);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+}
+
+.dark-mode .form-control,
+.dark-mode .form-select {
+  border: 1px solid var(--dark-border)!important;
+}
+.dark-mode .form-control:focus,
+.dark-mode .form-select:focus,
+.dark-mode .form-select:disabled {
+  background-color: var(--dark-body);
+  border-color: var(--bs-primary);
+  outline: 0;
+}
+
+
+.dark-mode .modal-content {
+  background-color: var(--dark-body) !important;
+  border: 1px solid var(--dark-border)!important;
+  box-shadow: 0 4px 16px #0000001a;
+}
+
+.dark-mode .modal-header {
+  border-bottom: 1px solid var(--dark-border)!important;
+}
+
+
+
+/******************************************************************* TABLAS *******************************************************************
+***********************************************************************************************************************************************/
+.dark-mode .table {
+  color: var(--dark-text) !important;
+}
+
+.dark-mode .table-core {
+  border-collapse: collapse !important;
+  border-spacing: 0 !important;
+}
+
+.dark-mode .table-core :is(td,th) {
+  background-color: transparent !important;
+  border: 1px solid var(--dark-border) !important;
+  padding: 0.75rem 0.6rem !important;
+}
+
+/***********************************************************************************************************************************************
+******************************************************************* DROPDOWN *******************************************************************/
+
+
+.dark-mode .dropdown-menu {
+  background-color: transparent;
+  color: var(--dark-text);
+  background-color: var(--dark-body) !important;
+  border: 1px solid var(--dark-border)!important;
+  box-shadow: 0 4px 16px #0000001a;
+}
+.dark-mode .dropdown-header,
+.dark-mode .dropdown-item {
+  color: var(--dark-text);
+}
+
+
+.dark-mode .dropdown-item:hover,
+.dark-mode .dropdown-item:focus {
+  color: var(--vz-dropdown-link-hover-color);
+  background-color: var(--vz-dropdown-link-hover-bg);
+}
+
+
+/***********************************************************************************************************************************************
+******************************************************************* CARD *******************************************************************/
+
+.dark-mode :where(.card, .list-group, .list-group-item, .box) {
+	background-color: transparent !important;
+	border: 1px solid var(--dark-border)!important;
+	box-shadow: 0 4px 16px #0000001a;
+	color: var(--dark-text) !important;
+}
+
+.dark-mode .card-header {
+	border-bottom: 1px solid var(--dark-border) ;
+}
+
+
+/* .dark-mode .table-core td:nth-child(1) {
+  border-left: 2px solid var(--bs-primary) !important;
+} */
+.dark-mode .header-logo {
+  content: url('/assets/logo/logotipoheader-blanco.png') !important;
+}
+
+
+.dark-mode .dashboard-logo {
+  content: url('/assets/logo/logotipo-blanco.png') !important;
+  width: 100%;
+}
+
+.dark-mode .titulo-sistema {
+  color: var(--dark-text) !important;
+}
+
+
+/* .dark-mode .swal2-container .swal2-popup  {
+
+  background-color: transparent !important;
+  color: var(--dark-text);
+  border-bottom: 1px solid var(--dark-border) ;
+} */
+
+
+.dark-mode .code-view {
+  background: transparent !important;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.dark-mode .nav-tabs .nav-link.active {
+  background-color: transparent !important;
+}
+
+.dark-mode .bar-left-success {
+  border-left: 5px solid var(--bs-success) !important;
+
+}
+.dark-mode .bar-left-danger {
+  border-left: 5px solid var(--bs-danger) !important;
+}
+
+.dark-mode .form-control:disabled,
+.dark-mode .form-select:disabled,
+.dark-mode .dropdown-select .dropdown-toggle:disabled  {
+  background-color: #3e4254 !important;
+  opacity: 1 !important;
+}
+
+
+
+/* Dashboard */
+.dark-mode .history-exp ul.timeline :is(.flag, .desc) {
+  background: transparent;
+	border: 1px solid var(--dark-border)!important;
+}
+
+.dark-mode .direction-l .flag:after {
+  border-left-color: var(--dark-border) !important;
+}
+/* .dark-mode .history-exp ul.timeline .flag::after{
+  border-left-color: transparent !important;
+}
+ */
+
+
+
+.dark-mode .card-dashboard .list-group {
+  border: none !important;
+}
+
+.dark-mode .rounded-circle:not(.btn) {
+  background-color: transparent !important;
+  border: 1px solid var(--dark-border)!important;
+}

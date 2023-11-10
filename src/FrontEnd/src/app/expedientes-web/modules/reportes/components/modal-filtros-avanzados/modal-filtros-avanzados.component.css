@@ -1,0 +1,77 @@
+.box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2px 16px;
+}
+
+.year-body table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+
+.box li  {
+  padding: 4px;
+  margin: 0 auto;
+}
+
+.box li .content {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box li span {
+
+  color: #54708b;
+}
+
+
+
+
+.box li .content:hover {
+  background-color: #e9edf0;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+}
+
+
+.dropdown-menu.show {
+  padding-bottom: 0;
+  padding-top: 1px;
+  box-shadow: 0 0 10px 0 #aaa;
+}
+
+
+h6.card-subtitle {
+  margin-bottom: -6px;
+}
+
+.box-columns {
+    max-height: 200px;
+    min-height: 200px;
+    max-width: 420px;
+    resize: both;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
+}
+
+.box-columns .list-group .list-group-item {
+  border: none;
+  border-radius: 0;
+  padding-top: 0.3rem;
+  padding-bottom: 0.3rem;
+}
+
+.box-columns .list-group .list-group-item > span {
+  display: block;
+}
+
+
+.modal-footer > * {
+  margin: 0;
+}

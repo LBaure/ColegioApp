@@ -1,0 +1,22 @@
+.toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  font-weight: 600;
+  z-index: 99!important;
+}
+
+.sideBar {
+  margin-left: 400px;
+  transition: all ease .3s;
+}
+
+
+@media screen and (max-width: 991px) {
+  .sideBar {
+    margin-left: 0;
+    transition: all ease .3s;
+  }
+}

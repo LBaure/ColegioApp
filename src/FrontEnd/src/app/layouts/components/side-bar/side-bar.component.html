@@ -1,0 +1,76 @@
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <div class="row w-100">
+      <div class="col-12 ">
+        <div class="align-items-center justify-content-between d-flex">
+          <div class="d-flex align-items-center fw-600">
+            <img class="header-logo" >
+            <!-- <div class="ms-2 d-none d-xl-inline-block">
+              <span >Expedientes Web</span><br>
+              <small>DTI - Ministerio de Finanzas Públicas</small>
+            </div> -->
+          </div>
+          <div class="cursor-pointer">
+            <span class="material-icons" (click)="toggle()">close</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="list-unstyled ps-0">
+      <li class="mb-1" *ngFor="let item of menu;">
+        <button
+          class="btn btn-toggle align-items-center slide-item"
+          type="button"
+          data-bs-toggle="collapse"
+          [attr.data-bs-target]="'#indice'+item.idOpcionMenu"
+          aria-expanded="true"
+          aria-controls="collapseExample"
+          *ngIf="item.mostrarMenu"
+        >
+          <span class="material-icons px-2">{{ item.icono }}</span>
+          {{item.nombre}}
+          <i class="bi bi-chevron-down icon-toggle"></i>
+        </button>
+        <div class="collapse border-list" [id]="'indice'+item.idOpcionMenu">
+          <ul class="btn-toggle-nav list-unstyled pb-1 small" >
+            <li *ngFor="let sub of item.opciones">
+              <a
+                class="dark-text side-link"
+                *ngIf="!sub.opciones.length && sub.mostrarMenu"
+                [id]="sub.url"
+                routerLinkActive="active"
+                routerLink="{{ sub.url }}"
+                (click)="validar(sub.url)"
+              >
+              <span class="material-icons px-2">{{ sub.icono }}</span>
+                {{sub.nombre}}
+              </a>
+              <ul *ngIf="sub.opciones.length" class="list-unstyled ps-0">
+                <button
+                  class="btn btn-toggle align-items-center slide-item"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  [attr.data-bs-target]="'#indice'+ sub.idOpcionMenu"
+                  aria-expanded="true"
+                  aria-controls="collapseExample"
+                >
+                  <span class="material-icons px-2">{{ sub.icono }}</span>
+                  {{sub.nombre}}
+                  <i class="bi bi-chevron-down icon-toggle"></i>
+                </button>
+                <div class="collapse border-list" [id]="'indice'+sub.idOpcionMenu">
+                  <ul class="btn-toggle-nav list-unstyled fw-normal pb-1" *ngFor="let child of sub.opciones">
+                    <li><a  class="dark-text side-link" [id]="child.path" routerLinkActive="active" routerLink="{{ child.url }}" >{{child.nombre}}</a></li>
+                  </ul>
+                </div>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+

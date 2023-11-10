@@ -1,0 +1,174 @@
+<div class="p-3">
+  <div class="row" *ngIf="paso1">
+    <div class="col-lg-12">
+      <h4 class="form-check-label">Autenticación en dos pasos</h4>
+      <p>
+        La autenticación en dos pasos es una capa adicional de seguridad cuando inicias sesión. Una vez habilitado,
+        el sistema le solicitara un pin, una contraseña o un token de seguridad, esta verificación ayuda a proteger la privacidad y la seguridad
+        de tu información personal  y de la <cite title="Ministerio de Finanzas Públicas">Institución.</cite>
+      </p>
+    </div>
+    <div class="col-lg-12">
+      <div class="d-flex gap-5 align-items-center">
+        <div class="flex-grow-0 d-none d-sm-block">
+          <div class="rounded-circle">
+            <span  translate="no" class="material-icons device text-muted">devices</span>
+            <span  translate="no" class="material-icons mobile_friendly text-muted">mobile_friendly</span>
+            <span  translate="no" class="material-icons verified_user text-muted">verified_user</span>
+          </div>
+        </div>
+        <div class="flex-shrink-1">
+          <h6 class="text-muted">Seguridad sin complicaciones</h6>
+          <p>Además de tu contraseña registrada en el <cite>Sistema de Autenticación de Usuarios</cite> -SAU-, la verificación en dos pasos o Autenticación multifactor añade un segundo paso rápido para verificar que eres tú.</p>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button
+        *ngIf="!dobleFactorActivado"
+        type="button"
+        class="btn btn-primary text-white px-3"
+        (click)="pasoCompletado(2)"
+      >
+        Habilitar
+      </button>
+      <button
+        *ngIf="dobleFactorActivado"
+        type="button"
+        class="btn btn-danger text-white px-3"
+        (click)="inhabilitarDobleFactor()"
+
+      >
+        Inhabilitar
+      </button>
+    </div>
+  </div>
+  <div class="row" *ngIf="paso2">
+      <div class="row justify-content-center">
+        <div class="col-lg-7">
+          <h4 class="form-check-label">
+            <button
+              class="btn btn-icon btn-ghost-dark"
+              (click)="pasoCompletado(1)"
+            >
+              <span translate="no" class="material-icons">arrow_back</span>
+            </button>
+            Autenticación en dos pasos
+          </h4>
+        </div>
+        <div class="col-lg-7 mt-4">
+          <div class="list-group">
+            <li class="list-group-item list-group-item-action" *ngFor="let item of itemsPrivacyPolicy; let position = index">
+              <div class="d-flex gap-3 align-items-center">
+                <label  [for]="item.nombre" class="cursor-pointer w-100">
+                  <div class="flex-grow-1">
+                      <div class="d-flex">
+                        <div class="flex-shrink-1 ms-2">
+                          <h6 class="fs-14 mb-0">{{item.nombre }}</h6>
+                          <small class="text-muted">{{ item.descripcion }}</small>
+                        </div>
+                      </div>
+                  </div>
+                </label>
+                <div class="flex-shrink-0">
+                  <input
+                    class="form-check-input form-check-info"
+                    type="checkbox"
+                    role="switch"
+                    [name]="item.nombre"
+                    [id]="item.nombre"
+                    (change)="administrarCambioPolitica(position, item)"
+                    [checked]="setCheck[position]"
+                  >
+                </div>
+              </div>
+            </li>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
+  <div class="row" *ngIf="paso3">
+    <div class="row justify-content-center">
+      <div class="col-lg-7">
+        <h4 class="form-check-label">
+          <button
+            class="btn btn-icon btn-ghost-dark"
+            (click)="reiniciarFormulario()"
+          >
+            <span translate="no" class="material-icons">arrow_back</span>
+          </button>
+          Autenticación en dos pasos
+        </h4>
+      </div>
+      <div class="col-lg-7 mt-4">
+        <form action="" [formGroup]="FormPoliticaPrivacidad">
+          <div *ngIf="etiquetaInput" class="w-50">
+              <label class="form-label required">Configuración de {{ configCampos.etiqueta }}</label>
+              <div class="form-icon right">
+                <input
+                  id="campoSeguridad"
+                  class="form-control"
+                  [type]="configCampos.mascara ? 'text': 'password'"
+                  formControlName="valor"
+                  (keypress)="getMax($event, configCampos.maxlength)"
+                  autocomplete="off"
+                  (copy)="false"
+                  (paste)="false"
+                />
+                <span translate="no" *ngIf="!configCampos.mascara" id="iconoCampo" class="material-icons cursor-pointer" (click)="cambiarIconoInput('campoSeguridad', 'iconoCampo')">visibility_off</span>
+              </div>
+              <div  *ngIf="valor?.invalid && (valor?.dirty || valor?.touched)">
+                <small *ngIf="valor?.hasError('required')" class="text-danger d-block">{{ configCampos.mensajeRequired }}</small>
+                <small *ngIf="valor?.hasError('pattern')" class="text-danger d-block">{{ configCampos.mensajePattern }}</small>
+                <small *ngIf="valor?.hasError('minlength')" class="text-danger d-block">{{ configCampos.mensajeMinlength }}</small>
+              </div>
+          </div>
+          <div *ngIf="etiquetaInput" class="w-50 mt-2">
+            <label class="form-label required">Confirme su {{ configCampos.etiqueta }}</label>
+            <div class="form-icon right">
+              <input
+                id="campoSeguridadConfirmar"
+                class="form-control"
+                [type]="configCampos.mascara ? 'text': 'password'"
+                formControlName="confirmarValor"
+                (keypress)="getMax($event, configCampos.maxlength)"
+                autocomplete="off"
+                (copy)="false"
+                (paste)="false"
+              />
+              <span translate="no" *ngIf="!configCampos.mascara" id="iconoCampoConfirmar" class="material-icons cursor-pointer" (click)="cambiarIconoInput('campoSeguridadConfirmar', 'iconoCampoConfirmar')">visibility_off</span>
+            </div>
+            <div *ngIf="confirmarValor?.invalid && (confirmarValor?.dirty || confirmarValor?.touched)">
+              <small *ngIf="confirmarValor?.hasError('required')" class="text-danger d-block">{{ configCampos.mensajeRequired }}</small>
+            </div>
+            <div *ngIf="confirmarValor?.dirty">
+              <small *ngIf="validarCoincidencia()" class="text-danger d-block">Los valores no coinciden</small>
+            </div>
+          </div>
+          <li class="d-flex gap-5 align-items-center mt-3">
+            <div class="flex-grow-1">
+              <h6 class="required">Intentos de Inicio de Sesión</h6>
+              <p>Puedes establecer el numero de intentos de inicio de sesion fallidos,
+                al alcanzar el número máximo de intentos de inicio de sesión fallidos, se bloquea la cuenta temporalmente.</p>
+            </div>
+            <div class="flex-shrink-0">
+              <select class="form-select" formControlName="intentosLogin">
+                <option *ngFor="let item of itemsAttemps" [ngValue]="item">{{item}}</option>
+              </select>
+            </div>
+          </li>
+        </form>
+      </div>
+      <div class="col-lg-7 modal-footer">
+        <button
+          type="submit"
+          class="btn btn-success text-white"
+          (click)="!loading ? guardarPoliticaPrivacidad() : ''"
+          [disabled]="!FormPoliticaPrivacidad.valid || !lockSaveButton"
+          > Guardar &amp; Cerrar Sesión</button>
+      </div>
+    </div>
+  </div>
+</div>

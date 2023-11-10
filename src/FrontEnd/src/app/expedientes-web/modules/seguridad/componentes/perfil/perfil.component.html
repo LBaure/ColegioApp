@@ -1,0 +1,61 @@
+<form class="row g-3" [formGroup]="formProfile">
+  <div class="col-lg-6">
+    <label class="form-label" for="nitUsuario">Nit Usuario</label>
+    <input type="text" class="form-control" formControlName="nitUsuario" id="nitUsuario" >
+  </div>
+  <div class="col-lg-6">
+    <label class="form-label required">Nombre Completo</label>
+    <input type="text" class="form-control" placeholder="Ingrese sus nombres" formControlName="nombreCompleto" focus>
+    <div *ngIf="nombreCompleto?.invalid && (nombreCompleto?.dirty || nombreCompleto?.touched)">
+      <small *ngIf="nombreCompleto?.hasError('required')" class="text-danger">Campo obligatorio</small>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <label class="form-label">Correo Institucional</label>
+    <input type="text" class="form-control" placeholder="Ingrese su correo electrónico Institucional" formControlName="emailInstitucional">
+  </div>
+  <div class="col-lg-6">
+    <label class="form-label required">Correo Personal</label>
+    <input type="text" class="form-control" placeholder="Ingrese su correo electrónico personal" formControlName="emailPersonal">
+    <div *ngIf="emailPersonal?.invalid && (emailPersonal?.dirty || emailPersonal?.touched)">
+      <small *ngIf="emailPersonal?.hasError('required')" class="text-danger">Campo obligatorio, ingrese un correo electrónico  válido.</small>
+      <small *ngIf="emailPersonal?.hasError('pattern')" class="text-danger">Ingrese un correo electrónico  válido</small>
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <label class="form-label">Institución</label>
+    <select class="form-select" formControlName="institucion">
+      <option selected>Seleccione una Institución</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+  <div class="col-lg-6">
+    <label class="form-label">Unidad Ejecutora</label>
+    <select class="form-select" formControlName="unidadEjecutora">
+      <option selected>Seleccione una dependencia</option>
+      <option value="1">One</option>
+      <option value="2">Two</option>
+      <option value="3">Three</option>
+    </select>
+  </div>
+  <div class="col-lg-6">
+    <label class="form-label">Puesto / Cargo</label>
+    <input type="text" class="form-control" placeholder="Ingrese su cargo Actual" formControlName="cargo">
+  </div>
+  <div class="col-lg-3">
+    <label class="form-label">Código de Empleado</label>
+    <input type="text" class="form-control" onkeypress="return false;" formControlName="codigoEmpleado">
+  </div>
+  <div class="col-lg-3">
+    <label class="form-label required">Telefono</label>
+    <input type="text" class="form-control" placeholder="Ingrese su número de teléfono " formControlName="telefono">
+    <div *ngIf="telefono?.invalid && (telefono?.dirty || telefono?.touched)">
+      <small *ngIf="telefono?.hasError('required')" class="text-danger">Campo obligatorio</small>
+    </div>
+  </div>
+  <div class="col-lg-12 text-end">
+    <button type="submit" class="btn btn-success text-white" (click)="btnSaveProfile()">Guardar información</button>
+  </div>
+</form>

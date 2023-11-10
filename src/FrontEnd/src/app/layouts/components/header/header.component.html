@@ -1,0 +1,93 @@
+<header class="d-flex d-flex justify-content-between align-items-center border-bottom">
+  <div class="d-flex align-items-center gap-3">
+    <button class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" (click)="toggle()">
+      <span translate="no" class="material-icons">{{ iconMenu }}</span>
+    </button>
+    <div id="info-direccion" class="text-truncate">
+      <div class="d-flex align-items-center" id="info">
+        <a routerLink="">
+          <img class="header-logo" >
+        </a>
+        <div class="titulo-sistema d-none d-xl-inline-block" >
+          <span >Dirección de Tecnologías de la Información</span><br>
+          <small>Ministerio de Finanzas Públicas</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="d-flex align-items-center gap-3 h-100">
+    <div class="header-item">
+        <button class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" (click)="cambiarApariencia()">
+          <i translate="no" [class]="iconMode" ></i>
+        </button>
+      </div>
+      <div class="header-item ">
+        <button class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" routerLink="seguridad/mi-perfil">
+          <span translate="no" class="material-icons icon-spin">settings</span>
+        </button>
+      </div>
+
+      <div class="dropdown header-item topbar-user">
+        <button type="button" class="btn btn-user" data-bs-toggle="dropdown">
+          <span class="d-flex align-items-center">
+            <span translate="no" class="material-icons">account_circle</span>
+            <span class="text-start ms-xl-2">
+                <span translate="no" class="d-none d-lg-inline-block ms-1 fw-medium user-name-text">{{usuario.name}}</span>
+                <span translate="no" class="d-none d-lg-block ms-1 fs-12 user-name-sub-text">{{usuario.nit}}</span>
+            </span>
+          </span>
+        </button>
+        <div class="dropdown-menu">
+            <h6 class="dropdown-header">Bienvenido {{ name }}</h6>
+            <li class="divider dropdown-divider"></li>
+            <a class="dropdown-item" routerLink="seguridad/mi-perfil">
+              <i class="bi bi-person-circle text-muted fs-16 align-middle me-2"></i>
+              <span class="align-middle">Mi perfil</span>
+            </a>
+            <a class="dropdown-item" (click)="logout()"><i class="bi bi-box-arrow-right text-muted fs-16 align-middle me-2"></i> <span class="align-middle">Cerrar sesión</span></a>
+        </div>
+      </div>
+
+
+      <!-- <div class="dropdown header-item topbar-user" dropdown>
+        <button
+          id="button-basic"
+          dropdownToggle
+          type="button"
+          class="btn  btn-user dropdown-toggle"
+          aria-controls="dropdown-basic"
+          >
+          <span class="d-flex align-items-center">
+            <span translate="no" class="material-icons">account_circle</span>
+            <span class="text-start ms-xl-2">
+                <span translate="no" class="d-none d-lg-inline-block ms-1 fw-medium user-name-text">{{usuario.name}}</span>
+                <span translate="no" class="d-none d-lg-block ms-1 fs-12 user-name-sub-text">{{usuario.nit}}</span>
+            </span>
+          </span>
+        </button>
+        <ul
+          id="dropdown-basic"
+          *dropdownMenu
+          class="dropdown-menu"
+          role="menu"
+          aria-labelledby="button-basic"
+        >
+          <h6 class="dropdown-header">Bienvenido {{  name }}</h6>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem">
+            <a class="dropdown-item" routerLink="seguridad/mi-perfil">
+              <i class="bi bi-person-circle text-muted fs-16 align-middle me-2"></i>
+              Mi perfil
+            </a>
+          </li>
+          <li role="menuitem">
+            <a class="dropdown-item" (click)="logout()">
+              <i class="bi bi-box-arrow-right text-muted fs-16 align-middle me-2"></i>
+              Cerrar sesión
+            </a>
+          </li>
+        </ul>
+      </div> -->
+
+  </div>
+</header>

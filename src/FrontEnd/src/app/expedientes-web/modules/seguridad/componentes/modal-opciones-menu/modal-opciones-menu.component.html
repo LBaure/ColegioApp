@@ -1,0 +1,145 @@
+<div class="modal-content modal-minfin">
+  <div class="modal-body">
+    <h4 class="modal-title mb-3">{{ tituloModal }}</h4>
+    <form class="row g-3" [formGroup]="formOpcionMenu">
+      <div class="col-lg-6">
+        <div class="row g-3">
+          <div class="col-md-12">
+            <label class="form-label required">Nombre Opción</label>
+            <input type="text" class="form-control" formControlName="nombre" />
+            <div *ngIf="nombre?.invalid && (nombre?.dirty || nombre?.touched)">
+              <small *ngIf="nombre?.hasError('required')" class="text-danger">Campo obligatorio</small>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label class="form-label required">Descripción</label>
+            <input type="text" class="form-control" formControlName="descripcion" />
+            <div *ngIf="descripcion?.invalid && (descripcion?.dirty || descripcion?.touched)">
+              <small *ngIf="descripcion?.hasError('required')" class="text-danger">Campo obligatorio</small>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label class="form-label">Icono</label>
+            <div class="form-icon right">
+              <input
+                type="text"
+                class="form-control form-control-icon"
+                id="iconInput"
+                formControlName="icono"
+                (keyup)="iconMenu = this.icono?.value "
+                maxlength="30"
+              />
+              <span class="material-icons">{{ iconMenu }}</span>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label class="form-label">Ruta</label>
+            <input type="text" class="form-control" formControlName="url" />
+          </div>
+          <div class="col-md-12">
+            <div class="list-group">
+              <li class="list-group-item px-0">
+                <div class="d-flex align-items-center">
+                  <label for="consulta" class="cursor-pointer w-100">
+                    <div class="flex-grow-1">
+                        <div class="d-flex">
+                          <div class="flex-shrink-1">
+                            <span class="d-block">Mostrar en menú</span>
+                            <small class="text-muted">Esta opción se mostrará en el listado del menú del usuario.</small>
+                          </div>
+                        </div>
+                    </div>
+                  </label>
+                  <div class="flex-shrink-0">
+                    <input
+                      id="consulta"
+                      type="checkbox"
+                      class="form-check-input me-1 cursor-pointer"
+                      formControlName="mostrarMenu"
+                    >
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row g-3">
+
+          <div class="col-md-12">
+            <label class="form-label">Menú padre</label>
+            <select class="form-select"  formControlName="idOpcionMenuPadre" (ngModelChange)="filtrar('select')">
+              <option *ngFor="let item of itemsOpcionesMenuSelect" [value]="item.idOpcionMenu">{{ item.nombre }}</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Orden</label>
+            <input
+              type="number"
+              class="form-control"
+              min="1"
+              max="99"
+              maxlength="2"
+              formControlName="orden"
+              (change)="filtrar('input');"
+
+            />
+            <div *ngIf="orden?.invalid && (orden?.dirty || orden?.touched)">
+              <small *ngIf="orden?.hasError('required')" class="text-danger">Campo obligatorio</small>
+              <small *ngIf="orden?.hasError('pattern')" class="text-danger">Valores permitidos 0 - 99</small>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Estado</label>
+            <select class="form-select" formControlName="activo">
+              <option value="1">Activo</option>
+              <option value="0">Inactivo</option>
+            </select>
+          </div>
+          <div class="col-lg-12 bg-light">
+
+            <h6 class="p-3 mb-0 fs-14">Previsualización</h6>
+            <div class="d-flex align-items-center px-3 " >
+              <ul class="list-unstyled ps-0">
+                <li class="mb-2" *ngFor="let item of itemsOpcionesPrevizualizar;">
+                    <div class="d-flex align-items-center">
+                      <span class="material-icons px-2">{{ item.icono }}</span>
+                      <span class="fw-bold">{{item.nombre}}</span>
+                    </div>
+                  <ul class="border-list btn-toggle-nav list-unstyled pt-2 small" *ngFor="let sub of item.opciones">
+                    <li class="side-link">
+                      <div class="d-flex align-items-center">
+                        <!-- <span class="material-icons px-2">{{ sub.icono }}</span> -->
+                        <span class="px-3" >{{sub.nombre}}</span>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-success text-white"
+      [disabled]="loading"
+      (click)="loading ? '' : btnAceptar()"
+    >
+      Guardar Cambios
+    </button>
+    <button
+      type="button"
+      class="btn btn-soft-danger"
+      (click)="bsModalRef.hide()"
+    >
+      Cancelar
+    </button>
+  </div>
+
+</div>

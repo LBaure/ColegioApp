@@ -1,0 +1,184 @@
+<div class="p-3">
+  <div *ngIf="mq === 'lg' || mq === 'xl' then laptop else movil"></div>
+  <ng-template #laptop>
+    <div class="card overflow-hidden">
+      <div class="card-header">
+        <h4 class="card-title">Opciones del Menú</h4>
+        <div class="row align-items-center">
+          <div class="col-8">
+            <div class="form-icon right">
+              <input
+                type="text"
+                class="form-control form-control-icon"
+                placeholder="Búscar"
+                [(ngModel)]="filtrarBusqueda"
+              />
+              <i *ngIf="!filtrarBusqueda.length" class="bi bi-search"></i>
+              <i *ngIf="filtrarBusqueda.length" class="bi bi-x-lg cursor-pointer" (click)="filtrarBusqueda = ''"></i>
+            </div>
+          </div>
+          <div class="col-4 text-end">
+            <button
+              *ngIf="permisos.inserta"
+              type="button"
+              class="btn btn-primary btn-label"
+              (click)="abrirModalOpcionMenu(false)"
+            >
+              <i class="bi bi-plus label-icon"></i>
+              Agregar Opción
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-core">
+            <thead>
+              <tr>
+                <th
+                  *ngFor="let item of headers"
+                  [class]="item.class"
+                  [width]="item.width"
+                  [style]="'text-align: ' + item.align"
+                  (click)="ordenarPorEncabezado(item.value)"
+                  [id]="item.value"
+                >
+                  {{ item.text }}
+                  <span
+                    *ngIf="item.orderBy"
+                    class="material-icons fs-14 cursor-pointer ms-2"
+                  >
+                    <span>{{ ascendente ? "arrow_upward" : "arrow_downward" }}</span>
+                  </span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of listadoOpcionesMenuFiltrados | paginate : { itemsPerPage: itemsPage, currentPage: page }">
+                <td>
+                  <span>
+                    <div class="d-flex align-items-center">
+                      <div class="flex-shrink-0 me-3">
+                        <div class="avatar-sm bg-light rounded p-1">
+                          <span *ngIf="item.icono" class="material-icons px-2">{{ item.icono }}</span>
+                        </div>
+                      </div>
+                      <div class="flex-grow-1">
+                        <h5 class="fs-14 mb-1">{{ item.nombre }}</h5>
+                        <p class="text-muted mb-0">{{ item.descripcion }}</p>
+                      </div>
+                    </div>
+                  </span>
+                </td>
+                <td>
+                  <h5 class="fs-14 mb-1">{{ item.nombreMenuPadre }}</h5>
+                </td>
+                <td>
+                  <h5 class="fs-14 mb-1">{{ item.url }}</h5>
+                </td>
+                <td align="center">
+                  <div class="flex-shrink-0 avatar-xs">
+                    <div class="avatar-title bg-soft-danger text-danger rounded">
+                      <span>{{ item.orden }}</span>
+                    </div>
+                  </div>
+                </td>
+                <td
+                  class="bg-success text-white text-uppercase fw-semibold"
+                  [class.bg-danger]="item.activo === 0"
+                  align="center"
+                >
+                  {{ item.activo === 1 ? "Activo" : "Inactivo" }}
+                </td>
+                <td align="center" *ngIf="permisos.elimina || permisos.modifica ">
+                  <button
+                    *ngIf="permisos.modifica"
+                    class="btn btn-icon btn-ghost-primary"
+                    (click)="abrirModalOpcionMenu(true, item)"
+                  >
+                    <span class="material-icons">edit</span>
+                  </button>
+                  <button
+                    *ngIf="permisos.elimina"
+                    class="btn btn-icon btn-ghost-danger"
+                    (click)="btnEliminar(item)"
+                  >
+                    <span class="material-icons">delete</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div *ngIf="!listadoOpcionesMenuFiltrados.length"  [class]="resultadobusqueda ? 'alert-warning' : 'alert-danger'" class="alert alert-dismissible fade show" role="alert">
+          <span *ngIf="!resultadobusqueda"><strong>Lo sentimos!</strong> No encontramos resultados</span>
+          <span *ngIf="resultadobusqueda" ><strong>Lo sentimos!</strong> No pudimos encontrar ningún resultado para su búsqueda. Use palabras más genéricas o revise su ortografía.</span>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #movil>
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Búscar"
+          [(ngModel)]="filtrarBusqueda"
+        />
+        <button
+          *ngIf="permisos.inserta"
+          type="button"
+          class="btn btn-primary btn-fab"
+          (click)="abrirModalOpcionMenu(false)"
+        >
+          <span class="material-icons">add</span>
+        </button>
+      </div>
+      <div class="col-md-6 sm-12" *ngFor="let item of listadoOpcionesMenuFiltrados | paginate : { itemsPerPage: itemsPage, currentPage: page }">
+        <div class="list-group" >
+          <a class="card" [class]="item.activo === 1 ? 'bar-left-success' : 'bar-left-danger'">
+            <div class="card-header">
+              <div class="d-flex align-items-center">
+                <div class="card-title mb-0">
+                  <strong>{{ item.nombre }}</strong>
+                  <span class="badge ms-1 mb-0" [class]="item.activo === 1 ? 'badge-soft-success' : 'badge-soft-danger'">{{ (item.activo === 1) ? "Activo" : "Inactivo" }}</span>
+                </div>
+                <div class="ms-auto my-auto">
+                  <div class="btn-group" dropdown>
+                    <button dropdownToggle type="button" class="btn btn-icon-sm light">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="button-animated">
+                      <li *ngIf="permisos.modifica" role="menuitem"><a class="dropdown-item" (click)="abrirModalOpcionMenu(true, item)">Editar</a></li>
+                      <li *ngIf="permisos.elimina" role="menuitem"><a class="dropdown-item" (click)="btnEliminar(item)">Eliminar</a></li>
+                  </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-body border-top">
+              <p class="mb-1"><span>Descripción:</span> {{item.descripcion}}</p>
+              <p class="mb-1"><span>Ruta:</span> {{item.url}}</p>
+              <p class="mb-1"><span>Menú padre:</span> {{item.nombreMenuPadre}}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!listadoOpcionesMenuFiltrados.length"  [class]="resultadobusqueda ? 'alert-warning' : 'alert-danger'" class="alert alert-dismissible fade show" role="alert">
+      <span *ngIf="!resultadobusqueda"><strong>Lo sentimos!</strong> No encontramos resultados</span>
+      <span *ngIf="resultadobusqueda" ><strong>Lo sentimos!</strong> No pudimos encontrar ningún resultado para su búsqueda. Use palabras más genéricas o revise su ortografía.</span>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </ng-template>
+  <div *ngIf="listadoOpcionesMenuFiltrados.length > itemsPage " class="d-flex justify-content-center">
+    <pagination-controls
+      class="pagination-rounded"
+      (pageChange)="page = $event"
+      previousLabel=""
+      nextLabel=""
+    ></pagination-controls>
+  </div>
+</div>

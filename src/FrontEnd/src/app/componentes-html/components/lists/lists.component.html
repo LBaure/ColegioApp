@@ -1,0 +1,206 @@
+<div>
+  <minfin-breadcrumb
+    title="Diseño de Listas"
+    [routes]="itemsRoutes"
+    separator="|"
+    classPath="breadcrumb-path"
+  ></minfin-breadcrumb>
+  <div class="p-3">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <div class="list-group">
+          <a routerLink="../buttons" class="list-group-item list-group-item-action active" aria-current="true">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Titulo del elemento - Ir a Tablas</h5>
+              <small>3 days ago</small>
+            </div>
+            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, iste laboriosam quae consequatur voluptatibus dolorem officia hic at quibusdam alias amet quod excepturi nemo tenetur, quasi nobis ducimus. Iste, doloribus!</p>
+            <small>And some small print.</small>
+          </a>
+          <a routerLink="../buttons" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Titulo del elemento - Diseño de Botones</h5>
+              <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis soluta autem tempora, delectus expedita nihil aut nostrum! Delectus, architecto? Odio maxime fugit repellendus cumque incidunt repudiandae blanditiis voluptate laborum non?</p>
+            <small class="text-muted">And some muted small print.</small>
+          </a>
+          <a routerLink="../pagination" class="list-group-item list-group-item-action">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Titulo del elemento - Ir a Paginación</h5>
+              <small class="text-muted">3 days ago</small>
+            </div>
+            <p class="mb-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto adipisci a quam hic nihil laborum maxime, nemo repudiandae, error, dolore sit temporibus rerum harum quas distinctio reprehenderit corrupti earum. Excepturi!</p>
+            <small class="text-muted">And some muted small print.</small>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <ol class="list-group list-group-numbered">
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Subheading</div>
+              Content for list item
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Subheading</div>
+              Content for list item
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="ms-2 me-auto">
+              <div class="fw-bold">Subheading</div>
+              Content for list item
+            </div>
+            <span class="badge bg-primary rounded-pill">14</span>
+          </li>
+        </ol>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 mt-2">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+            <label class="form-check-label" for="firstCheckbox">First checkbox</label>
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox">
+            <label class="form-check-label" for="secondCheckbox">Second checkbox</label>
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox">
+            <label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="firstRadio" checked>
+            <label class="form-check-label" for="firstRadio">First radio</label>
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="secondRadio">
+            <label class="form-check-label" for="secondRadio">Second radio</label>
+          </li>
+          <li class="list-group-item">
+            <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="" id="thirdRadio">
+            <label class="form-check-label" for="thirdRadio">Third radio</label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12  mt-2">
+        <div class="list-group">
+          <div class="list-group-item list-group-item-action" *ngFor="let item of items">
+            <div class="float-end">
+              <!-- <button class="btn btn-icon-sm light">
+                <i class="bi bi-three-dots-vertical"></i>
+              </button> -->
+              <div class="btn-group" dropdown>
+                <button id="button-animated" dropdownToggle type="button" class="btn btn-icon-sm light">
+                        <i class="bi bi-three-dots-vertical"></i>
+                </button>
+                <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu dropdown-menu-right"
+                    role="menu" aria-labelledby="button-animated">
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:void(0);">Eliminar</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:void(0);">Editar</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex mb2-align-items-center">
+              <div class="flex-shrink-0">
+                <img src="https://themesbrand.com/velzon/html/default/assets/images/users/avatar-4.jpg" alt="" class="avatar-sm rounded-circle">
+              </div>
+              <div class=" ms-3">
+                <h5 class="list-title fs-15 mb-1">Angela Bernier</h5>
+                <p class="list-text mb-0 fs-12">5 days Ago</p>
+                <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam dolorem magnam, maiores atque at veniam neque impedit quod possimus quia, voluptatibus quos quibusdam eum quasi provident facilis reiciendis numquam nulla?</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12  mt-2">
+        <!-- <div *ngFor="let item of itemsCatalogos">
+          <h5 class="list-title fs-15 mb-1 ms-3">{{ item.nombre }}</h5>
+          <div class="list-group">
+          <div class="list-group-item mb-2">
+            <div class="d-flex align-items-center justify-content-between mb-2 border-bottom">
+              <h6 class="list-title fs-12">Tipo</h6>
+              <h6 class="list-text fs-12 text-muted">{{ item.nombre }}</h6>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-2 border-bottom">
+              <h6 class="list-title fs-12">Valor defecto</h6>
+              <h6 class="list-text fs-12 text-muted">{{ item.tipoCatalogoTexto }}</h6>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-2 border-bottom">
+              <h6 class="list-title fs-12 me-2">Descripción</h6>
+              <h6 class="list-text fs-12 text-muted text-end">{{ item.descripcion }}</h6>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+        <div class="list-group">
+          <div class="list-group-item  mb-2 rounded" *ngFor="let item of itemsCatalogos">
+            <div class="float-end">
+              <div class="btn-group" dropdown>
+                <button id="button-animated" dropdownToggle type="button" class="btn btn-icon-sm light">
+                  <i class="bi bi-three-dots-vertical"></i>
+                </button>
+                <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="button-animated">
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:void(0);">Eliminar</a></li>
+                  <li role="menuitem"><a class="dropdown-item" href="javascript:void(0);">Editar</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-flex mb2-align-items-center">
+              <div class="mb-2">
+                <h5 class="list-title fs-15 mb-1">{{ item.nombre }}</h5>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-2 border-bottom">
+              <h6 class="list-title fs-12 me-2">Tipo Catálogo</h6>
+              <h6 class="list-text fs-12 text-muted text-end">{{ item.tipoCatalogoTexto }}</h6>
+            </div>
+            <div class="d-flex align-items-center justify-content-between mb-2 border-bottom" >
+              <h6 class="list-title fs-12 me-2">Descripción</h6>
+              <h6 class="list-text fs-12 text-muted text-end">{{ item.descripcion }}</h6>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12  mt-2">
+      <div class="list-group">
+        <li class="list-group-item" *ngFor="let item of itemsCatalogos">
+          <div class="d-flex align-items-center">
+            <div class="flex-grow-1">
+              <div class="d-flex">
+                <div class="flex-shrink-0 avatar-xs">
+                  <div class="avatar-title bg-soft-danger text-danger rounded">
+                    <span>{{ item.idCatalogo }}</span>
+                  </div>
+                </div>
+                <div class="flex-shrink-1 ms-2">
+                  <h6 class="fs-14 mb-0">{{ item.nombre }}</h6>
+                  <small class="text-muted">{{ item.descripcion }}</small>
+                </div>
+              </div>
+            </div>
+            <div class="flex-shrink-0">
+              <span class="text-success">{{ item.tipoCatalogoTexto }}</span>
+            </div>
+          </div>
+        </li>
+      </div>
+    </div>
+
+  </div>
+</div>

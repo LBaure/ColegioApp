@@ -1,0 +1,15 @@
+.disabled {
+  pointer-events:none;
+  opacity:0.6;
+  color: var(--bs-breadcrumb-item-active-color);
+}
+
+.breadcrumb-divider:not(:first-child) {
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  padding-left: var(--bs-breadcrumb-item-padding-x);
+  color: var(--bs-breadcrumb-divider-color);
+}
+nav {
+  z-index: 99;
+  position: relative;
+}

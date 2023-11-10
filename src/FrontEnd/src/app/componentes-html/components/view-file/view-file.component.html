@@ -1,0 +1,32 @@
+<div class="modal-content modal-minfin" [class]="colorModal">
+  <div class="modal-header modal-file-upload justify-content-between">
+      <div class="w-80">
+        <h6 class="modal-title pull-left text-truncate">{{ nameFile }}</h6>
+      </div>
+      <div class="button-actions-file-upload">
+        <button class="btn text-white" (click)="maximizeModal()">
+          <i [class]="iconMaximize"></i>
+        </button>
+        <button class="btn text-white" (click)="bsModalRef.hide()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+  </div>
+  <div *ngIf="esImagen; else elseBlock" class="card card-file-upload">
+    <img [src]="path" class="img-fluid" alt="...">
+  </div>
+  <ng-template #elseBlock>
+    <div class="contenedor-pdf">
+      <embed
+        [src]="path"
+        type="application/pdf"
+        frameBorder="0"
+        scrolling="auto"
+        height="500"
+        width="100%"
+      >
+    </div>
+
+  </ng-template>
+
+</div>

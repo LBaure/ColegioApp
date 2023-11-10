@@ -1,0 +1,528 @@
+<div>
+  <minfin-breadcrumb
+    title="Diseño de tablas"
+    [routes]="itemsRoutes"
+    separator=">"
+    classPath="breadcrumb-path"
+  ></minfin-breadcrumb>
+  <div class="p-3">
+    <div class="row">
+      <div class="col-12">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Responsive Tables</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="responsive-table-showcode" class="form-label text-muted">Show Code</label>
+                <input class="form-check-input code-switcher" type="checkbox" id="responsive-table-showcode">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="table-responsive">
+              <table class="table table-core">
+                <thead>
+                  <tr>
+                      <th>ID</th>
+                      <th>Catálogo</th>
+                      <th>Descripción</th>
+                      <th>Tipo Catálogo</th>
+                      <th>Acciones</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let item of itemsCatalogos | paginate : { itemsPerPage: 5, currentPage: page }">
+                    <td>{{ item.idCatalogo }}</td>
+                    <td >{{ item.nombre }}</td>
+                    <td>{{ item.descripcion }}</td>
+                    <td class="bg-table text-uppercase fw-semibold" [class.bg-danger]="item.tipoCatalogo === 0" align="center">{{ item.tipoCatalogoTexto }}</td>
+                    <td align="center">
+                      <button class="btn btn-icon btn-ghost-secondary rounded-circle" style="color: var(--bs-success);">
+                        <span class="material-icons">edit</span>
+                      </button>
+                      <button class="btn btn-icon btn-ghost-secondary rounded-circle" style="color: var(--bs-danger);">
+                        <span class="material-icons">delete</span>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <pagination-controls
+                class="pagination-round"
+                (pageChange)="page = $event"
+                previousLabel=""
+                nextLabel=""
+              ></pagination-controls>
+            </div>
+          </div>
+        </div>
+        <div class="card overflow-hidden">
+          <div class="card-body">
+            <table class="table table-core">
+              <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Catálogo</th>
+                    <th>Descripción</th>
+                    <th>Tipo Catálogo</th>
+                    <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let item of itemsCatalogos | paginate : { itemsPerPage: 5, currentPage: page }">
+                  <td>{{ item.idCatalogo }}</td>
+                  <td >{{ item.nombre }}</td>
+                  <td>{{ item.descripcion }}</td>
+                  <td class="bg-table text-uppercase fw-semibold" [class.bg-danger]="item.tipoCatalogo === 0" align="center">{{ item.tipoCatalogoTexto }}</td>
+                  <td align="center">
+                    <button class="btn btn-icon btn-ghost-secondary rounded-circle" style="color: var(--bs-success);">
+                      <span class="material-icons">edit</span>
+                    </button>
+                    <button class="btn btn-icon btn-ghost-secondary rounded-circle" style="color: var(--bs-danger);">
+                      <span class="material-icons">delete</span>
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <pagination-controls
+              class="pagination-round"
+              (pageChange)="page = $event"
+              previousLabel=""
+              nextLabel=""
+            ></pagination-controls>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Responsive Tables</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="responsive-table-showcode" class="form-label text-muted">Show Code</label>
+                <input class="form-check-input code-switcher" type="checkbox" id="responsive-table-showcode">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">Use <code>table-responsive</code> class to make any table responsive across all
+              viewports. Responsive tables allow tables to be scrolled horizontally with ease.</p>
+            <div class="table-responsive">
+              <table class="table align-middle table-nowrap mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="responsivetableCheck">
+                        <label class="form-check-label" for="responsivetableCheck"></label>
+                      </div>
+                    </th>
+                    <th scope="col">#</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Purchased</th>
+                    <th scope="col">Revenue</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="responsivetableCheck01">
+                        <label class="form-check-label" for="responsivetableCheck01"></label>
+                      </div>
+                    </th>
+                    <td><a href="#" class="fw-semibold">#VZ2110</a></td>
+                    <td>10 Oct, 14:47</td>
+                    <td class="text-success"><i class="ri-checkbox-circle-line fs-17 align-middle"></i> Paid</td>
+                    <td>
+                      <div class="d-flex gap-2 align-items-center">
+                        <div class="flex-shrink-0">
+                          <img src="assets/images/users/avatar-3.jpg" alt="" class="avatar-xs rounded-circle" />
+                        </div>
+                        <div class="flex-grow-1">
+                          Jordan Kennedy
+                        </div>
+                      </div>
+                    </td>
+                    <td>Mastering the grid</td>
+                    <td>$9.98</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="responsivetableCheck02">
+                        <label class="form-check-label" for="responsivetableCheck02"></label>
+                      </div>
+                    </th>
+                    <td><a href="#" class="fw-semibold">#VZ2109</a></td>
+                    <td>17 Oct, 02:10</td>
+                    <td class="text-success"><i class="ri-checkbox-circle-line fs-17 align-middle"></i> Paid</td>
+                    <td>
+                      <div class="d-flex gap-2 align-items-center">
+                        <div class="flex-shrink-0">
+                          <img src="assets/images/users/avatar-4.jpg" alt="" class="avatar-xs rounded-circle" />
+                        </div>
+                        <div class="flex-grow-1">
+                          Jackson Graham
+                        </div>
+                      </div>
+                    </td>
+                    <td>Splashify</td>
+                    <td>$270.60</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="responsivetableCheck03">
+                        <label class="form-check-label" for="responsivetableCheck03"></label>
+                      </div>
+                    </th>
+                    <td><a href="#" class="fw-semibold">#VZ2108</a></td>
+                    <td>26 Oct, 08:20</td>
+                    <td class="text-primary"><i class="ri-refresh-line fs-17 align-middle"></i> Refunded</td>
+                    <td>
+                      <div class="d-flex gap-2 align-items-center">
+                        <div class="flex-shrink-0">
+                          <img src="assets/images/users/avatar-5.jpg" alt="" class="avatar-xs rounded-circle" />
+                        </div>
+                        <div class="flex-grow-1">
+                          Lauren Trujillo
+                        </div>
+                      </div>
+                    </td>
+                    <td>Wireframing Kit for Figma</td>
+                    <td>$145.42</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="responsivetableCheck04">
+                        <label class="form-check-label" for="responsivetableCheck04"></label>
+                      </div>
+                    </th>
+                    <td><a href="#" class="fw-semibold">#VZ2107</a></td>
+                    <td>02 Nov, 04:52</td>
+                    <td class="text-danger"><i class="ri-close-circle-line fs-17 align-middle"></i> Cancel</td>
+                    <td>
+                      <div class="d-flex gap-2 align-items-center">
+                        <div class="flex-shrink-0">
+                          <img src="assets/images/users/avatar-6.jpg" alt="" class="avatar-xs rounded-circle" />
+                        </div>
+                        <div class="flex-grow-1">
+                          Curtis Weaver
+                        </div>
+                      </div>
+                    </td>
+                    <td>Wireframing Kit for Figma</td>
+                    <td>$170.68</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="responsivetableCheck05">
+                        <label class="form-check-label" for="responsivetableCheck05"></label>
+                      </div>
+                    </th>
+                    <td><a href="#" class="fw-semibold">#VZ2106</a></td>
+                    <td>10 Nov, 07:20</td>
+                    <td class="text-success"><i class="ri-checkbox-circle-line fs-17 align-middle"></i> Paid</td>
+                    <td>
+                      <div class="d-flex gap-2 align-items-center">
+                        <div class="flex-shrink-0">
+                          <img src="assets/images/users/avatar-1.jpg" alt="" class="avatar-xs rounded-circle" />
+                        </div>
+                        <div class="flex-grow-1">
+                          Jason schuller
+                        </div>
+                      </div>
+                    </td>
+                    <td>Splashify</td>
+                    <td>$350.87</td>
+                  </tr>
+                </tbody>
+                <tfoot class="table-light">
+                  <tr>
+                    <td colspan="6">Total</td>
+                    <td>$947.55</td>
+                  </tr>
+                </tfoot>
+              </table>
+              <!-- end table -->
+            </div>
+            <!-- end table responsive -->
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Responsive Tables</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="responsive-table-showcode" class="form-label text-muted">Show Code</label>
+                <input class="form-check-input code-switcher" type="checkbox" id="responsive-table-showcode">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">Use <code>table-responsive</code> class to make any table responsive across all
+              viewports. Responsive tables allow tables to be scrolled horizontally with ease.</p>
+            <div class="table-responsive">
+              <table class="table table-borderless align-middle table-nowrap mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Job Title</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>Annette Black</td>
+                    <td>Industrial Designer</td>
+                    <td>10, Nov 2021</td>
+                    <td><span class="badge badge-soft-success">Active</span></td>
+                    <td>
+                      <div class="hstack gap-3 fs-15">
+                        <a href="javascript:void(0);" class="link-primary"><i class="ri-settings-4-line"></i></a>
+                        <a href="javascript:void(0);" class="link-danger"><i class="ri-delete-bin-5-line"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">2</th>
+                    <td>Bessie Cooper</td>
+                    <td>Graphic Designer</td>
+                    <td>13, Nov 2021</td>
+                    <td><span class="badge badge-soft-success">Active</span></td>
+                    <td>
+                      <div class="hstack gap-3 fs-15">
+                        <a href="javascript:void(0);" class="link-primary"><i class="ri-settings-4-line"></i></a>
+                        <a href="javascript:void(0);" class="link-danger"><i class="ri-delete-bin-5-line"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">3</th>
+                    <td>Leslie Alexander</td>
+                    <td>Product Manager</td>
+                    <td>17, Nov 2021</td>
+                    <td><span class="badge badge-soft-success">Active</span></td>
+                    <td>
+                      <div class="hstack gap-3 fs-15">
+                        <a href="javascript:void(0);" class="link-primary"><i class="ri-settings-4-line"></i></a>
+                        <a href="javascript:void(0);" class="link-danger"><i class="ri-delete-bin-5-line"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">4</th>
+                    <td>Lenora Sandoval</td>
+                    <td>Applications Engineer</td>
+                    <td>25, Nov 2021</td>
+                    <td><span class="badge badge-soft-danger">Disabled</span></td>
+                    <td>
+                      <div class="hstack gap-3 fs-15">
+                        <a href="javascript:void(0);" class="link-primary"><i class="ri-settings-4-line"></i></a>
+                        <a href="javascript:void(0);" class="link-danger"><i class="ri-delete-bin-5-line"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Responsive Tables</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="responsive-table-showcode" class="form-label text-muted">Show Code</label>
+                <input class="form-check-input code-switcher" type="checkbox" id="responsive-table-showcode">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">Use <code>table-responsive</code> class to make any table responsive across all
+              viewports. Responsive tables allow tables to be scrolled horizontally with ease.</p>
+            <!-- Table Head -->
+            <div class="table-responsive">
+              <table class="table table-core align-middle table-nowrap mb-0">
+                <thead class="table-light">
+                  <tr>
+                    <th scope="col">Student</th>
+                    <th scope="col">Course</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Payment</th>
+                    <th scope="col">Process</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Milana Scot</td>
+                    <td>UI/UX design</td>
+                    <td>Mitchell Flores</td>
+                    <td>$450</td>
+                    <td>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </td>
+                    <td><a href="javascript:void(0);" class="link-success">Confirmed</a></td>
+                  </tr>
+                  <tr>
+                    <td>Jassica Welsh</td>
+                    <td>3d Animation</td>
+                    <td>Dan Evgeni</td>
+                    <td>$860</td>
+                    <td>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </td>
+                    <td><a href="javascript:void(0);" class="link-warning">Waiting</a></td>
+                  </tr>
+                  <tr>
+                    <td>Leslie Alexander</td>
+                    <td>Logotype Design</td>
+                    <td>Olimpia Jordan</td>
+                    <td>$450</td>
+                    <td>
+                      <div class="progress progress-sm">
+                        <div class="progress-bar bg-warning" role="progressbar" style="width: 35%" aria-valuenow="35"
+                          aria-valuemin="0" aria-valuemax="100"></div>
+                      </div>
+                    </td>
+                    <td><a href="javascript:void(0);" class="link-warning">Waiting</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Striped columns</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="card-tables-showcode" class="form-label text-muted">Show Code</label>
+                <input class="form-check-input code-switcher" type="checkbox" id="card-tables-showcode">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted mb-4">Use .<code>table-striped-columns</code> to add zebra-striping to any table
+              column.</p>
+
+            <div class="live-preview">
+              <div class="table-responsive table-card">
+                <table class="table align-middle table-nowrap table-striped-columns mb-0">
+                  <thead class="table-light">
+                    <tr>
+                      <th scope="col" style="width: 46px;">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="cardtableCheck">
+                          <label class="form-check-label" for="cardtableCheck"></label>
+                        </div>
+                      </th>
+                      <th scope="col">ID</th>
+                      <th scope="col">Name</th>
+                      <th scope="col">Date</th>
+                      <th scope="col">Total</th>
+                      <th scope="col">Status</th>
+                      <th scope="col" style="width: 150px;">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="cardtableCheck01">
+                          <label class="form-check-label" for="cardtableCheck01"></label>
+                        </div>
+                      </td>
+                      <td><a href="#" class="fw-medium">#VL2110</a></td>
+                      <td>William Elmore</td>
+                      <td>07 Oct, 2021</td>
+                      <td>$24.05</td>
+                      <td><span class="badge bg-success">Paid</span></td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-light">Details</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="cardtableCheck02">
+                          <label class="form-check-label" for="cardtableCheck02"></label>
+                        </div>
+                      </td>
+                      <td><a href="#" class="fw-medium">#VL2109</a></td>
+                      <td>Georgie Winters</td>
+                      <td>07 Oct, 2021</td>
+                      <td>$26.15</td>
+                      <td><span class="badge bg-success">Paid</span></td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-light">Details</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="cardtableCheck03">
+                          <label class="form-check-label" for="cardtableCheck03"></label>
+                        </div>
+                      </td>
+                      <td><a href="#" class="fw-medium">#VL2108</a></td>
+                      <td>Whitney Meier</td>
+                      <td>06 Oct, 2021</td>
+                      <td>$21.25</td>
+                      <td><span class="badge bg-danger">Refund</span></td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-light">Details</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="cardtableCheck04">
+                          <label class="form-check-label" for="cardtableCheck04"></label>
+                        </div>
+                      </td>
+                      <td><a href="#" class="fw-medium">#VL2107</a></td>
+                      <td>Justin Maier</td>
+                      <td>05 Oct, 2021</td>
+                      <td>$25.03</td>
+                      <td><span class="badge bg-success">Paid</span></td>
+                      <td>
+                        <button type="button" class="btn btn-sm btn-light">Details</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

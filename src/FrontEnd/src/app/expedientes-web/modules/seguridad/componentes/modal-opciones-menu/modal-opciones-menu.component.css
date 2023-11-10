@@ -1,0 +1,9 @@
+.border-list {
+  margin-left: 1.4375rem;
+  border-left-style: solid;
+  border-left-width: thin;
+  border-left-color: #d4dae3;
+}
+.list-group-item {
+  border: none;
+}

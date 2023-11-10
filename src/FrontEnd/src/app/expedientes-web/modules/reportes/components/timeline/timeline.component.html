@@ -1,0 +1,20 @@
+<ul class="timeline">
+  <li *ngFor="let item of items; let indice = index" >
+    <div class="direction-r" [classList]="getClass(indice)">
+      <div class="flag-wrapper">
+        <span class="hexa"></span>
+        <span class="flag">{{ item.descripcionFase }}</span>
+        <span class="time-wrapper"><span class="time">{{ item.fechaTraslado }}</span></span>
+      </div>
+      <div class="desc">
+        <div class="d-block">
+          <div class="content-user">
+            <span class="material-icons me-1">person</span>
+            <span class="text-truncate">{{item.usuario}}</span>
+          </div>
+        </div>
+        <span>{{ item.observaciones }}</span>
+      </div>
+    </div>
+  </li>
+</ul>

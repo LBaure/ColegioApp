@@ -1,0 +1,50 @@
+.divider {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid var(--bs-border-color-translucent);
+  opacity: 1;
+}
+
+
+.bd-example>.dropdown-menu {
+  position: static;
+  display: block;
+}
+
+
+.card-expediente {
+  border: 1px solid var(--bs-border-color-translucent);
+  box-shadow: none;
+}
+
+.icon-square {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+}
+
+
+.nav-datos a {
+  overflow-wrap: anywhere;
+}
+
+
+
+.list-group-item h6 {
+  font-size: 1.1rem;
+}
+
+.nav-datos a {
+  color: #5a5a5a;
+}
+
+.history-exp {
+  max-height: 500px;
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+/* @media(min-width: 992px) {
+
+} */

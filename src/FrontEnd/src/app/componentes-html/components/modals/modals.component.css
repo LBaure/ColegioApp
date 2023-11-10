@@ -1,0 +1,6 @@
+.form-switch-right {
+  display: contents !important;
+}
+.form-switch-right .form-label {
+  margin-bottom: 0;
+}

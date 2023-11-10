@@ -1,0 +1,39 @@
+<div class="modal-content modal-minfin danger">
+  <div class="modal-body">
+    <h4 class="modal-title mb-3">Bitácora de roles | <small class="text-muted fs-16">{{ nombreUsuario }}</small></h4>
+    <div class="table-responsive">
+      <table class="table table-core">
+        <thead>
+          <tr >
+            <th *ngFor="let item of headers"
+            [class]="item.class"
+            [width]="item.width"
+            [style]="'text-align: '+ item.align"
+            >
+              {{ item.text }}
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of listadoBitacora | paginate : { itemsPerPage: itemsPage, currentPage: page }">
+            <td>{{ item.rol }}</td>
+            <td>{{ item.nombreUsuarioRegistro }}</td>
+            <td>{{ item.fechaRegistro }}</td>
+            <td class="bg-success text-white text-uppercase fw-semibold" [class.bg-danger]="!item.activo" align="center">
+              {{ (item.activo) ? "Alta" : "Baja" }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div *ngIf="!listadoBitacora.length"  class="alert alert-danger alert-dismissible fade show" role="alert">
+      <span><strong>Lo sentimos!</strong> No encontramos resultados</span>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button
+      class="btn btn-soft-danger"
+      (click)="bsModalRef.hide()"
+    >Salir</button>
+  </div>
+</div>

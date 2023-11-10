@@ -1,0 +1,36 @@
+.full-width-center {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.banner-error {
+  text-align: center;
+  color: #04467c;
+}
+
+.banner-error h1 {
+  font-weight: bolder;
+  font-size: 3rem;
+}
+
+.banner-error p,
+.banner-error a {
+  font-family: 'Poppins', sans-serif;
+  font-weight: lighter;
+  font-weight: 300;
+  font-size: 1.25rem;
+}
+
+
+@media screen and (max-width: 767px) {
+  .banner-error h1 {
+    font-size: 1.5rem;
+  }
+  .banner-error p,
+  .banner-error a  {
+    font-size: 0.825rem;
+  }
+}

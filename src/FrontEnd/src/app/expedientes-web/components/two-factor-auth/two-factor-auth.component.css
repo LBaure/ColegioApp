@@ -1,0 +1,20 @@
+.input-pin {
+  padding: 0.575rem 0.1rem;
+  border: none;
+  font-size: 3rem;
+  letter-spacing: 20px;
+  text-align: center;
+}
+
+.modal-content {
+  border: none !important;
+}
+
+.material-icons.two-factor{
+  font-size: 7rem;
+  color: var(--bs-primary);
+
+}
+.modal-sm {
+  width: 185px !important;
+}

@@ -1,0 +1,217 @@
+<section class="p-3">
+  <div class="row">
+    <div class="col-12 col-md-12">
+      <h4>WorkFlow - {{ tipoExpediente.descripcion }}</h4>
+    </div>
+  </div>
+
+  <div class="row gx-5 gy-2 align-items-center">
+    <div class="col-lg-6 col-md-12">
+      <div class="form-icon right">
+        <input
+          type="text"
+          class="form-control form-control-icon"
+          placeholder="Búscar"
+          [(ngModel)]="filtrarBusqueda"
+        />
+        <i class="bi bi-search"></i>
+        <!-- <i *ngIf="filtrarBusqueda.length" class="bi bi-x-lg cursor-pointer" (click)="filtrarBusqueda = ''"></i> -->
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+      <div class="float-end">
+        <div>
+          <button
+            type="button"
+            class="btn btn-primary btn-label"
+            (click)="filtrarTipoExpediente()"
+          >
+            <i class="bi bi-funnel label-icon"></i>
+            Tipo Expediente
+          </button>
+
+          <!-- <button
+            type="button"
+            class="btn btn-success text-white btn-label ms-2"
+            (click)="filtrarFasesExpediente()"
+          >
+            <i class="bi bi-funnel label-icon"></i>
+            Filtras fases
+          </button> -->
+
+          <button
+            type="button"
+            class="btn btn-primary btn-label ms-2"
+            (click)="abrirFiltrosAvanzados()"
+          >
+            <i class="bi bi-sort-down"></i>
+            Filtros avanzados
+          </button>
+
+        </div>
+
+      </div>
+
+
+
+
+    </div>
+
+  </div>
+
+  <div class="grid w-full mt-3" *ngIf="renderizarDashboard" >
+    <div class="overflow-hidden">
+      <div class="d-flex overflow-x-auto custom-scroll gap-1 pb-4 h-60">
+        <!-- <div class="d-flex flex-col flex-shrink-0 w-80 border rounded-md p-3" *ngFor="let item of listaFase"></div> -->
+        <div class="d-flex flex-col flex-shrink-0 w-80" *ngFor="let item of listadoExpedientesWorkFlow">
+          <div class="panel">
+            <h6 class="uppercase mb-4 box-title text-truncate">{{ item.descripcion }}</h6>
+          </div>
+          <div class="d-flex flex-col gap-1 position-relative custom-scroll overflow-x-hidden overflow-y-auto  h-full border">
+            <div class="card cursor-pointer" *ngFor="let exp of item.expedientes" >
+              <div class="card-body " (click)="abrirModalExpedientes(exp)">
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <small>{{ exp.fechaGrabacion }}</small>
+                  <span class="d-inline-flex align-items-center gap-1.5 px-1 border-rounded text-xs fw-semibold bg-danger/10 text-danger">{{ exp.tiempoTranscurrido }}</span>
+                </div>
+                <div class="card-text">
+                  <span class="fw-medium fs-12 text-box">{{exp.noExpedienteMinfin}}</span>
+                  <div class="d-flex align-items-center">
+                    <div class="avatar-xs bg-light rounded p-1 me-1">
+                      <span class="material-icons px-2 icon-blue">person</span>
+                    </div>
+                    <span class="d-block text-truncate">{{exp.usuarioAsignado}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+
+<!--
+  <div class="row">
+    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2 ">
+      <div class="card overflow-hidden ">
+        <div class="card-header">
+          <h6>En Proceso</h6>
+        </div>
+
+
+
+
+
+        <div class="card-body cursor-pointer">
+          <div class="card overflow-hidden">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <small>18 Jul 2023</small>
+                <span class="d-inline-flex align-items-center gap-1.5 px-1 border-rounded text-xs fw-normal bg-danger/10 text-danger">High</span>
+              </div>
+              <h6 class="card-title fw-medium fs-14">Compras de utilies y enseres</h6>
+              <div class="card-text">
+                <div class="d-flex align-items-center">
+                  <div class="avatar-xs bg-light rounded p-1 me-1">
+                    <span class="material-icons px-2 icon-blue">person</span>
+                  </div>
+                  <span class="d-block text-truncate">Mercedes Alarcon Martinez</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card overflow-hidden">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <small>18 Jul 2023</small>
+                <span class="d-inline-flex align-items-center gap-1.5 px-1 border-rounded text-xs fw-normal bg-danger/10 text-danger">High</span>
+              </div>
+              <h6 class="card-title fw-medium fs-14">Compras de utilies y enseres</h6>
+              <div class="card-text">
+                <div class="d-flex align-items-center">
+                  <div class="avatar-xs bg-light rounded p-1 me-1">
+                    <span class="material-icons px-2 icon-blue">person</span>
+                  </div>
+                  <span class="d-block text-truncate">Mercedes Alarcon Martinez</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card overflow-hidden">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <small>18 Jul 2023</small>
+                <span class="d-inline-flex align-items-center gap-1.5 px-1 border-rounded text-xs fw-normal bg-danger/10 text-danger">High</span>
+              </div>
+              <h6 class="card-title fw-medium fs-14">Compras de utilies y enseres</h6>
+              <div class="card-text">
+                <div class="d-flex align-items-center">
+                  <div class="avatar-xs bg-light rounded p-1 me-1">
+                    <span class="material-icons px-2 icon-blue">person</span>
+                  </div>
+                  <span class="d-block text-truncate">Mercedes Alarcon Martinez</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card overflow-hidden">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <small>18 Jul 2023</small>
+                <span class="d-inline-flex align-items-center gap-1.5 px-1 border-rounded text-xs fw-normal bg-danger/10 text-danger">High</span>
+              </div>
+              <h6 class="card-title fw-medium fs-14">Compras de utilies y enseres</h6>
+              <div class="card-text">
+                <div class="d-flex align-items-center">
+                  <div class="avatar-xs bg-light rounded p-1 me-1">
+                    <span class="material-icons px-2 icon-blue">person</span>
+                  </div>
+                  <span class="d-block text-truncate">Mercedes Alarcon Martinez</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="card overflow-hidden">
+            <div class="card-body">
+              <h6 class="card-title">Card title</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+          <div class="card overflow-hidden">
+            <div class="card-body">
+              <h6 class="card-title">Card title</h6>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          </div>
+
+
+
+
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+      </div>
+    </div>
+  </div> -->
+</section>

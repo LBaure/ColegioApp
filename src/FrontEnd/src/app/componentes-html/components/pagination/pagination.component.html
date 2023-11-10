@@ -1,0 +1,146 @@
+<div>
+  <div class="col-12">
+    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+      <h4 class="mb-sm-0">Paginación</h4>
+      <div>
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"><a routerLink="/public">Inicio</a></li>
+          <li class="breadcrumb-item">Pagination</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="p-3">
+    <div class="card overflow-hidden">
+      <div class="card-header align-items-center d-flex">
+        <h4 class="card-title mb-0 flex-grow-1">Paginación</h4>
+      </div>
+      <div class="card-body">
+        <div class="row g-3">
+          <div class="form-group col-lg-3 col-sm-6 col-xs-12">
+            <label for=""  class="form-label">Filtro</label>
+            <input class="form-control" type="text" [(ngModel)]="filterModel"  >
+          </div>
+          <div class="form-group col-lg-3 col-sm-6 col-xs-12">
+            <label for=""  class="form-label">Link Directions</label>
+            <select class="form-select" [(ngModel)]="directionLinks" name="directionLinks">
+              <option selected [value]="true">True</option>
+              <option [value]="false">False</option>
+            </select>
+          </div>
+          <div class="form-group col-lg-3 col-sm-6 col-xs-12">
+            <label for=""  class="form-label">Items por página</label>
+            <input class="form-control" type="number" [(ngModel)]="itemsPage"  >
+          </div>
+          <div class="form-group col-lg-3 col-sm-6 col-xs-12">
+            <label for=""  class="form-label">Pagina Actual</label>
+            <input class="form-control" type="number" [(ngModel)]="currentPageModel"  >
+          </div>
+
+          <div class="form-group col-lg-3 col-sm-6 col-xs-12">
+            <label for=""  class="form-label">Paginas a Mostrar</label>
+            <input class="form-control" type="number" [(ngModel)]="maxSizeModel"  >
+          </div>
+          <div class="form-group col-lg-3 col-sm-6 col-xs-12">
+            <label for=""  class="form-label">Etiqueta Anterior</label>
+            <input class="form-control" type="text" [(ngModel)]="previousLabelModel"  >
+          </div>
+          <div class="form-group col-lg-3 col-sm-6 col-xs-12">
+            <label for=""  class="form-label">Etiqueta Siguiente</label>
+            <input class="form-control" type="text" [(ngModel)]="nextLabelModel"  >
+          </div>
+        </div>
+        <br>
+        <table class="table table-core">
+          <thead>
+            <tr>
+                <th>ID</th>
+                <th>Catálogo</th>
+                <th>Descripción</th>
+                <th>Tipo Catálogo</th>
+                <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of itemsCatalogos | paginate : { itemsPerPage: itemsPage, currentPage: currentPageModel }">
+              <td>{{ item.idCatalogo }}</td>
+              <td >{{ item.nombre }}</td>
+              <td>{{ item.descripcion }}</td>
+              <td class="text-white bg-info text-uppercase fw-semibold" [class.bg-danger]="item.tipoCatalogo === 0" align="center">{{ item.tipoCatalogoTexto }}</td>
+              <td align="center">
+                <button class="btn btn-icon btn-ghost-secondary rounded-circle" style="color: var(--bs-success);">
+                  <span class="material-icons">edit</span>
+                </button>
+                <button class="btn btn-icon btn-ghost-secondary rounded-circle" style="color: var(--bs-danger);">
+                  <span class="material-icons">delete</span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <pagination-controls
+          [maxSize]="maxSizeModel"
+          [directionLinks]="directionLinks"
+          (pageChange)="currentPageModel = $event"
+          [previousLabel]="previousLabelModel"
+          [nextLabel]="nextLabelModel"
+        ></pagination-controls>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Paginación rounded con etiquetas dirección</h4>
+          </div>
+          <div class="card-body">
+            <div class="container">
+              <ul class="meal-list">
+                <li *ngFor="let meal of itemsCatalogos | paginate: { id: 'pagRoundLabel', itemsPerPage: 10, currentPage: page2 }">
+                    {{ meal.nombre }}
+                </li>
+              </ul>
+              <div class="text-center">
+                  <pagination-controls
+                    id="pagRoundLabel"
+                    class="pagination-rounded-label"
+                    (pageChange)="page2 = $event"
+                    previousLabel="Anterior"
+                    nextLabel="Siguiente"
+                    [autoHide]="false"
+                  ></pagination-controls>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Paginación rounded</h4>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">Use la clase <code>pagination-rounded</code> en el componente </p>
+            <div class="container">
+              <ul class="meal-list">
+                <li *ngFor="let meal of itemsCatalogos | paginate: { id: 'pagRound', itemsPerPage: 5, currentPage: page3 }">
+                  {{ meal.descripcion }}
+                </li>
+              </ul>
+              <div class="text-center">
+                  <pagination-controls
+                    id="pagRound"
+                    class="pagination-rounded"
+                    (pageChange)="page3 = $event"
+                    previousLabel=""
+                    nextLabel=""
+                  ></pagination-controls>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

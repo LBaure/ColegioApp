@@ -1,0 +1,217 @@
+<div class="modal-content modal-minfin">
+  <div class="modal-header">
+    <h5 class="modal-title pull-left">{{title}}</h5>
+  </div>
+  <div class="modal-body pt-4 pb-1 px-4">
+    <form [formGroup]="formFilter">
+      <div class="row g-3">
+        <div class="col-12">
+          <label class="form-label">Tipo de Expediente</label>
+          <select
+            class="form-select"
+            aria-label="Default select example"
+            formControlName="idTipoExpediente"
+            (change)="buscarFases()"
+          >
+            <option *ngFor="let item of listaTiposExpedientes" [ngValue]="item.idTipoExpediente">{{ item.descripcion }}</option>
+          </select>
+        </div>
+        <div class="col-lg-4 col-xs-12" *ngIf="mostrarNoExpediente">
+          <label class="form-label">Número de Expediente</label>
+          <input
+            type="text"
+            class="form-control"
+            [bsConfig]="bsConfigEjercicio"
+            bsDatepicker
+            (bsValueChange)="establecerReglas($event)"
+            id="bsAnio"
+            autocomplete="off"
+          >
+        </div>
+        <div class="col-lg-8 col-xs-12" *ngIf="mostrarNoExpediente">
+          <label [class.required]="noExpedienteObligatorio" class="form-label hidden-xs">&nbsp;</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="numeroExpediente"
+              maxlength="15"
+              autocomplete="off"
+            />
+            <div *ngIf="numeroExpediente?.invalid && (numeroExpediente?.dirty || numeroExpediente?.touched)">
+              <small *ngIf="numeroExpediente?.hasError('required')" class="text-danger">Campo obligatorio, ingrese un numero de expediente</small>
+            </div>
+        </div>
+        <h6>Filtrar por</h6>
+        <div class="mt-1">
+          <div class="form-check form-check-inline form-radio-secondary">
+            <input
+              id="Radio1"
+              class="form-check-input"
+              type="radio"
+              formControlName="tipoFiltro"
+              [value]="true"
+              (ngModelChange)="limpiarRangoFechas()"
+            >
+            <label class="form-check-label" for="Radio1">Ejercicio Fiscal</label>
+          </div>
+          <div class="form-check form-check-inline form-radio-secondary">
+            <input
+              id="Radio2"
+              class="form-check-input"
+              type="radio"
+              formControlName="tipoFiltro"
+              [value]="false"
+              (ngModelChange)="validarRangoFechas()"
+            >
+            <label class="form-check-label" for="Radio2">Rango de fechas de grabación <small class="text-muted">(los rangos máximos de fechas, deben ser menores a un año)</small></label>
+          </div>
+        </div>
+        <div *ngIf="tipoFiltro?.value; then bloqueEjercicioFiscal else bloqueRangosFechas"></div>
+        <ng-template #bloqueEjercicioFiscal>
+          <div class="col-12">
+            <label class="form-label">Ejercicio Fiscal</label>
+            <select
+              class="form-select"
+              aria-label="Default select example"
+              formControlName="ejercicioFiscal"
+            >
+              <option *ngFor="let item of listadoEjercicios" [ngValue]="item">{{ item }}</option>
+            </select>
+          </div>
+        </ng-template>
+
+        <ng-template #bloqueRangosFechas>
+          <div class="col-lg-6">
+            <label class="form-label" [class.required]="rangoFechasObligatorio">Fecha Inicial</label>
+            <div class="input-group">
+              <input
+                #dpfi="bsDatepicker"
+                type="text"
+                class="form-control"
+                [bsConfig]="bsConfig"
+                bsDatepicker
+                formControlName="fechaInicial"
+                (ngModelChange)="establecerReglasFecha($event)"
+                >
+                <span
+                  class="input-group-text"
+                  (click)="dpfi.show()"
+                  style="cursor: pointer;"
+                >
+                  <i class="bi bi-calendar"></i>
+                </span>
+              </div>
+              <div *ngIf="fechaInicial?.invalid && (fechaInicial?.dirty || fechaInicial?.touched)">
+                <small *ngIf="fechaInicial?.hasError('required')" class="text-danger">Campo obligatorio, ingrese una fecha inicial</small>
+              </div>
+          </div>
+          <div class="col-lg-6">
+            <label [class.required]="rangoFechasObligatorio" class="form-label">Fecha Final</label>
+            <div class="input-group">
+              <input
+                #dpff="bsDatepicker"
+                type="text"
+                formControlName="fechaFinal"
+                class="form-control"
+                [bsConfig]="bsConfig"
+                bsDatepicker
+                [minDate]="minDate"
+                [maxDate]="maxDate"
+                (ngModelChange)="validarFechas($event)"
+              >
+              <span
+                class="input-group-text"
+                (click)="dpff.show()"
+                style="cursor: pointer;"
+              >
+                <i class="bi bi-calendar"></i>
+              </span>
+            </div>
+            <div *ngIf="fechaFinal?.invalid && (fechaFinal?.dirty || fechaFinal?.touched)">
+              <small *ngIf="fechaFinal?.hasError('required')" class="text-danger">Campo obligatorio, ingrese una fecha final</small>
+            </div>
+            <div *ngIf="errorFechaFinal">
+              <small class="text-danger">{{ mensajeErrorFechaFinal }}</small>
+            </div>
+          </div>
+        </ng-template>
+      </div>
+    </form>
+
+    <div class="row g-3 pt-2 pb-2 justify-content-between align-items-center" *ngIf="mostrarColumnas">
+      <div class="col-lg-5">
+        <h6 class="card-subtitle mt-3">Columnas disponibles</h6>
+        <br>
+        <div class="box-columns position-relative custom-scroll overflow-x-hidden overflow-y-auto border">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a
+              *ngFor="let item of listadoFasesDisponibles; let i = index"
+              [id]="'columna'+ i"
+              class="list-group-item list-group-item-action cursor-pointer"
+              data-bs-toggle="list"
+              (click)="agregarColumnaTemporal(item, i, false, true)"
+              (dblclick)="agregarColumnaTemporal(item, i, true, true)"
+              role="tab"
+            >
+              <span class="text-truncate">{{item.nombreFase}}</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-2">
+        <div class="d-grid gap-2">
+          <button
+            class="btn btn-light"
+            type="button"
+            (click)="agregarListadoFasesMostrar()"
+          >
+            Agregar
+            <i class="bi bi-chevron-right"></i>
+          </button>
+          <button
+            class="btn btn-light"
+            type="button"
+            (click)="agregarListadoFasesDisponibles()"
+          >
+            <i class="bi bi-chevron-left"></i>
+            Quitar
+          </button>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <h6 class="card-subtitle mt-3">Columnas a mostrar</h6>
+        <br>
+        <div class="box-columns position-relative custom-scroll overflow-x-hidden overflow-y-auto border">
+          <div class="list-group" id="list-tab" role="tablist">
+            <a
+              *ngFor="let item of listadoFasesMostrar; let index = index"
+              [id]="'columna_'+ index"
+              class="list-group-item list-group-item-action cursor-pointer"
+              data-bs-toggle="list"
+              role="tab"
+              (click)="quitarListadoFasesMostrar(item, index, false)"
+              (dblclick)="quitarListadoFasesMostrar(item, index, true)"
+            >
+              <span class="text-truncate">{{ item.nombreFase }}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-3 px-4">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button class="btn btn-soft-danger" (click)="bsModalRef.hide()">
+        <i class="bi bi-arrow-counterclockwise me-1"></i>
+        Descartar cambios
+      </button>
+      <button class="btn btn-info" (click)="aplicarFiltros()">
+        <div class="d-flex align-items-center text-white">
+          <span class="material-icons fs-16 me-1">save</span>
+          <span>Aplicar filtros</span>
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

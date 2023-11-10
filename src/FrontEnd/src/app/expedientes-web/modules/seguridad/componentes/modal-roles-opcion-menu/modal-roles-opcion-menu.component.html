@@ -1,0 +1,145 @@
+<div class="modal-content modal-minfin">
+  <div class="modal-body">
+    <h4 class="modal-title mb-3">{{ tituloModal }}</h4>
+    <form class="row g-3" [formGroup]="formRolOpcionMenu">
+      <div class="col-md-12">
+        <label class="form-label required">Listado de opciones del menú</label>
+        <div class="dropdown dropdown-select">
+          <button
+            type="button"
+            class="btn dropdown-toggle w-100"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+            [disabled]="esEdicion"
+          >
+            {{ opcionSeleccionada }}
+          </button>
+          <ul class="dropdown-menu">
+            <li role="menuitem" *ngFor="let item of listaDesplegableOpcionesMenu" >
+              <a class="dropdown-item" [class]="esEdicion ? 'disabled' : ''" (click)="esEdicion ? '' : cambiarValorSeleccionado(item)">
+                <span class=" d-flex">{{ item.nombre }}</span>
+                <small class=" d-flex text-muted">{{ item.descripcion }}</small>
+                <small class=" d-flex text-muted">{{ item.path }}</small>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div *ngIf="idOpcionMenu?.invalid && (idOpcionMenu?.dirty || idOpcionMenu?.touched)">
+          <small *ngIf="idOpcionMenu?.hasError('required')" class="text-danger">Campo obligatorio</small>
+          <small *ngIf="idOpcionMenu?.hasError('pattern')" class="text-danger">Valores permitidos 0 - 99</small>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="list-group">
+          <li class="list-group-item list-group-item-action">
+            <div class="d-flex align-items-center">
+              <label for="consulta" class="cursor-pointer w-100">
+                <div class="flex-grow-1">
+                    <div class="d-flex">
+                      <div class="flex-shrink-1 ms-2">
+                        <h6 class="fs-14 mb-0">Consulta</h6>
+                        <small class="text-muted">El usuraio puede</small>
+                      </div>
+                    </div>
+                </div>
+              </label>
+              <div class="flex-shrink-0">
+                <input
+                  id="consulta"
+                  type="checkbox"
+                  class="form-check-input me-1 cursor-pointer"
+                  formControlName="consulta"
+                >
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-group-item-action">
+            <div class="d-flex align-items-center">
+              <label for="inserta" class="cursor-pointer w-100">
+                <div class="flex-grow-1">
+                    <div class="d-flex">
+                      <div class="flex-shrink-1 ms-2">
+                        <h6 class="fs-14 mb-0">Insertar</h6>
+                        <small class="text-muted">El usuario unicamente puede insertar registros</small>
+                      </div>
+                    </div>
+                </div>
+              </label>
+              <div class="flex-shrink-0">
+                <input
+                  id="inserta"
+                  type="checkbox"
+                  class="form-check-input me-1 cursor-pointer"
+                  formControlName="inserta"
+                >
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-group-item-action">
+            <div class="d-flex align-items-center">
+              <label for="modifica" class="cursor-pointer w-100">
+                <div class="flex-grow-1">
+                    <div class="d-flex">
+                      <div class="flex-shrink-1 ms-2">
+                        <h6 class="fs-14 mb-0">Modificar</h6>
+                        <small class="text-muted">El usuario puede modificar registros existentes</small>
+                      </div>
+                    </div>
+                </div>
+              </label>
+              <div class="flex-shrink-0">
+                <input
+                  id="modifica"
+                  type="checkbox"
+                  class="form-check-input me-1 cursor-pointer"
+                  formControlName="modifica"
+                >
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item list-group-item-action">
+            <div class="d-flex align-items-center">
+              <label for="elimina" class="cursor-pointer w-100">
+                <div class="flex-grow-1">
+                    <div class="d-flex">
+                      <div class="flex-shrink-1 ms-2">
+                        <h6 class="fs-14 mb-0">Eliminar</h6>
+                        <small class="text-muted">El usuario puede eliminar registros existentes</small>
+                      </div>
+                    </div>
+                </div>
+              </label>
+              <div class="flex-shrink-0">
+                <input
+                  id="elimina"
+                  type="checkbox"
+                  class="form-check-input me-1 cursor-pointer"
+                  formControlName="elimina"
+                >
+              </div>
+            </div>
+          </li>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-success text-white"
+      [disabled]="loading"
+      (click)="loading ? '' : guardarOpcionMenu()"
+    >
+      Guardar Cambios
+    </button>
+    <button
+      type="button"
+      class="btn btn-soft-danger"
+      (click)="bsModalRef.hide()"
+    >
+      Cancelar
+    </button>
+  </div>
+
+</div>

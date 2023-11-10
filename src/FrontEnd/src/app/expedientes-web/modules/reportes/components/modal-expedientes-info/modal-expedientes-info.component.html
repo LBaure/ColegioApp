@@ -1,0 +1,160 @@
+<div class="modal-content modal-minfin">
+  <div class="modal-header">
+    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+      <li class="nav-item me-2" role="presentation">
+        <button class="nav-link active nav-link-success" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-datos-generales" >Datos Generales</button>
+      </li>
+      <li class="nav-item me-2" role="presentation">
+        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact">Datos</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="pills-pin-pass-tab" data-bs-toggle="pill" data-bs-target="#pills-pass" >Histórico de Flujo</button>
+      </li>
+    </ul>
+  </div>
+  <div class="modal-body">
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active" id="pills-datos-generales" role="tabpanel" tabindex="0">
+        <div class="p-4">
+          <div class="row">
+
+            <div class="col-lg-6">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="fw-bold py-1">No. de Expediente:</td>
+                    <td class="ps-2 fw-semi-bold py-1">{{ encabezado.expedienteGlobal }}<button class="btn p-0" type="button"><svg class="svg-inline--fa fa-rotate text-900 ms-1" style="--phoenix-text-opacity: .6;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rotate" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M449.9 39.96l-48.5 48.53C362.5 53.19 311.4 32 256 32C161.5 32 78.59 92.34 49.58 182.2c-5.438 16.81 3.797 34.88 20.61 40.28c16.97 5.5 34.86-3.812 40.3-20.59C130.9 138.5 189.4 96 256 96c37.96 0 73 14.18 100.2 37.8L311.1 178C295.1 194.8 306.8 223.4 330.4 224h146.9C487.7 223.7 496 215.3 496 204.9V59.04C496 34.99 466.9 22.95 449.9 39.96zM441.8 289.6c-16.94-5.438-34.88 3.812-40.3 20.59C381.1 373.5 322.6 416 256 416c-37.96 0-73-14.18-100.2-37.8L200 334C216.9 317.2 205.2 288.6 181.6 288H34.66C24.32 288.3 16 296.7 16 307.1v145.9c0 24.04 29.07 36.08 46.07 19.07l48.5-48.53C149.5 458.8 200.6 480 255.1 480c94.45 0 177.4-60.34 206.4-150.2C467.9 313 458.6 294.1 441.8 289.6z"></path></svg><!-- <span class="fa-solid fa-rotate text-900 ms-1" style="--phoenix-text-opacity: .6;"></span> Font Awesome fontawesome.com --></button></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold py-1">Fase Actual:</td>
+                    <td class="ps-2 fw-semi-bold py-1">{{ encabezado.idFaseActual }}</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold py-1">Tipo de expediente:</td>
+                    <td class="ps-2 fw-semi-bold py-1">{{ encabezado.idTipoExpediente }}</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold py-1">Recibido de:</td>
+                    <td class="ps-2 fw-semi-bold py-1">{{ encabezado.recibidoDe }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="col-lg-6">
+              <table>
+                <thead>
+                  <tr>
+                    <th style="width: 150px;"></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="fw-bold py-1">Usuario Grabó:</td>
+                    <td class="ps-2 fw-semi-bold py-1">{{ encabezado.usuarioGrabo }}<button class="btn p-0" type="button"><svg class="svg-inline--fa fa-rotate text-900 ms-1" style="--phoenix-text-opacity: .6;" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="rotate" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M449.9 39.96l-48.5 48.53C362.5 53.19 311.4 32 256 32C161.5 32 78.59 92.34 49.58 182.2c-5.438 16.81 3.797 34.88 20.61 40.28c16.97 5.5 34.86-3.812 40.3-20.59C130.9 138.5 189.4 96 256 96c37.96 0 73 14.18 100.2 37.8L311.1 178C295.1 194.8 306.8 223.4 330.4 224h146.9C487.7 223.7 496 215.3 496 204.9V59.04C496 34.99 466.9 22.95 449.9 39.96zM441.8 289.6c-16.94-5.438-34.88 3.812-40.3 20.59C381.1 373.5 322.6 416 256 416c-37.96 0-73-14.18-100.2-37.8L200 334C216.9 317.2 205.2 288.6 181.6 288H34.66C24.32 288.3 16 296.7 16 307.1v145.9c0 24.04 29.07 36.08 46.07 19.07l48.5-48.53C149.5 458.8 200.6 480 255.1 480c94.45 0 177.4-60.34 206.4-150.2C467.9 313 458.6 294.1 441.8 289.6z"></path></svg><!-- <span class="fa-solid fa-rotate text-900 ms-1" style="--phoenix-text-opacity: .6;"></span> Font Awesome fontawesome.com --></button></td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold py-1">Fecha Grabó:</td>
+                    <td class="ps-2 fw-semi-bold py-1">{{ encabezado.fechaGrabacion }}</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold py-1">Unidad de Destino:</td>
+                    <td class="ps-2 fw-semi-bold py-1">{{ encabezado.unidadAdministrativa }}</td>
+                  </tr>
+                  <tr>
+                    <td class="fw-bold py-1">Procedencia:</td>
+                    <td class="ps-2 fw-semi-bold py-1">{{ encabezado.origen }}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="row g-4 pt-4 row-cols-1 row-cols-lg-2">
+
+            <div class="col d-flex align-items-start">
+              <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <span class="material-icons-outlined">description</span>
+              </div>
+              <div>
+                <h3 class="fs-2">Descripción</h3>
+                <p class="text-justify">{{ encabezado.descripcionIngreso }}</p>
+              </div>
+            </div>
+            <div class="col d-flex align-items-start">
+              <div class="icon-square text-bg-light d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+                <span class="material-icons">manage_search</span>
+              </div>
+              <div>
+                <h3 class="fs-2">Observaciones</h3>
+                <p class="text-justify">{{ encabezado.observacionesIngreso ? encabezado.observacionesIngreso : 'N/A' }}</p>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- <div class="row mt-4">
+            <div class="col-lg-6 ">
+              <div class="card card-expediente">
+                <div class="card-body">
+                  <h5 class="card-title">Descripcion</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="card card-expediente">
+                <div class="card-body">
+                  <h5 class="card-title">Observaciones</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                </div>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div class="tab-pane fade" id="pills-contact" role="tabpanel" tabindex="1">
+        <div class="history-exp">
+          <div class="row m-3 nav-datos">
+            <div class="col-sm-6 col-xs-12" *ngFor="let item of listaDatos">
+              <a href="javascript:void(0)" class="d-flex align-items-center text-start" >
+                <div>
+                  <h6><strong class="d-block">{{ item.etiqueta }}</strong></h6>
+                  <small>{{ item.valor ? item.valor : '&nbsp;' }}</small>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="row">
+          <div class="col-lg-6 col-sm-12 " *ngFor="let item of listaDatos">
+
+            <div class=" list-group w-auto">
+              <div class="list-group-item d-flex gap-3 py-3">
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                  <div>
+                    <h6 class="mb-0">{{ item.etiqueta }}</h6>
+                    <p class="mb-0 opacity-75">{{ item.valor ? item.valor : '&nbsp;' }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+      <div class="tab-pane fade" id="pills-pass" role="tabpanel" tabindex="2">
+        <div class="history-exp">
+          <app-timeline [items]="listaHistorico"></app-timeline>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-soft-danger" (click)="bsModalRef.hide()">{{closeBtnName}}</button>
+  </div>
+</div>

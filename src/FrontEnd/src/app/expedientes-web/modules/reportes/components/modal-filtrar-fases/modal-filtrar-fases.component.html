@@ -1,0 +1,42 @@
+<div class="modal-content modal-minfin">
+  <div class="modal-body">
+    <h4 class="modal-title mb-2">Fases del Expediente </h4>
+    <div class="modal-body">
+      <div class="row">
+
+        <div class="col-6 px-4">
+          <ul>
+            <li  class="list-group-item my-2"  *ngFor="let item of listaFases; let i = index">
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <label class="form-check-label"  [for]="item.idFase" (click)="agregarFase(item, i)">
+                     {{ item.nombreFase }}
+                  </label>
+                </div>
+                <div class="flex-shrink-0">
+                  <input class="form-check-input cursor-pointer" type="checkbox" [id]="item.idFase" (click)="agregarFase(item, i)" [indeterminate]="true">
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-6 px-4">
+          <ul>
+            <li  class="list-group-item my-2"  *ngFor="let item of listaFasesMostrar; let indice = index">
+              <div class="d-flex align-items-center">
+                <div class="flex-grow-1">
+                  <label class="form-check-label"  [for]="item.idFase" (click)="quitarFase(item, indice)" >
+                     {{ item.nombreFase }}
+                  </label>
+                </div>
+                <div class="flex-shrink-0">
+                  <input class="form-check-input cursor-pointer" type="checkbox" [id]="item.idFase"  checked (click)="quitarFase(item, indice)" >
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+<minfin-breadcrumb [routes]="itemsRoutes" [title]="titulo" separator=">"></minfin-breadcrumb>
+<section class="p-3">
+  <div class="card overflow-hidden">
+    <div class="card-header">
+      <div class="row gy-2 align-items-center">
+        <div class="col-xl-8 col-lg-7 col-sm-12" >
+          <div class="form-icon right">
+            <input
+              type="text"
+              class="form-control form-control-icon"
+              placeholder="Buscar expedientes por: número de expediente, usuario asignado, descripción, tiempo transcurrido etc. "
+              [(ngModel)]="filtrarBusqueda"
+            />
+            <i *ngIf="!filtrarBusqueda.length" class="bi bi-search"></i>
+            <i *ngIf="filtrarBusqueda.length" class="bi bi-x-lg cursor-pointer" (click)="filtrarBusqueda = ''"></i>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="d-flex align-items-center">
+            <div class="flex-grow-1 d-grid gap-2 d-sm-block">
+              <button
+                type="button"
+                class="btn btn-primary btn-label"
+                (click)="abrirFiltrosAvanzados()"
+              >
+                <i class="bi bi-sort-down label-icon"></i>
+                <span>Filtros avanzados</span>
+              </button>
+            </div>
+            <div class="flex-shrink-0 d-none d-sm-block">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="static-backdrop" class="form-label text-muted" >Girar encabezados</label>
+                <input
+                  class="form-check-input code-switcher"
+                  type="checkbox"
+                  href="#modalBasic"
+                  data-bs-toggle="collapse"
+                  (change)="girarEncabezados()"
+                  >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-core table-hover">
+          <thead>
+            <tr>
+              <th
+                *ngFor="let item of headers"
+                [tooltip]="item.text"
+                [class]="item.value === 'NoExpediente' ? 'th-exp': ''"
+                class="th-core horizontal"
+              >
+                <div class="bc-head-txt-label">{{ item.text }}
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let item of listadoExpedientes | paginate : { itemsPerPage: itemsPage, currentPage: page }">
+              <td>
+                {{item.NO_EXPEDIENTE_MINFIN }}
+              </td>
+
+              <td *ngFor="let fase of filterItems(item)" align="center" [class]="fase === 1 ? 'icon-soft-info' : '' ">
+                <div *ngIf="fase === 1" [tooltip]="popTemplate" containerClass="dashboard" class="d-flex justify-content-center align-items-center cursor-pointer">
+                  <button class="btn btn-icon btn-ghost-info" (click)="abrirModalExpedientes(item)">
+                    <span class="material-icons">check</span>
+                  </button>
+
+                  <ng-template #popTemplate>
+                    <div class="fs-12">
+                      <div class="d-flex justify-content-between">
+                        <span class="fw-semibold">No. Expediente: {{ item.NO_EXPEDIENTE_MINFIN }}</span>
+                        <span >{{ item.TIEMPO_TRANSCURRIDO }}</span>
+                      </div>
+                      <div class="tooltip-content">
+                        <span>Descripcion: {{ item.DESCRIPCION }}</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-3" >
+                        <i class="bi bi-person"></i>
+                        <span>{{item.USUARIO_ASIGNADO}}</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-3" >
+                        <i class="bi bi-building"></i>
+                        <span>{{item.ID_UNIDAD_ADMINISTRATIVA}}</span>
+                      </div>
+                      <div class="d-flex align-items-center gap-3" >
+                        <i class="bi bi-telephone"></i>
+                        <span>{{item.EXTENSION}}</span>
+                      </div>
+                    </div>
+                  </ng-template>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="d-flex justify-content-center">
+          <pagination-controls
+            (pageChange)="page = $event"
+            previousLabel=""
+            nextLabel=""
+            [autoHide]="false"
+          ></pagination-controls>
+        </div>
+      </div>
+      <div *ngIf="!listadoExpedientes.length"  [class]="resultadobusqueda ? 'alert-warning' : 'alert-danger'" class="alert alert-dismissible fade show" role="alert">
+        <span *ngIf="!resultadobusqueda"><strong>Lo sentimos!</strong> No encontramos resultados</span>
+        <span *ngIf="resultadobusqueda" ><strong>Lo sentimos!</strong> No pudimos encontrar ningún resultado para su búsqueda. Use palabras más genéricas o revise su ortografía.</span>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+</section>

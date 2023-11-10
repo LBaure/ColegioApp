@@ -1,0 +1,69 @@
+<div class="p-3">
+  <form action="" class="row g-3" [formGroup]="formCambiarPinContrasenia">
+    <div class="col-lg-4">
+      <div class="row  g-3">
+        <div class="col-md-12">
+          <label class="form-label" [class]="credencialObligatoria ? 'required' : ''">Ingresa tu {{ configInput.mascara ? 'nuevo' : 'nueva' }}  {{ configInput.etiqueta }}</label>
+          <div class="form-icon right">
+            <input
+              id="valorNuevo"
+              class="form-control"
+              [type]="configInput.mascara ? 'text': 'password'"
+              formControlName="valorNuevo"
+              (keypress)="getMax($event, configInput.maxlength)"
+              (keyup)="obtenerReglas()"
+              autocomplete="off"
+              (copy)="false"
+              (paste)="false"
+            />
+            <span translate="no" *ngIf="!configInput.mascara" id="iconoValorNuevo" class="material-icons cursor-pointer" (click)="cambiarIcono('valorNuevo', 'iconoValorNuevo')">visibility_off</span>
+          </div>
+          <div  *ngIf="valorNuevo?.invalid && (valorNuevo?.dirty || valorNuevo?.touched)">
+            <small *ngIf="valorNuevo?.hasError('required')" class="text-danger d-block">{{ configInput.mensajeRequired }}</small>
+            <small *ngIf="valorNuevo?.hasError('pattern')" class="text-danger d-block">{{ configInput.mensajePattern }}</small>
+            <small *ngIf="valorNuevo?.hasError('minlength')" class="text-danger d-block">{{ configInput.mensajeMinlength }}</small>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <label class="form-label" [class]="credencialObligatoria ? 'required' : ''">Confirmar tu {{ configInput.etiqueta }}</label>
+          <div class="form-icon right">
+            <input
+              id="confirmarValorNuevo"
+              class="form-control"
+              [type]="configInput.mascara ? 'text': 'password'"
+              formControlName="confirmarValorNuevo"
+              (keypress)="getMax($event, configInput.maxlength)"
+              autocomplete="off"
+              (copy)="false"
+              (paste)="false"
+            />
+            <span translate="no" *ngIf="!configInput.mascara" id="iconoConfirmarValorNuevo" class="material-icons cursor-pointer" (click)="cambiarIcono('confirmarValorNuevo', 'iconoConfirmarValorNuevo')">visibility_off</span>
+          </div>
+          <div  *ngIf="confirmarValorNuevo?.invalid && (confirmarValorNuevo?.dirty || confirmarValorNuevo?.touched)">
+            <small *ngIf="confirmarValorNuevo?.hasError('required')" class="text-danger d-block">{{ configInput.mensajeRequired }}</small>
+            <small *ngIf="confirmarValorNuevo?.hasError('pattern')" class="text-danger d-block">{{ configInput.mensajePattern }}</small>
+            <small *ngIf="confirmarValorNuevo?.hasError('minlength')" class="text-danger d-block">{{ configInput.mensajeMinlength }}</small>
+          </div>
+
+          <div *ngIf="confirmarValorNuevo?.dirty">
+            <small *ngIf="validarCoincidencia()" class="text-danger d-block">Los valores no coinciden</small>
+          </div>
+        </div>
+        <li class="d-flex gap-5 align-items-center mt-3">
+          <div class="flex-grow-1">
+            <label class="required">Intentos de Inicio de Sesión</label>
+          </div>
+          <div class="flex-shrink-0">
+            <select class="form-select" formControlName="intentosLogin">
+              <option *ngFor="let item of listaIntentos" [ngValue]="item">{{item}}</option>
+            </select>
+          </div>
+        </li>
+      </div>
+    </div>
+    <div class="hstack gap-2 mt-3">
+      <button class="btn btn-success text-white" [disabled]="!formCambiarPinContrasenia.valid" (click)="guardarNuevasCredenciales()">Guardar &amp; Cerrar sesión</button>
+      <a href="javascript:void(0);" class="btn btn-soft-danger" (click)="cancelarCambios()">Cancelar</a>
+    </div>
+  </form>
+</div>

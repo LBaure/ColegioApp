@@ -1,0 +1,26 @@
+.footer-content {
+  line-height: 26px;
+}
+.footer .browser-content li {
+  margin-left: 1rem;
+  transition: all .2s ease-in-out;
+}
+
+.footer .browser-content li:not(.navigator):hover {
+  transform: scale(1.5);
+}
+
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .footer .browser-content {
+    margin-bottom: 2px!important;
+  }
+  .footer .browser-content li {
+    margin-left: 0;
+    margin-right: 1rem !important;
+  }
+}

@@ -1,0 +1,306 @@
+[
+  {
+     "idCatalogo":1,
+     "nombre":"Afectación",
+     "descripcion":"Describe los tipos de afectación que pueden registrarse sobre un inmueble",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":2,
+     "nombre":"Amenidades",
+     "descripcion":"Listado de atractivos adicionales relacionados con las construcciones en un inmueble",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":3,
+     "nombre":"Anotación",
+     "descripcion":"Se listan los tipos de anotaciones judiciales que pueden asociarse a un inmueble",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":4,
+     "nombre":"Archivo",
+     "descripcion":"Listado de numéros de archivo disponibles en el Registre de Patrimonio del Estado",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":5,
+     "nombre":"Baja",
+     "descripcion":"Listado de motivos por los que se puede dar de baja un inmueble",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":6,
+     "nombre":"Banco",
+     "descripcion":"Listado de Bancos registrados en el sistema",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":7,
+     "nombre":"Concelación",
+     "descripcion":"Listado de motivos por los que se puede cancelar una afectación",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":8,
+     "nombre":"Categoría de Respuesta",
+     "descripcion":"Listado de categorías y relacion con las firmas que puede requérir una respuesta",
+     "tipoCatalogo":0,
+     "activo":1,
+     "tipoCatalogoTexto":"No Editable"
+  },
+  {
+     "idCatalogo":9,
+     "nombre":"Departamento y Municipio",
+     "descripcion":"Se listan los departamentos de Guatemala y permite editor los municipios asociados",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":10,
+     "nombre":"Direccional",
+     "descripcion":"Elemento que permite describir la dirección de un inmueble",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":11,
+     "nombre":"Documento Soporte",
+     "descripcion":"Tipo de documentos que pueden adjuntarse de acuerdo a la sección que se trabaja",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":12,
+     "nombre":"Entidad",
+     "descripcion":"Listado de Entidades registradas ",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":13,
+     "nombre":"Estados de Gestión",
+     "descripcion":"Listado de estados que se utilizan al operar una solicitud de información",
+     "tipoCatalogo":0,
+     "activo":1,
+     "tipoCatalogoTexto":"No Editable"
+  },
+  {
+     "idCatalogo":14,
+     "nombre":"Forma Adquisición",
+     "descripcion":"Se listan las Formas de Adquisición que se utilizaron para obtener la propiedad de un inmueble",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":15,
+     "nombre":"Forma Geométrica",
+     "descripcion":"Listado de formas de terreno registradas",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":16,
+     "nombre":"Gravamen",
+     "descripcion":"Se listan los tipos de Gravamen que pueden pesar sobre un inmueble",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":17,
+     "nombre":"Indicadores de Tiempo",
+     "descripcion":"Listado de indicadores que relacionan el tiempo restante a la fecha de entrega",
+     "tipoCatalogo":0,
+     "activo":1,
+     "tipoCatalogoTexto":"No Editable"
+  },
+  {
+     "idCatalogo":18,
+     "nombre":"Instalaciones",
+     "descripcion":"Listado de elementos que conforman una construcción ",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":19,
+     "nombre":"Limitación",
+     "descripcion":"Se listan los tipos de limitaciones de dominio que pueden afectar a un inmueble",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":20,
+     "nombre":"Materiales",
+     "descripcion":"Listado de materiales que pueden ser utilizados para la construcción de una parte del inmueble",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":21,
+     "nombre":"Municipios",
+     "descripcion":"Se listan los departamentos de Guatemala y permite editar los municipios asociados",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":22,
+     "nombre":"Naturaleza Finca",
+     "descripcion":"Se listan los Tipos de Naturaleza que caracterizan a un inmueble ",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":23,
+     "nombre":"Nombre de Libro Registral",
+     "descripcion":"Se listan las colecciones de libros registrales en el registro de la propiedad",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":24,
+     "nombre":"Orientación",
+     "descripcion":"Listado de orientaciones utilizadas para ubicar la geolocalización de un inmueble",
+     "tipoCatalogo":0,
+     "activo":1,
+     "tipoCatalogoTexto":"No Editable"
+  },
+  {
+     "idCatalogo":25,
+     "nombre":"País",
+     "descripcion":"Listado de paises",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":26,
+     "nombre":"Prioridad de Respuesta",
+     "descripcion":"Listado de prioridades con las que se debe atender una solicitud de información",
+     "tipoCatalogo":0,
+     "activo":1,
+     "tipoCatalogoTexto":"No Editable"
+  },
+  {
+     "idCatalogo":27,
+     "nombre":"Procedencia de Precio",
+     "descripcion":"Listado de motivos que permiten identificar el precio de un inmueble",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":28,
+     "nombre":"Reactivación",
+     "descripcion":"Listado de motivos por los que se puede reactivar un inmueble dado previamente de baja",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":29,
+     "nombre":"Secciones",
+     "descripcion":"Listado de secciones que conforman el registro de un inmueble",
+     "tipoCatalogo":0,
+     "activo":1,
+     "tipoCatalogoTexto":"No Editable"
+  },
+  {
+     "idCatalogo":30,
+     "nombre":"Servicios",
+     "descripcion":"Se listan los posibles servicios que pueden estar presentes en un inmueble",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":31,
+     "nombre":"Subdivisión",
+     "descripcion":"Listado de Subdivisiones a las que puede pertenecer un inmueble trabaja con Tipo de Predio",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":32,
+     "nombre":"Tipo de Pago",
+     "descripcion":"Lista las formas en las que un arrendatario hace efectivo el pago de su renta",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":33,
+     "nombre":"Tipo de Predio",
+     "descripcion":"Se listan los Tipos de predio que se desean identificar trabaja en conjunto con subdivisión",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":34,
+     "nombre":"Topografía",
+     "descripcion":"Listado de tipos de topografía que pueden describir un inmueble",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":35,
+     "nombre":"Tratamiento",
+     "descripcion":"Listado de formas en que se puede referir a una persona",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":36,
+     "nombre":"Ubicación Física",
+     "descripcion":"Listado de lugares donde se puede ubicar un expediente",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":37,
+     "nombre":"Perfil de Firmantes",
+     "descripcion":"Listado de entes autorizados para firmar documentos de respuesta para firmar electronicamente",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  },
+  {
+     "idCatalogo":38,
+     "nombre":"Proveedor Firma Electrónica\t",
+     "descripcion":"Listado de Sistemas que proveen el certificado de firma electrónica",
+     "tipoCatalogo":1,
+     "activo":1,
+     "tipoCatalogoTexto":"Editable"
+  }
+]

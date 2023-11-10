@@ -1,0 +1,172 @@
+<minfin-breadcrumb [routes]="itemsRoutes" [title]="'Opciones de Menú - ' + rolLocalStorage.nombre" separator=">"></minfin-breadcrumb>
+<div class="p-3">
+  <div *ngIf="mq === 'lg' || mq === 'xl' then laptop else movil"></div>
+  <ng-template #laptop>
+    <div class="card " >
+      <div class="card-header align-items-center">
+        <div class="row">
+          <div class="col-8">
+            <div class="form-icon right">
+              <input
+                type="text"
+                class="form-control form-control-icon"
+                placeholder="Búscar"
+                [(ngModel)]="filtrarBusqueda"
+              />
+              <i *ngIf="!filtrarBusqueda.length" class="bi bi-search"></i>
+              <i *ngIf="filtrarBusqueda.length" class="bi bi-x-lg cursor-pointer" (click)="filtrarBusqueda = ''"></i>
+            </div>
+          </div>
+          <div class="col-4 text-end">
+            <button
+              *ngIf="permisos.inserta"
+              type="button"
+              class="btn btn-primary btn-label"
+              (click)="abrirModalAgregarOpcionMenu(false)"
+            >
+              <i class="bi bi-plus label-icon"></i>
+              Agregar menú
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-core">
+            <thead>
+              <tr>
+                <th
+                  *ngFor="let item of headers"
+                  [class]="item.class"
+                  [width]="item.width"
+                  [style]="'text-align: '+ item.align"
+                >
+                  {{ item.text }}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of listadoRolOpcionesMenuFiltrados | paginate : { itemsPerPage: itemsPage, currentPage: page }">
+                <td>{{ item.opcionMenu}}</td>
+                <td>{{ item.descripcionOpcion }}</td>
+                <td align="center">
+                  <span class="material-icons" [class]="item.consulta ? 'text-success' : 'text-danger'">{{ item.consulta ? 'done' : 'close' }}</span>
+                </td>
+                <td align="center">
+                  <span class="material-icons" [class]="item.inserta ? 'text-success' : 'text-danger'">{{ item.inserta ? 'done' : 'close' }}</span>
+                </td>
+                <td align="center">
+                  <span class="material-icons" [class]="item.modifica ? 'text-success' : 'text-danger'">{{ item.modifica ? 'done' : 'close' }}</span>
+                </td>
+                <td align="center">
+                  <span class="material-icons" [class]="item.elimina ? 'text-success' : 'text-danger'">{{ item.elimina ? 'done' : 'close' }}</span>
+                </td>
+                <td align="center" *ngIf="permisos.elimina || permisos.modifica">
+                  <button *ngIf="permisos.modifica" class="btn btn-icon btn-ghost-primary" (click)="abrirModalAgregarOpcionMenu(true, item)">
+                    <span class="material-icons">edit</span>
+                  </button>
+                  <button *ngIf="permisos.elimina" class="btn btn-icon btn-ghost-danger" (click)="eliminarRolOpcionMenu(item)">
+                    <span class="material-icons">delete</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div *ngIf="!listadoRolOpcionesMenuFiltrados.length"  [class]="resultadobusqueda ? 'alert-warning' : 'alert-danger'" class="alert alert-dismissible fade show" role="alert">
+          <span *ngIf="!resultadobusqueda"><strong>Lo sentimos!</strong> No encontramos resultados</span>
+          <span *ngIf="resultadobusqueda" ><strong>Lo sentimos!</strong> No pudimos encontrar ningún resultado para su búsqueda. Use palabras más genéricas o revise su ortografía.</span>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #movil>
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Búscar"
+          [(ngModel)]="filtrarBusqueda"
+        />
+        <button
+          *ngIf="permisos.inserta"
+          type="button"
+          class="btn btn-primary btn-fab"
+          (click)="abrirModalAgregarOpcionMenu(false)"
+        >
+          <span class="material-icons">add</span>
+        </button>
+      </div>
+      <div class="col-md-6 sm-12" *ngFor="let item of listadoRolOpcionesMenuFiltrados | paginate : { itemsPerPage: itemsPage, currentPage: page }">
+        <div class="list-group" >
+          <a class="card">
+            <div class="card-header">
+              <div class="d-flex align-items-center">
+                <div>
+                  <h6 class="card-title mb-0">{{ item.opcionMenu }}</h6>
+                  <small>{{item.descripcionOpcion}}</small>
+                </div>
+                <div class="ms-auto my-auto">
+                  <div class="btn-group" dropdown>
+                    <button dropdownToggle type="button" class="btn btn-icon-sm light">
+                      <i class="bi bi-three-dots-vertical"></i>
+                    </button>
+                    <ul *dropdownMenu class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="button-animated">
+                      <li role="menuitem" *ngIf="permisos.modifica"><a class="dropdown-item" (click)="abrirModalAgregarOpcionMenu(true, item)">Editar</a></li>
+                      <li role="menuitem" *ngIf="permisos.elimina"><a class="dropdown-item" (click)="eliminarRolOpcionMenu(item)">Eliminar</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="nav-content">
+                <button class="btn nav-btn" [class]="item.consulta ? 'btn-soft-success' : 'btn-soft-danger'" >
+                  <span class="btn-content">
+                    <i class="bi bi-search"></i>
+                    Consulta
+
+                  </span>
+                </button>
+                <button class="btn nav-btn" [class]="item.inserta? 'btn-soft-success' : 'btn-soft-danger'" >
+                  <span class="btn-content">
+                    <i class="bi bi-plus-circle"></i>
+                    Inserta
+
+                  </span>
+                </button><button class="btn nav-btn" [class]="item.modifica? ' btn-soft-success' : 'btn-soft-danger'" >
+                  <span class="btn-content">
+                    <i class="bi bi-pencil-square"></i>
+                    Modifica
+
+                  </span>
+                </button>
+                <button class="btn nav-btn" [class]="item.elimina ? 'btn-soft-success' : 'btn-soft-danger'" >
+                  <span class="btn-content">
+                    <span class="material-icons">delete</span>
+                    Elimina
+                  </span>
+                </button>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!listadoRolOpcionesMenuFiltrados.length" [class]="resultadobusqueda ? 'alert-warning' : 'alert-danger'" class="alert alert-dismissible fade show" role="alert">
+      <span *ngIf="!resultadobusqueda"><strong>Lo sentimos!</strong> No encontramos resultados</span>
+      <span *ngIf="resultadobusqueda" ><strong>Lo sentimos!</strong> No pudimos encontrar ningún resultado para su búsqueda. Use palabras más genéricas o revise su ortografía.</span>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </ng-template>
+  <div *ngIf="listadoRolOpcionesMenuFiltrados.length >= itemsPage" class="d-flex justify-content-center">
+    <pagination-controls
+      class="pagination-rounded"
+      (pageChange)="page = $event"
+      previousLabel=""
+      nextLabel=""
+    ></pagination-controls>
+  </div>
+</div>

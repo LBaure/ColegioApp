@@ -1,0 +1,23 @@
+.card-tipo-exp {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-tipo-exp .card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card-tipo-exp .card-body>p {
+  margin-bottom: auto;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.card.card-tipo-exp:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgb(var(--bs-primary-rgb), 75%);
+  cursor: pointer;
+}

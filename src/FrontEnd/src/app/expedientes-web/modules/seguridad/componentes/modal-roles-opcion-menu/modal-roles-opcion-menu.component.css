@@ -1,0 +1,30 @@
+.dropdown-select .btn {
+  border: 1px solid #ced4da;
+}
+.dropdown-select .dropdown-toggle::after {
+  border: none !important;
+  content: "\e5cf";
+  font-family: "Material Icons";
+  font-size: 1.5rem;
+  line-height: 15px;
+  right: 12px;
+  position: absolute;
+}
+
+.dropdown-select .dropdown-toggle {
+  display: inline-flex;
+  align-items: center;
+}
+
+
+.dropdown-select .dropdown-menu.show {
+  width: 100%;
+  max-height: 200px;
+  overflow:scroll;
+  overflow-x:hidden;
+}
+
+
+.list-group-item {
+  border: none;
+}

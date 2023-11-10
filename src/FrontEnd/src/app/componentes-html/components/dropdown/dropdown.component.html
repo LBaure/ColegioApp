@@ -1,0 +1,258 @@
+<div>
+  <div class="col-12">
+    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+      <h4 class="mb-sm-0">Diseño Dropdown</h4>
+      <div>
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"><a routerLink="/public">Inicio</a></li>
+          <li class="breadcrumb-item">dropdown</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="p-3">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Menú desplegable de un solo botón</h4>
+            <div class="flex-shrink-0">
+                <div class="form-check form-switch form-switch-right form-switch-md">
+                    <label for="dropdown-base-example" class="form-label text-muted">Ver Código</label>
+                    <input class="form-check-input code-switcher" type="checkbox" (change)="showDropdown = !showDropdown">
+                </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">Use la clase <code>dropdown</code> en el elemento <code>&#60;div&#62;</code> </p>
+            <div *ngIf="showDropdown; else elseShowDropdown" class="d-flex flex-wrap gap-3">
+              <div class="dropdown">
+                <button
+                  type="button"
+                  class="btn btn-secondary dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li role="menuitem"><a class="dropdown-item">Editar</a></li>
+                  <li role="menuitem"><a class="dropdown-item">Eliminar</a></li>
+                  <li role="menuitem"><a class="dropdown-item">Ver</a></li>
+                </ul>
+              </div>
+            </div>
+            <ng-template #elseShowDropdown>
+              <pre>
+                <code class="default-markup"> <span>// Dropdown simple</span>
+                  <span>&lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown</span>"&gt;</span>
+                  <span>  &lt;<span class="tag">button</span></span>
+                  <span>    <span class="attr-name">type</span>="<span class="attr-value">button</span>"</span>
+                  <span>    <span class="attr-name">class</span>="<span class="attr-value">btn btn-secondary dropdown-toggle</span>"</span>
+                  <span>    <span class="attr-name">data-bs-toggle</span>="<span class="attr-value">dropdown</span>"</span>
+                  <span>    <span class="attr-name">aria-expanded</span>="<span class="attr-value">false</span>"</span>
+                  <span>  &gt;Dropdown button</span>
+                  <span>  &lt;<span class="tag">/button</span>&gt;</span>
+                  <span>  &lt;<span class="tag">ul</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-menu</span>"&gt;</span>
+                  <span>    &lt;<span class="tag">li</span> <span class="attr-name">role</span>="<span class="attr-value">menuitem</span>"&gt;&lt;<span class="tag">a</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-item</span>"&gt;Editar&lt;<span class="tag">/a</span>&gt;&lt;<span class="tag">/li</span>&gt;</span>
+                  <span>    &lt;<span class="tag">li</span> <span class="attr-name">role</span>="<span class="attr-value">menuitem</span>"&gt;&lt;<span class="tag">a</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-item</span>"&gt;Eliminar&lt;<span class="tag">/a</span>&gt;&lt;<span class="tag">/li</span>&gt;</span>
+                  <span>    &lt;<span class="tag">li</span> <span class="attr-name">role</span>="<span class="attr-value">menuitem</span>"&gt;&lt;<span class="tag">a</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-item</span>"&gt;Ver&lt;<span class="tag">/a</span>&gt;&lt;<span class="tag">/li</span>&gt;</span>
+                  <span>  &lt;<span class="tag">/ul</span>&gt;</span>
+                  <span>&lt;<span class="tag">/div</span>&gt;</span>
+                </code>
+              </pre>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Dropdown en Lista</h4>
+            <div class="flex-shrink-0">
+                <div class="form-check form-switch form-switch-right form-switch-md">
+                    <label for="dropdown-base-example" class="form-label text-muted">Ver Código</label>
+                    <input class="form-check-input code-switcher" type="checkbox" id="dropdown-base-example" (change)="showCodeDropdown = !showCodeDropdown">
+                </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">Use la clase <code>dropdown</code> en el elemento <code>&#60;div&#62;</code> </p>
+            <div *ngIf="showCodeDropdown; else elseShowCodeDropdown">
+              <div class="list-group">
+                <li class="list-group-item" *ngFor="let item of itemsCatalogos">
+                  <div class="d-flex align-items-center">
+                    <div class="flex-grow-1">
+                      <div class="d-flex">
+                        <div class="flex-shrink-0 avatar-xs">
+                          <div class="avatar-title bg-soft-danger text-danger rounded">
+                            <span>{{ item.idCatalogo }}</span>
+                          </div>
+                        </div>
+                        <div class="flex-shrink-1 ms-2">
+                          <h6 class="fs-14 mb-0">{{ item.nombre }}</h6>
+                          <small class="text-muted">{{ item.descripcion }}</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-shrink-0">
+                      <div class="btn-group dropstart">
+                        <button
+                          type="button"
+                          class="btn btn-icon-sm light"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          <i class="bi bi-three-dots-vertical"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li role="menuitem"><a class="dropdown-item" >Edital</a></li>
+                          <li role="menuitem"><a class="dropdown-item" >Eliminar</a></li>
+                          <li role="menuitem"><a class="dropdown-item" >Ver</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </div>
+            </div>
+            <ng-template #elseShowCodeDropdown>
+              <pre>
+                <code class="default-markup"><span>// HTML</span>
+                  <span>&lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">list-group</span>"&gt;</span>
+                  <span>  &lt;<span class="tag">li</span> <span class="attr-name">class</span>="<span class="attr-value">list-group-item</span>" <span class="attr-name">*ngFor</span>="<span class="attr-value">let item of itemsCatalogos</span>"&gt;</span>
+                  <span>    &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">d-flex align-items-center</span>"&gt;</span>
+                  <span>      &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">flex-grow-1</span>"&gt;</span>
+                  <span>        &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">d-flex</span>"&gt;</span>
+                  <span>          &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">flex-shrink-0 avatar-xs</span>"&gt;</span>
+                  <span>            &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">avatar-title bg-soft-danger text-danger rounded</span>"&gt;</span>
+                  <span>              &lt;<span class="tag">span</span>&gt;&#123;&#123; <span class="attr-value"> item.idCatalogo </span>&#125;&#125;&lt;<span class="tag">/span</span>&gt;</span>
+                  <span>            &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>          &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>          &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">flex-shrink-1 ms-2</span>"&gt;</span>
+                  <span>            &lt;<span class="tag">h6</span> <span class="attr-name">class</span>="<span class="attr-value">fs-14 mb-0</span>"&gt; &#123;&#123;<span class="attr-value"> item.nombre </span>&#125;&#125;&lt;<span class="tag">/h6</span>&gt;</span>
+                  <span>            &lt;<span class="tag">small</span> <span class="attr-name">class</span>="<span class="attr-value">text-muted</span>"&gt;&#123;&#123; <span class="attr-value"> item.descripcion </span>&#125;&#125;&lt;<span class="tag">/small</span>&gt;</span>
+                  <span>          &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>        &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>      &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>      &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">flex-shrink-0</span>"&gt;</span>
+                  <span>        &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">btn-group dropstart</span>"&gt;</span>
+                  <span>          &lt;<span class="tag">button</span></span>
+                  <span>            <span class="attr-name">type</span>="<span class="attr-value">button</span>"</span>
+                  <span>            <span class="attr-name">class</span>="<span class="attr-value">btn btn-icon-sm light</span>"</span>
+                  <span>            <span class="attr-name">data-bs-toggle</span>="<span class="attr-value">dropdown</span>"</span>
+                  <span>            <span class="attr-name">aria-expanded</span>="<span class="attr-value">false</span>"</span>
+                  <span>          &gt;</span>
+                  <span>            &lt;<span class="tag">i</span> <span class="attr-name">class</span>="<span class="attr-value">bi bi-three-dots-vertical</span>"&gt;&lt;<span class="tag">/i</span>&gt;</span>
+                  <span>          &lt;<span class="tag">/button</span>&gt;</span>
+                  <span>          &lt;<span class="tag">ul</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-menu</span>"&gt;</span>
+                  <span>            &lt;<span class="tag">li</span> <span class="attr-name">role</span>="<span class="attr-value">menuitem</span>"&gt;&lt;<span class="tag">a</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-item</span>"&gt;Editar&lt;<span class="tag">/a</span>&gt;&lt;<span class="tag">/li</span>&gt;</span>
+                  <span>            &lt;<span class="tag">li</span> <span class="attr-name">role</span>="<span class="attr-value">menuitem</span>"&gt;&lt;<span class="tag">a</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-item</span>"&gt;Eliminar&lt;<span class="tag">/a</span>&gt;&lt;<span class="tag">/li</span>&gt;</span>
+                  <span>            &lt;<span class="tag">li</span> <span class="attr-name">role</span>="<span class="attr-value">menuitem</span>"&gt;&lt;<span class="tag">a</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-item</span>"&gt;Ver&lt;<span class="tag">/a</span>&gt;&lt;<span class="tag">/li</span>&gt;</span>
+                  <span>          &lt;<span class="tag">/ul</span>&gt;</span>
+                  <span>        &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>      &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>    &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>  &lt;<span class="tag">/li</span>&gt;</span>
+                  <span>&lt;<span class="tag">/div</span>&gt;</span>
+                </code>
+              </pre>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Dropdown evento en lista</h4>
+            <div class="flex-shrink-0">
+                <div class="form-check form-switch form-switch-right form-switch-md">
+                    <label for="dropdown-base-example" class="form-label text-muted">Ver Código</label>
+                    <input class="form-check-input code-switcher" type="checkbox" (change)="showCodeDropdownList = !showCodeDropdownList">
+                </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">Use la clase <code>dropdown</code> en el elemento <code>&#60;div&#62;</code> </p>
+            <div *ngIf="showCodeDropdownList; else elseShowCodeDropdownList">
+              <div class="list-group">
+                <div class="dropdown-center">
+                  <a
+                    class="list-group-item list-group-item-action"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    id="dropdownMenuButton3"
+                    *ngFor="let item of itemsCatalogos"
+                  >
+                    <div class="d-flex align-items-center">
+                      <div class="flex-grow-1">
+                        <div class="d-flex">
+                          <div class="flex-shrink-0 avatar-xs">
+                            <div class="avatar-title bg-soft-danger text-danger rounded">
+                              <span>{{ item.idCatalogo }}</span>
+                            </div>
+                          </div>
+                          <div class="flex-shrink-1 ms-2">
+                            <h6 class="fs-14 mb-0">{{ item.nombre }}</h6>
+                            <small class="text-muted">{{ item.descripcion }}</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu" id="dropdownMenuButton3"  >
+                    <li role="menuitem"><a class="dropdown-item" >Edital</a></li>
+                    <li role="menuitem"><a class="dropdown-item" >Eliminar</a></li>
+                    <li role="menuitem"><a class="dropdown-item" >Ver</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <ng-template #elseShowCodeDropdownList>
+              <pre>
+                <code class="default-markup"><span>// HTML LIST</span>
+                  <span>&lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">list-group</span>"&gt;</span>
+                  <span>  &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-center</span>"&gt;</span>
+                  <span>    &lt;<span class="tag">a</span></span>
+                  <span>      <span class="attr-name">class</span>="<span class="attr-value">list-group-item list-group-item-action</span>"</span>
+                  <span>      <span class="attr-name">data-bs-toggle</span>="<span class="attr-value">dropdown</span>"</span>
+                  <span>      <span class="attr-name">aria-expanded</span>="<span class="attr-value">false</span>"</span>
+                  <span>      <span class="attr-name">id</span>="<span class="attr-value">dropdownMenuButton3</span>"</span>
+                  <span>      <span class="attr-name">*ngFor</span>="<span class="attr-value">let item of itemsCatalogos</span>"</span>
+                  <span>    &gt;</span>
+                  <span>      &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">d-flex align-items-center</span>"&gt;</span>
+                  <span>        &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">flex-grow-1</span>"&gt;</span>
+                  <span>          &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">d-flex</span>"&gt;</span>
+                  <span>            &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">flex-shrink-0 avatar-xs</span>"&gt;</span>
+                  <span>              &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">avatar-title bg-soft-danger text-danger rounded</span>"&gt;</span>
+                  <span>                &lt;<span class="tag">span</span>&gt;&#123;&#123; <span class="attr-value"> item.idCatalogo </span>&#125;&#125;&lt;<span class="tag">/span</span>&gt;</span>
+                  <span>              &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>            &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>            &lt;<span class="tag">div</span> <span class="attr-name">class</span>="<span class="attr-value">flex-shrink-1 ms-2</span>"&gt;</span>
+                  <span>              &lt;<span class="tag">h6</span> <span class="attr-name">class</span>="<span class="attr-value">fs-14 mb-0</span>"&gt; &#123;&#123;<span class="attr-value"> item.nombre </span>&#125;&#125;&lt;<span class="tag">/h6</span>&gt;</span>
+                  <span>              &lt;<span class="tag">small</span> <span class="attr-name">class</span>="<span class="attr-value">text-muted</span>"&gt;&#123;&#123; <span class="attr-value"> item.descripcion </span>&#125;&#125;&lt;<span class="tag">/small</span>&gt;</span>
+                  <span>            &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>          &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>        &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>      &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>    &lt;<span class="tag">/a</span>&gt;</span>
+                  <span>    &lt;<span class="tag">ul</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-menu</span>" <span class="attr-name">id</span>="<span class="attr-value">dropdownMenuButton3</span>"&gt;</span>
+                  <span>      &lt;<span class="tag">li</span> <span class="attr-name">role</span>="<span class="attr-value">menuitem</span>"&gt;&lt;<span class="tag">a</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-item</span>"&gt;Editar&lt;<span class="tag">/a</span>&gt;&lt;<span class="tag">/li</span>&gt;</span>
+                  <span>      &lt;<span class="tag">li</span> <span class="attr-name">role</span>="<span class="attr-value">menuitem</span>"&gt;&lt;<span class="tag">a</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-item</span>"&gt;Eliminar&lt;<span class="tag">/a</span>&gt;&lt;<span class="tag">/li</span>&gt;</span>
+                  <span>      &lt;<span class="tag">li</span> <span class="attr-name">role</span>="<span class="attr-value">menuitem</span>"&gt;&lt;<span class="tag">a</span> <span class="attr-name">class</span>="<span class="attr-value">dropdown-item</span>"&gt;Ver&lt;<span class="tag">/a</span>&gt;&lt;<span class="tag">/li</span>&gt;</span>
+                  <span>    &lt;<span class="tag">/ul</span>&gt;</span>
+                  <span>  &lt;<span class="tag">/div</span>&gt;</span>
+                  <span>&lt;<span class="tag">/div</span>&gt;</span>
+                </code>
+              </pre>
+            </ng-template>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

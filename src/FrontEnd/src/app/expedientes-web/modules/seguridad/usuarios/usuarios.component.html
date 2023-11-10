@@ -1,0 +1,172 @@
+<div class="p-3">
+  <div *ngIf="(mq === 'lg' || mq === 'xl') then laptop else dispositivoMovil"></div>
+  <ng-template #laptop>
+    <div class="card overflow-hidden">
+      <div class="card-header">
+        <h4 class="card-title">Usuarios</h4>
+        <div class="row align-items-center">
+          <div class="col-8">
+            <div class="form-icon right">
+              <input
+                type="text"
+                class="form-control form-control-icon"
+                placeholder="Búscar"
+                [(ngModel)]="filtrarBusqueda"
+              />
+              <i *ngIf="!filtrarBusqueda.length" class="bi bi-search"></i>
+              <i *ngIf="filtrarBusqueda.length" class="bi bi-x-lg cursor-pointer" (click)="filtrarBusqueda = ''"></i>
+            </div>
+          </div>
+          <div class="col-4 text-end">
+            <button
+              *ngIf="permisos.inserta"
+              type="button"
+              class="btn btn-primary btn-label"
+              (click)="abrirModalAgregarUsuario(false)"
+            >
+              <i class="bi bi-plus label-icon"></i>
+              Agregar usuario
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="table-responsive">
+          <table class="table table-core">
+            <thead>
+              <tr >
+                <th *ngFor="let item of headers"
+                [class]="item.class"
+                [width]="item.width"
+                [style]="'text-align: '+ item.align"
+                >
+                  {{ item.text }}
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of listadoUsuariosFiltrados | paginate : { itemsPerPage: itemsPage, currentPage: page }">
+                <td >
+                  {{ item.nombreCompleto }}
+                  <span class="d-flex text-muted small">
+                    {{ item.nitUsuario }}
+                  </span>
+                </td>
+                <td class="text-truncate">{{ item.emailInstitucional }}</td>
+                <td class="text-truncate">{{ item.emailPersonal }}</td>
+                <td>{{ item.cargo }}</td>
+                <td align="center" class="text-truncate">{{ item.telefono }}</td>
+                <td>{{ item.fechaRegistro }}</td>
+                <td class="bg-success text-white text-uppercase fw-semibold" [class.bg-danger]="!item.activo" align="center">
+                  {{ (item.activo) ? "Activo" : "Inactivo" }}
+                </td>
+                <td align="center">
+                  <button class="btn btn-icon btn-ghost-info rounded-circle" (click)="abrirModalAgregarRoles(item)">
+                    <span class="material-icons">room_preferences</span>
+                  </button>
+                </td>
+                <td align="center">
+                  <button class="btn btn-icon btn-ghost-success" (click)="abrirModalBitacoraRoles(item)">
+                    <span class="material-icons">manage_search</span>
+                  </button>
+                </td>
+                <td align="center" *ngIf="permisos.elimina || permisos.modifica" >
+                  <button *ngIf="permisos.modifica" class="btn btn-icon btn-ghost-success" (click)="abrirModalAgregarUsuario(true, item)">
+                    <span class="material-icons">edit</span>
+                  </button>
+                  <button *ngIf="permisos.elimina" class="btn btn-icon btn-ghost-danger" (click)="eliminarUsuario(item)">
+                    <span class="material-icons">delete</span>
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div *ngIf="!listadoUsuariosFiltrados.length"  [class]="resultadobusqueda ? 'alert-warning' : 'alert-danger'" class="alert alert-dismissible fade show" role="alert">
+          <span *ngIf="!resultadobusqueda"><strong>Lo sentimos!</strong> No encontramos resultados</span>
+          <span *ngIf="resultadobusqueda" ><strong>Lo sentimos!</strong> No pudimos encontrar ningún resultado para su búsqueda. Use palabras más genéricas o revise su ortografía.</span>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template #dispositivoMovil>
+    <div class="row">
+      <div class="col-md-12 mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Búscar"
+          [(ngModel)]="filtrarBusqueda"
+        />
+      </div>
+      <button
+        *ngIf="permisos.inserta"
+        type="button"
+        class="btn btn-primary btn-fab"
+        (click)="abrirModalAgregarUsuario(false)"
+      >
+        <span class="material-icons">add</span>
+      </button>
+
+      <div class="col-md-6 sm-12" *ngFor="let item of listadoUsuariosFiltrados | paginate : { itemsPerPage: itemsPage, currentPage: page }">
+        <div class="card overflow-hidden" [class]="item.activo? 'bar-left-success' : 'bar-left-danger'">
+          <div class="card-header">
+            <div class="d-flex">
+              <div class="card-title mb-0">
+                <strong>{{ item.nombreCompleto }}</strong>
+                <span class="badge ms-1 mb-0" [class]="item.activo ? 'badge-soft-success' : 'badge-soft-danger'">{{ (item.activo) ? "Activo" : "Inactivo" }}</span> <br>
+                <small>{{item.nitUsuario}}</small>
+              </div>
+              <div class="ms-auto my-auto">
+                <div class="btn-group" dropdown>
+                  <button dropdownToggle type="button" class="btn btn-icon-sm light">
+                    <i class="bi bi-three-dots-vertical"></i>
+                  </button>
+                  <ul *dropdownMenu class="dropdown-menu dropdown-menu-right">
+                    <li role="menuitem"><a class="dropdown-item" (click)="abrirModalAgregarRoles(item)">Ver permisos</a></li>
+                    <li *ngIf="permisos.modifica" role="menuitem"><a class="dropdown-item" (click)="abrirModalAgregarUsuario(true, item)">Editar</a></li>
+                    <li *ngIf="permisos.elimina" role="menuitem"><a class="dropdown-item" (click)="eliminarUsuario(item)">Eliminar</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body border-top">
+            <ul class="list-mobile">
+              <li class="d-flex mb-2">
+                <p class="text-muted my-auto">Cargo :</p>
+                <p class="ms-auto my-auto">{{ item.cargo }}</p>
+              </li>
+              <li class="d-flex mb-2">
+                <p class="text-muted my-auto">Telefono :</p>
+                <p class="ms-auto my-auto"><i class="bi bi-telephone me-1"></i>{{ item.telefono }}</p>
+              </li>
+              <li class="d-flex mb-2">
+                <p class="text-muted my-auto">Email institucional:</p>
+                <p class="ms-auto my-auto"><i class="bi bi-envelope-at me-1"></i> {{ item.emailInstitucional }}</p>
+              </li>
+              <li class="d-flex mb-1">
+                <p class="text-muted my-auto">Email personal:</p>
+                <p class="ms-auto my-auto"><i class="bi bi-envelope-at me-1"></i>{{ item.emailPersonal }}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!listadoUsuariosFiltrados.length"  [class]="resultadobusqueda ? 'alert-warning' : 'alert-danger'" class="alert alert-dismissible fade show" role="alert">
+      <span *ngIf="!resultadobusqueda"><strong>Lo sentimos!</strong> No encontramos resultados</span>
+      <span *ngIf="resultadobusqueda" ><strong>Lo sentimos!</strong> No pudimos encontrar ningún resultado para su búsqueda. Use palabras más genéricas o revise su ortografía.</span>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </ng-template>
+  <div *ngIf="listadoUsuariosFiltrados.length > itemsPage " class="d-flex justify-content-center">
+    <pagination-controls
+      class="pagination-rounded"
+      (pageChange)="page = $event"
+      previousLabel=""
+      nextLabel=""
+    ></pagination-controls>
+  </div>
+</div>

@@ -1,0 +1,139 @@
+<div>
+  <div class="col-12">
+    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+      <h4 class="mb-sm-0">Diseño de Alertas</h4>
+      <div>
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"><a routerLink="/public">Inicio</a></li>
+          <li class="breadcrumb-item">Alertas</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="p-3">
+    <div class="card overflow-hidden">
+      <div class="card-header align-items-center d-flex">
+        <h4 class="card-title mb-0 flex-grow-1">Tipos de Alert SweetAlert2</h4>
+      </div>
+      <div class="card-body">
+        <div class="d-block d-sm-none">
+          <p>Presione algun item de la lista para desplegar el tipo de Alerta</p>
+          <div class="list-group list-group-fill-success">
+            <a (click)="AlertBasic()" class="list-group-item list-group-item-action"><i class="bi bi-chat-left-text align-middle me-2"></i>Alerta con mensaje básico</a>
+            <a (click)="AlertBasicClose()" class="list-group-item list-group-item-action"><i class="bi bi-chat-right-text align-middle me-2"></i>Mensaje Basico con Boton Cerrar</a>
+            <a (click)="AlertTitleMessage()" class="list-group-item list-group-item-action"><i class="bi bi-card-text align-middle me-2"></i>Titulo y Subtitulo</a>
+            <a (click)="AlertTitleMessageIcon()" class="list-group-item list-group-item-action"><i class="bi bi-exclamation-square align-middle me-2"></i>Alerta con Icono</a>
+            <a (click)="AlertSuccess()" class="list-group-item list-group-item-action"><i class="bi bi-check-square align-middle me-2"></i>Alerta Success - Guardar</a>
+            <a (click)="alertConfirm()" class="list-group-item list-group-item-action"><i class="bi bi-exclamation align-middle me-2"></i>Mensaje de Confirmación</a>
+        </div>
+      </div>
+
+        <div class="row d-none d-sm-block">
+          <div class="col-md-12">
+            <p class="text-muted">
+              Use la clase <code>form-check-</code> seguido de la clase
+              mencionada para establecer un color en la casilla de verificación.
+            </p>
+            <div class="table-responsive">
+              <table class="table table-nowrap align-middle justify-content-center mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col" style="width: 50%">Sweet Alert Type</th>
+                    <th scope="col" class="text-center">
+                      Sweet Alert Examples
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>A Basic Message</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-sm text-white"
+                        id="sa-basic"
+                        (click)="AlertBasic()"
+                      >
+                        Click me
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Mensaje Basico con Boton Cerrar</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-sm text-white"
+                        id="sa-basic"
+                        (click)="AlertBasicClose()"
+                      >
+                        Click me
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Titulo y Mensaje Abajo</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-sm text-white"
+                        id="sa-title"
+                        (click)="AlertTitleMessage()"
+                      >
+                        Click me
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Alerta con Icono</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-sm text-white"
+                        id="sa-success"
+                        (click)="AlertTitleMessageIcon()"
+                      >
+                        Click me
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Alerta Success - Guardar</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn btn-success btn-sm text-white"
+                        id="sa-success"
+                        (click)="AlertSuccess()"
+                      >
+                        Guardar
+                      </button>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>Mensaje de Confirmación</td>
+                    <td class="text-center">
+                      <button
+                        type="button"
+                        class="btn btn-danger btn-sm text-white"
+                        id="sa-success"
+                        (click)="alertConfirm()"
+                      >
+                        Confirmar
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- end table -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

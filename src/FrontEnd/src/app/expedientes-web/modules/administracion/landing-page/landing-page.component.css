@@ -1,0 +1,147 @@
+header {
+  color: #888888;
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+}
+.panel_middle {
+  background-color: #f2f3f3;
+}
+.panel_middle .panel_content {
+  position: relative;
+  width: 100%;
+  padding: 2rem 4.1em;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  display: inline-block;
+  text-align: left;
+
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul > li {
+  position: relative;
+  float: left;
+  z-index: 20;
+}
+
+nav ul>li>a {
+    padding: 1.8em 1.23em 1.8em;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.933em;
+    line-height: 1.2857em;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
+nav ul>li>a:hover {
+  color: #bf2d0d;
+  cursor: pointer;
+}
+
+
+nav > li.current-menu-item > a {
+  color: #bf2d0d;
+}
+
+
+.carousel {
+  height: 550px;
+}
+
+/*
+.img {
+  background-size: 100% 100%;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+.carousel-item img{
+  width: 100%;
+  height: 100%;
+}
+@supports(object-fit: cover){
+  .carousel-item img{
+    height: 550px;
+    object-fit: cover;
+    object-position: center center;
+  }
+} */
+
+.carousel-item {
+  height: 550px;
+
+}
+.vehicle-box.style1 {
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.vehicle-box.style1 .left-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 80px 0px 150px 80px;
+  z-index: 1;
+  position: relative;
+}
+
+.vehicle-box.style1 .left-info .title {
+  font-size: 80px;
+  color: #fff;
+  font-family: roboto;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 80px;
+  margin-bottom: 0;
+}
+.vehicle-box.style1 .left-info .main-title {
+  font-size: 28px;
+  color:  #bf2d0d;
+  font-family: roboto;
+  text-transform: uppercase;
+  font-weight: 800;
+  line-height: 28px;
+  margin-bottom: 0;
+}
+.vehicle-box.style1 .left-info .bottom-info {
+  border-left: 4px solid #EE3131;;
+  padding: 5px 0 5px 20px;
+  margin-top: auto;
+}
+
+.vehicle-box.style1 .left-info .bottom-info h3 {
+  color: #fff;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: roboto;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+/* transform: translate3d(-100px, 0px, 0px); transition-duration: 0ms; */
+
+
+.pickachu {
+  width: 500px;
+  height: 128px;
+  border: 2px solid #000;
+
+  background-image: url('./../../../../../assets/images/background-5.jpg');
+  background-size: contain;
+  resize: both;
+  overflow: auto;
+  background-repeat: round;
+}

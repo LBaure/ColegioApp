@@ -1,0 +1,430 @@
+<div>
+  <div class="col-12">
+    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+      <h4 class="mb-sm-0">Diseño de Ventanas modales</h4>
+      <div>
+        <ol class="breadcrumb m-0">
+          <li class="breadcrumb-item"><a routerLink="/public">Inicio</a></li>
+          <li class="breadcrumb-item">Modals</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  <div class="p-3">
+    <div class="row">
+      <div class="col-xl-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Modal Básica</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+                <input class="form-check-input code-switcher" type="checkbox" href="#modalBasic"
+                  data-bs-toggle="collapse">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">Use la clase <code>modal-content</code> para crear una ventana modal<br></p>
+            <div class="collapse" id="modalBasic">
+              <ul class="nav nav-tabs">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#htmlForm"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptForm"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="htmlForm" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                  <div class="code-view">
+                    <pre><code>&lt;div class="modal-content"&gt;</code></pre>
+                    <pre> <code>&lt;div class="modal-header"&gt;</code></pre>
+                    <pre>   <code>&lt;h4 class="modal-title pull-left">Modal Básica&lt;/h4&gt;</code></pre>
+                    <pre>     <code>&lt;button aria-label="Close" data-bs-dismiss="modal" class="btn-close"&gt;</code></pre>
+                    <pre>       <code>&lt;span aria-hidden="true">x&lt;/span&gt;</code></pre>
+                    <pre>     <code>&lt;/button&gt;</code></pre>
+                    <pre>   <code>&lt;/div&gt;</code></pre>
+                    <pre> <code>&lt;div class="modal-body"&gt;</code></pre>
+                    <pre>   <code>&lt;h5&gt;Este es el cuerpo del Modal &lt;/h5&gt;</code></pre>
+                    <pre>   <code>&lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sed maxime mollitia <br> iusto voluptatibus distinctio deserunt expedita at ipsa enim suscipit fugiat ducimus soluta,<br>delectus quis dolorem, modi dolorum doloribus..&lt;/p&gt;</code></pre>
+                    <pre> <code>&lt;/div&gt;</code></pre>
+                    <pre> <code>&lt;div class="modal-footer"&gt;</code></pre>
+                    <pre>   <code>&lt;button class="btn btn-primary"&gt;Guardar Cambios&lt;/button&gt;</code></pre>
+                    <pre>   <code>&lt;button class="btn btn-light"&gt;Cancelar&lt;/button&gt;</code></pre>
+                    <pre> <code>&lt;/div&gt;</code></pre>
+                    <pre><code>&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="TypeScriptForm" role="tabpanel" aria-labelledby="profile-tab"
+                  tabindex="0">
+                  <div class="code-view mt-2">
+                    <pre><code>// Demo</code></pre>
+                    <pre><code>openModal(template: TemplateRef&lt;any&gt; &#123;</code></pre>
+                    <pre> <code>this.modalRef = this.modalService.show(template);</code></pre>
+                    <pre><code>&#125;</code></pre>
+
+                    <pre><code>// Modal Static</code></pre>
+                    <pre><code>openModal(template: TemplateRef&lt;any&gt; &#123;</code></pre>
+                    <pre> <code>this.modalRef = this.modalService.show(template. &#123; backdrop: 'static'&#125;);</code></pre>
+                    <pre><code>&#125;</code></pre>
+
+                    <pre><code>// Modal Static Center</code></pre>
+                    <pre><code>openModal(template: TemplateRef&lt;any&gt; &#123;</code></pre>
+                    <pre> <code>this.modalRef = this.modalService.show(template. &#123; backdrop: 'static', class: 'modal-dialog-centered' &#125;);</code></pre>
+                    <pre><code>&#125;</code></pre>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="d-flex flex-wrap gap-3 justify-content-center">
+              <button type="button" class="btn btn-primary me-2" (click)="openModal(template)">Ver Demo</button>
+              <button type="button" class="btn btn-primary me-2" (click)="openModalBackdrop(template)">Modal
+                Static</button>
+              <button type="button" class="btn btn-primary"
+                (click)="openModalBackdrop(template, 'modal-dialog-centered')">Modal static center</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Modal Personalizada</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+                <input class="form-check-input code-switcher" type="checkbox" href="#modalCustom"
+                  data-bs-toggle="collapse">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">Use las clases <code>modal-content modal-minfin </code> seguido de la variacion de color (primary, secondary, danger, etc.) deseada, para crear una ventana modal personalizada<br></p>
+            <div class="collapse" id="modalCustom">
+              <ul class="nav nav-tabs">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#htmlForm2"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptForm2"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="htmlForm2" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                  <div class="code-view">
+                    <pre><code>&lt;div class="modal-content modal-minfin danger"&gt;</code></pre>
+                    <pre> <code>&lt;div class="modal-header"&gt;</code></pre>
+                    <pre>   <code>&lt;h4 class="modal-title pull-left">Modal Básica&lt;/h4&gt;</code></pre>
+                    <pre>     <code>&lt;button aria-label="Close" data-bs-dismiss="modal" class="btn-close"&gt;</code></pre>
+                    <pre>       <code>&lt;span aria-hidden="true">x&lt;/span&gt;</code></pre>
+                    <pre>     <code>&lt;/button&gt;</code></pre>
+                    <pre>   <code>&lt;/div&gt;</code></pre>
+                    <pre> <code>&lt;div class="modal-body"&gt;</code></pre>
+                    <pre>   <code>&lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sed maxime mollitia <br> iusto voluptatibus distinctio deserunt expedita at ipsa enim suscipit fugiat ducimus soluta,<br>delectus quis dolorem, modi dolorum doloribus..&lt;/p&gt;</code></pre>
+                    <pre> <code>&lt;/div&gt;</code></pre>
+                    <pre> <code>&lt;div class="modal-footer"&gt;</code></pre>
+                    <pre>   <code>&lt;button class="btn btn-primary"&gt;Guardar Cambios&lt;/button&gt;</code></pre>
+                    <pre>   <code>&lt;button class="btn btn-light"&gt;Cancelar&lt;/button&gt;</code></pre>
+                    <pre> <code>&lt;/div&gt;</code></pre>
+                    <pre><code>&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="TypeScriptForm2" role="tabpanel" aria-labelledby="profile-tab"
+                  tabindex="0">
+                  <div class="code-view mt-2">
+                    <pre><code>// Modal Personalizada</code></pre>
+                    <pre><code>openModal(template: TemplateRef&lt;any&gt; &#123;</code></pre>
+                    <pre> <code>this.modalRef = this.modalService.show(template);</code></pre>
+                    <pre><code>&#125;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary me-2" (click)="openModalCustom(templateCustom)">Modal
+              Custom</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Modal Personalizada Simple</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+                <input class="form-check-input code-switcher" type="checkbox" href="#modalCustomSimple"
+                  data-bs-toggle="collapse">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">Use las clases <code>modal-content modal-minfin </code> sin la etiqueta modal-header <br></p>
+            <div class="collapse" id="modalCustomSimple">
+              <ul class="nav nav-tabs">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#htmlForm3"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptForm3"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="htmlForm3" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                  <div class="code-view">
+                    <pre><code>&lt;div class="modal-content modal-minfin"&gt;</code></pre>
+                    <pre> <code>&lt;div class="modal-body"&gt;</code></pre>
+                    <pre>   <code>&lt;h4 class="modal-title mb-2">Modal Personalizada Simple&lt;/h4&gt;</code></pre>
+                    <pre>   <code>&lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sed maxime mollitia <br> iusto voluptatibus distinctio deserunt expedita at ipsa enim suscipit fugiat ducimus soluta,<br>delectus quis dolorem, modi dolorum doloribus..&lt;/p&gt;</code></pre>
+                    <pre> <code>&lt;/div&gt;</code></pre>
+                    <pre> <code>&lt;div class="modal-footer"&gt;</code></pre>
+                    <pre>   <code>&lt;button class="btn btn-primary"&gt;Guardar Cambios&lt;/button&gt;</code></pre>
+                    <pre>   <code>&lt;button class="btn btn-light"&gt;Cancelar&lt;/button&gt;</code></pre>
+                    <pre> <code>&lt;/div&gt;</code></pre>
+                    <pre><code>&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="TypeScriptForm3" role="tabpanel" aria-labelledby="profile-tab"
+                  tabindex="0">
+                  <div class="code-view mt-2">
+                    <pre><code>// Modal Personalizada y centrada</code></pre>
+                    <pre><code>openModal(template: TemplateRef&lt;any&gt; &#123;</code></pre>
+                    <pre> <code>this.modalRef = this.modalService.show(template, &#123; class: 'modal-dialog-centered' &#125;);</code></pre>
+                    <pre><code>&#125;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary me-2" (click)="openModalCustom(templateCustomSimple, 'modal-dialog-centered')">Modal Simple</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6">
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Modal Personalizada FullScreen</h4>
+            <div class="flex-shrink-0">
+              <div class="form-check form-switch form-switch-right form-switch-md">
+                <label for="static-backdrop" class="form-label text-muted">Ver Código</label>
+                <input class="form-check-input code-switcher" type="checkbox" href="#modalCustomFullScreen"
+                  data-bs-toggle="collapse">
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">Use las clases <code>modal-content modal-minfin </code> seguido de la variacion de color (primary, secondary, danger, etc.) deseada, para crear una ventana modal personalizada
+              y en el archivo <code>.ts</code> envie el parametro <code>class: 'modal-fullscreen' </code></p>
+            <div class="collapse" id="modalCustomFullScreen">
+              <ul class="nav nav-tabs">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#htmlForm4"
+                    type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">HTML</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#TypeScriptForm4"
+                    type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">TypeScript</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent4">
+                <div class="tab-pane fade show active" id="htmlForm4" role="tabpanel" aria-labelledby="home-tab"
+                  tabindex="0">
+                  <div class="code-view">
+                    <pre><code>&lt;div class="modal-content modal-minfin danger"&gt;</code></pre>
+                    <pre> <code>&lt;div class="modal-body"&gt;</code></pre>
+                    <pre>   <code>&lt;h4 class="modal-title mb-2">Modal Personalizada Simple&lt;/h4&gt;</code></pre>
+                    <pre>   <code>&lt;p&gt;Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sed maxime mollitia <br> iusto voluptatibus distinctio deserunt expedita at ipsa enim suscipit fugiat ducimus soluta,<br>delectus quis dolorem, modi dolorum doloribus..&lt;/p&gt;</code></pre>
+                    <pre> <code>&lt;/div&gt;</code></pre>
+                    <pre> <code>&lt;div class="modal-footer"&gt;</code></pre>
+                    <pre>   <code>&lt;button class="btn btn-primary"&gt;Guardar Cambios&lt;/button&gt;</code></pre>
+                    <pre>   <code>&lt;button class="btn btn-light"&gt;Cancelar&lt;/button&gt;</code></pre>
+                    <pre> <code>&lt;/div&gt;</code></pre>
+                    <pre><code>&lt;/div&gt;</code></pre>
+                  </div>
+                </div>
+                <div class="tab-pane fade" id="TypeScriptForm4" role="tabpanel" aria-labelledby="profile-tab"
+                  tabindex="0">
+                  <div class="code-view mt-2">
+                    <pre><code>// Modal Personalizada</code></pre>
+                    <pre><code>openModal(template: TemplateRef&lt;any&gt; &#123;</code></pre>
+                    <pre> <code>this.modalRef = this.modalService.show(template, &#123; class: 'modal-fullscreen' &#125;);</code></pre>
+                    <pre><code>&#125;</code></pre>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button type="button" class="btn btn-primary me-2" (click)="openModalCustom(templateCustomFull, 'modal-fullscreen')">Modal FullScreen</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-12">
+
+        <div class="card overflow-hidden">
+          <div class="card-header align-items-center d-flex">
+            <h4 class="card-title mb-0 flex-grow-1">Modal Tamaños</h4>
+          </div>
+          <div class="card-body">
+            <p class="text-muted">En el archivo <code>.ts</code> envie en el parametro <code>class: </code> las clases <code>'modal-sm' | 'modal-md' | 'modal-lg' | 'modal-xl'</code></p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center">
+              <button type="button" class="btn btn-primary me-2" (click)="openModalSize(templateSize, 'modal-sm')">Ver
+                Small</button>
+              <button type="button" class="btn btn-primary me-2" (click)="openModalSize(templateSize, 'modal-md')">Ver
+                Medium</button>
+              <button type="button" class="btn btn-primary me-2" (click)="openModalSize(templateSize, 'modal-lg')">Ver
+                Large</button>
+              <button type="button" class="btn btn-primary me-2" (click)="openModalSize(templateSize, 'modal-xl')">Ver
+                Extra large</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #template>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Modal Básica</h4>
+        <button aria-label="Close" data-bs-dismiss="modal" class="btn-close" (click)="modalRef?.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h5>Este es el cuerpo del Modal </h5>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi in, asperiores eaque modi deserunt dolorum
+          voluptatem, ex labore quaerat exercitationem neque nobis itaque similique facere quibusdam ipsa repellendus
+          nam maiores?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary">Guardar Cambios</button>
+        <button class="btn btn-soft-light" (click)="modalRef?.hide()">Cancelar</button>
+      </div>
+    </ng-template>
+
+    <ng-template #templateSize>
+      <div class="modal-header">
+        <h4 class="modal-title pull-left">Modal Básica</h4>
+        <button aria-label="Close" data-bs-dismiss="modal" class="btn-close" (click)="modalRefSize?.hide()">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Et labore et gubergren et. Diam sadipscing et.
+          Ut gubergren kasd gubergren sit no ipsum et sadipscing, ipsum consetetur ipsum vero no invidunt amet. Amet
+          takimata vero aliquyam ea aliquyam ut amet et. Dolore sed duo clita clita stet magna dolor ut dolores,
+          gubergren labore at aliquyam sea, dolor et erat dolor sea.</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary">Guardar Cambios</button>
+        <button class="btn btn-light" (click)="modalRefSize?.hide()">Cancelar</button>
+      </div>
+    </ng-template>
+
+
+    <ng-template #templateCustom>
+      <div class="modal-content modal-minfin danger">
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">Modal Básica</h4>
+          <button aria-label="Close" data-bs-dismiss="modal" class="btn-close" (click)="modalRefCustom?.hide()">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Personalizada Minfin Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum sed maxime mollitia iusto voluptatibus
+            distinctio deserunt expedita at ipsa enim suscipit fugiat ducimus soluta, delectus quis dolorem, modi
+            dolorum doloribus.. Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus error sit
+            consequatur, quas accusantium quam sequi necessitatibus repellat nihil ex. Modi a eius iure id consectetur
+            error eos sunt deleniti!</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">Guardar Cambios</button>
+          <button class="btn btn-light" (click)="modalRefCustom?.hide()">Cancelar</button>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #templateCustomFull>
+      <div class="modal-content modal-minfin light">
+        <div class="modal-header">
+          <h4 class="modal-title pull-left">Modal Básica</h4>
+          <button aria-label="Close" data-bs-dismiss="modal" class="btn-close" (click)="modalRefCustom?.hide()">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container">
+            <form class="row g-3">
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail4">
+              </div>
+              <div class="col-md-6">
+                <label for="inputPassword4" class="form-label">Password</label>
+                <input type="password" class="form-control" id="inputPassword4">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+              </div>
+              <div class="col-12">
+                <label for="inputAddress2" class="form-label">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+              </div>
+              <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity">
+              </div>
+              <div class="col-md-4">
+                <label for="inputState" class="form-label">State</label>
+                <select id="inputState" class="form-select">
+                  <option selected>Choose...</option>
+                  <option>...</option>
+                </select>
+              </div>
+              <div class="col-md-2">
+                <label for="inputZip" class="form-label">Zip</label>
+                <input type="text" class="form-control" id="inputZip">
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="gridCheck">
+                  <label class="form-check-label" for="gridCheck">
+                    Check me out
+                  </label>
+                </div>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary">Guardar Cambios</button>
+          <button class="btn btn-light" (click)="modalRefCustom?.hide()">Cancelar</button>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #templateCustomSimple>
+      <div class="modal-content modal-minfin">
+        <div class="modal-body">
+          <h4 class="modal-title mb-2">Modal Básica</h4>
+          <p>Et labore et gubergren et. Diam sadipscing et.
+            Ut gubergren kasd gubergren sit no ipsum et sadipscing, ipsum consetetur ipsum vero no invidunt amet. Amet
+            takimata vero aliquyam ea aliquyam ut amet et. Dolore sed duo clita clita stet magna dolor ut dolores,
+            gubergren labore at aliquyam sea, dolor et erat dolor sea.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-soft-success">Guardar Cambios</button>
+          <button class="btn btn-soft-danger" (click)="modalRefCustom?.hide()">Cancelar</button>
+        </div>
+      </div>
+    </ng-template>
+  </div>

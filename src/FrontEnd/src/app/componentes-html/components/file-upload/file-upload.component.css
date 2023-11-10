@@ -1,0 +1,76 @@
+.file-readonly {
+  cursor: initial !important;
+  background-color: #fff !important;
+}
+
+
+.form-control[readonly], .form-control {
+  cursor: initial !important;
+  background-color: #ffff;
+  opacity: 1;
+}
+
+.form-control[disabled], fieldset[disabled] .form-control {
+  cursor: not-allowed;
+  background-color: #eee;
+  opacity: 1;
+}
+
+img.card-img-top {
+  max-width: 100%;
+  min-height: 120.641px;
+  max-height: 120.641px;
+}
+.card-file-upload .card-body {
+  padding: 0.5rem var(--bs-card-spacer-x);
+}
+
+.card.card-file-upload {
+  margin-bottom: 4px;
+  box-shadow: 0 1px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+  transition: .5s;
+}
+
+
+.card:hover {
+  cursor: pointer;
+  transform:scale(1.05);
+}
+.card:hover .card-body{
+  background-color: #efefef;
+}
+
+
+.btn-drop-file {
+  display: initial !important;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+}
+
+/* .btn-drop-file:hover i {
+  color: var(--bs-danger);
+  background-color: #3577f11a;
+  border-color: #00000000;
+
+} */
+
+.alert-file {
+  position: fixed;
+  bottom: 0;
+  left: 10px;
+  z-index: 9999;
+  width: calc(100vw - 20px);
+  border-radius: 0;
+
+}
+
+.alert.is-helpful {
+  border-left: 8px solid #842029;
+  background-color: #f8d7da
+}
+
+
+.list-group-item:hover {
+  background-color: var(--bs-light);
+}

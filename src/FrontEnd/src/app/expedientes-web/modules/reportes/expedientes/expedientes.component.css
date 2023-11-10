@@ -1,0 +1,41 @@
+.tooltip-content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+
+.icon-soft-info {
+  color: var(--bs-info);
+  font-weight: 500;
+  background-color: rgb(var(--bs-info-rgb), 25%);
+  border-color: transparent;
+  font-size: large;
+}
+
+.th-core > div {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.table-core th {
+  background: var(--background-tertiary);
+  padding: 0.4rem;
+  vertical-align: bottom;
+}
+
+.th-core.vertical .bc-head-txt-label {
+  left: calc(50% - 0rem);
+  line-height: 1;
+  padding-top: 0.5rem;
+  position: relative;
+  -webkit-transform: rotate(200deg);
+  -moz-transform: rotate(200deg);
+  -o-transform: rotate(200deg);
+  transform: rotate(200deg);
+  -webkit-writing-mode: vertical-rl;
+  writing-mode: vertical-rl;
+}

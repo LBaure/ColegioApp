@@ -1,0 +1,71 @@
+.form-icon {
+  position: relative;
+}
+
+.form-icon .form-control-icon {
+  padding-left: 2.7rem;
+  position: relative;
+}
+.form-icon i {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 18px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+
+.form-icon.right .form-control-icon {
+  padding-right: 2.7rem;
+  padding-left: 0.9rem;
+  position: relative;
+}
+.form-icon.right i {
+  left: auto;
+  right: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* code .tag {
+  color: #f06548;
+} */
+code .key {
+  color: #690;
+}
+
+/* code .value {
+  color: #07a;
+} */
+
+code .function {
+  color: rgb(255, 183, 0)
+}
+
+
+/* .attr-value {
+  color: #07a;
+}
+.attr-key {
+  color: #690;
+} */
+.attr-function {
+  color: rgb(238, 166, 9);
+}
+
+/* .attr-name {
+  color: rgb(37, 213, 236);
+} */

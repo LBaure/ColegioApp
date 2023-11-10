@@ -1,0 +1,10 @@
+[
+  {
+    "texto": "Activo",
+    "valor": true
+  },
+  {
+    "texto": "Inactivo",
+    "valor": false
+  }
+]

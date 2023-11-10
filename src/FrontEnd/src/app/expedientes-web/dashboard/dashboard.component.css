@@ -1,0 +1,100 @@
+.dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+
+.dashboard-logo {
+  content: url('/assets/logo/logotipo.png');
+  width: 100%;
+}
+.product-device {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 200px;
+  height: 200px;
+  transform: rotate(-35deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  left: 0%;
+  content: "";
+  background-image: url(/assets/logo/folder_open.svg);
+  background-repeat: no-repeat;
+  background-size: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboard>div>div>div h1 {
+    font-size: calc(1.475rem + 1vw);
+  }
+
+  .dashboard>div>div>div p {
+    font-size: 1rem
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .product-device {
+    width: 200px;
+    height: 200px;
+  }
+  .product-device::before {
+    background-size: 150px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .product-device {
+    width: 150px;
+    height: 130px;
+  }
+  .product-device::before {
+    background-size: 150px;
+  }
+}
+
+
+#table {
+	display: table;
+	width: 100%;
+	height: 100%;
+  padding: 1rem;
+}
+
+#centeralign {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.folder-wallpaper img {
+  width: auto;
+  height: 20rem;
+}
+
+.folder-wallpaper {
+  position: absolute;
+  left: auto;
+  right: 20px;
+  bottom: 0px;
+
+}
+
+
+.scheme-wallpaper {
+  position: absolute;
+  bottom: 5%;
+  left: 60%;
+
+}
+.scheme-wallpaper  img {
+  width: auto;
+  height: 10rem;
+}

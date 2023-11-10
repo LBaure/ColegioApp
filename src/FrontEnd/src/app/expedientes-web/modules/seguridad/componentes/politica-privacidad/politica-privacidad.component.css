@@ -1,0 +1,47 @@
+.rounded-circle {
+  width: 100px;
+  height: 100px;
+  background: #ededed;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+
+.rounded-circle .material-icons.device {
+  position: relative;
+  top: -12px;
+  font-size: 1.5rem;
+}
+.rounded-circle .material-icons.mobile_friendly {
+  position: relative;
+  bottom: -20px;
+  font-size: 1.5rem;
+}
+
+.rounded-circle .material-icons.verified_user {
+  position: relative;
+  top: -12px;
+  font-size: 1.5rem;
+}
+
+
+.list-group .list-group-item {
+  border:none !important;
+}
+
+
+
+.input-pin {
+  padding: 0.575rem 0.1rem;
+  border: none;
+  font-size: 3rem;
+  letter-spacing: 20px;
+  text-align: center;
+}
+
+
+.material-icons.two-factor{
+  font-size: 7rem;
+  color: var(--bs-primary);
+
+}

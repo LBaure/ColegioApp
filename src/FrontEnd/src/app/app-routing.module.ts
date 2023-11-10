@@ -10,18 +10,23 @@ import { AuthGuardService } from './utils/auth-guard.service';
 import { PageNotFoundComponent } from './layouts/page-not-found/page-not-found.component';
 import { PageErrorComponent } from './layouts/page-error/page-error.component';
 import { PublicAppComponent } from './layouts/public-app/public-app.component';
+import { LoginComponent } from './layouts/login/login.component';
 
 const routes: Routes = [
 
-  {
-    path: 'login',
-    component: RedirectionComponent,
-    resolve: { url: 'externalUrlRedirectResolver' },
-    data: { externalUrl: environment.ssoLogin }
-  },
+  // {
+  //   path: 'login',
+  //   component: RedirectionComponent,
+  //   resolve: { url: 'externalUrlRedirectResolver' },
+  //   data: { externalUrl: environment.ssoLogin }
+  // },
   {
     path: '',
     component: RedirectToComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'public',

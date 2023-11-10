@@ -28,7 +28,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { IConfig, provideEnvironmentNgxMask } from 'ngx-mask';
 import { ExpedientesWebLayoutComponent } from './layouts/expedientes-web-layout/expedientes-web-layout.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
-import { TooltipModule } from 'ngx-bootstrap/tooltip'
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { LoginComponent } from './layouts/login/login.component'
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -50,7 +51,8 @@ function initializeAppFactory(config: StartupConfigurationService): () => Observ
     RedirectToComponent,
     LoadingComponent,
     PublicAppComponent,
-    ExpedientesWebLayoutComponent
+    ExpedientesWebLayoutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

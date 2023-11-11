@@ -1,0 +1,45 @@
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\bin\Debug\net6.0\Repositorios.deps.json
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\bin\Debug\net6.0\Repositorios.dll
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\bin\Debug\net6.0\Repositorios.pdb
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\bin\Debug\net6.0\Core.dll
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\bin\Debug\net6.0\Core.pdb
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\obj\Debug\net6.0\Repositorios.csproj.AssemblyReference.cache
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\obj\Debug\net6.0\Repositorios.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\obj\Debug\net6.0\Repositorios.AssemblyInfoInputs.cache
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\obj\Debug\net6.0\Repositorios.AssemblyInfo.cs
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\obj\Debug\net6.0\Repositorios.csproj.CoreCompileInputs.cache
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\obj\Debug\net6.0\Repositorios.csproj.CopyComplete
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\obj\Debug\net6.0\Repositorios.dll
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\obj\Debug\net6.0\refint\Repositorios.dll
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\obj\Debug\net6.0\Repositorios.pdb
+D:\Documentos\Projects\Workspaces\Backend\Repositorios\obj\Debug\net6.0\ref\Repositorios.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\bin\Debug\net6.0\Repositorios.deps.json
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\bin\Debug\net6.0\Repositorios.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\bin\Debug\net6.0\Repositorios.pdb
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\bin\Debug\net6.0\Core.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\bin\Debug\net6.0\Core.pdb
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\obj\Debug\net6.0\Repositorios.csproj.AssemblyReference.cache
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\obj\Debug\net6.0\Repositorios.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\obj\Debug\net6.0\Repositorios.AssemblyInfoInputs.cache
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\obj\Debug\net6.0\Repositorios.AssemblyInfo.cs
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\obj\Debug\net6.0\Repositorios.csproj.CoreCompileInputs.cache
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\obj\Debug\net6.0\Repositorios.csproj.CopyComplete
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\obj\Debug\net6.0\Repositorios.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\obj\Debug\net6.0\refint\Repositorios.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\obj\Debug\net6.0\Repositorios.pdb
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Repositorios\obj\Debug\net6.0\ref\Repositorios.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\bin\Debug\net6.0\Repositorios.deps.json
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\bin\Debug\net6.0\Repositorios.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\bin\Debug\net6.0\Repositorios.pdb
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\bin\Debug\net6.0\Core.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\bin\Debug\net6.0\Core.pdb
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\obj\Debug\net6.0\Repositorios.csproj.AssemblyReference.cache
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\obj\Debug\net6.0\Repositorios.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\obj\Debug\net6.0\Repositorios.AssemblyInfoInputs.cache
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\obj\Debug\net6.0\Repositorios.AssemblyInfo.cs
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\obj\Debug\net6.0\Repositorios.csproj.CoreCompileInputs.cache
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\obj\Debug\net6.0\Repositorios.csproj.CopyComplete
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\obj\Debug\net6.0\Repositorios.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\obj\Debug\net6.0\refint\Repositorios.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\obj\Debug\net6.0\Repositorios.pdb
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Repositorios\obj\Debug\net6.0\ref\Repositorios.dll

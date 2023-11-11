@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi", "WebApi\WebApi.csproj", "{45A20C02-A8CC-4143-9BD1-94EFA575E9A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositorios", "Repositorios\Repositorios.csproj", "{3D62E392-D77C-4D0D-8405-8FCAADD64D87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{4DE55D76-44F0-4560-8AD6-9DAA3E4AA768}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45A20C02-A8CC-4143-9BD1-94EFA575E9A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45A20C02-A8CC-4143-9BD1-94EFA575E9A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45A20C02-A8CC-4143-9BD1-94EFA575E9A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45A20C02-A8CC-4143-9BD1-94EFA575E9A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D62E392-D77C-4D0D-8405-8FCAADD64D87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D62E392-D77C-4D0D-8405-8FCAADD64D87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D62E392-D77C-4D0D-8405-8FCAADD64D87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D62E392-D77C-4D0D-8405-8FCAADD64D87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DE55D76-44F0-4560-8AD6-9DAA3E4AA768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DE55D76-44F0-4560-8AD6-9DAA3E4AA768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DE55D76-44F0-4560-8AD6-9DAA3E4AA768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DE55D76-44F0-4560-8AD6-9DAA3E4AA768}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2915ED45-B711-4800-A4C8-265C395634B7}
+	EndGlobalSection
+EndGlobal

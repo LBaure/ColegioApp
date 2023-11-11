@@ -1,0 +1,36 @@
+D:\Documentos\Projects\Workspaces\Backend\Core\bin\Debug\net6.0\Core.deps.json
+D:\Documentos\Projects\Workspaces\Backend\Core\bin\Debug\net6.0\Core.dll
+D:\Documentos\Projects\Workspaces\Backend\Core\bin\Debug\net6.0\Core.pdb
+D:\Documentos\Projects\Workspaces\Backend\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+D:\Documentos\Projects\Workspaces\Backend\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Projects\Workspaces\Backend\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+D:\Documentos\Projects\Workspaces\Backend\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+D:\Documentos\Projects\Workspaces\Backend\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+D:\Documentos\Projects\Workspaces\Backend\Core\obj\Debug\net6.0\Core.dll
+D:\Documentos\Projects\Workspaces\Backend\Core\obj\Debug\net6.0\refint\Core.dll
+D:\Documentos\Projects\Workspaces\Backend\Core\obj\Debug\net6.0\Core.pdb
+D:\Documentos\Projects\Workspaces\Backend\Core\obj\Debug\net6.0\ref\Core.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Core\bin\Debug\net6.0\Core.deps.json
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Core\bin\Debug\net6.0\Core.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Core\bin\Debug\net6.0\Core.pdb
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Core\obj\Debug\net6.0\Core.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Core\obj\Debug\net6.0\refint\Core.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Core\obj\Debug\net6.0\Core.pdb
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\Core\obj\Debug\net6.0\ref\Core.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Core\bin\Debug\net6.0\Core.deps.json
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Core\bin\Debug\net6.0\Core.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Core\bin\Debug\net6.0\Core.pdb
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Core\obj\Debug\net6.0\Core.csproj.AssemblyReference.cache
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Core\obj\Debug\net6.0\Core.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Core\obj\Debug\net6.0\Core.AssemblyInfoInputs.cache
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Core\obj\Debug\net6.0\Core.AssemblyInfo.cs
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Core\obj\Debug\net6.0\Core.csproj.CoreCompileInputs.cache
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Core\obj\Debug\net6.0\Core.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Core\obj\Debug\net6.0\refint\Core.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Core\obj\Debug\net6.0\Core.pdb
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\Core\obj\Debug\net6.0\ref\Core.dll

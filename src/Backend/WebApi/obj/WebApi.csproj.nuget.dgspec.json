@@ -1,0 +1,332 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\WebApi\\WebApi.csproj": {}
+  },
+  "projects": {
+    "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj",
+        "projectName": "Core",
+        "projectPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\lbautista.DC-DI01\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\NuGet.Config",
+          "C:\\Users\\lbautista.DC-DI01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://minfinnuget/nuget": {},
+          "http://nexus-desa.minfin.gob.gt/nexus/service/local/nuget/minfin-nuget/": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {},
+          "https://www.nuget.org/api/v2": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Exceptionless": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "FluentValidation.AspNetCore": {
+              "target": "Package",
+              "version": "[11.3.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Repositorios\\Repositorios.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Repositorios\\Repositorios.csproj",
+        "projectName": "Repositorios",
+        "projectPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Repositorios\\Repositorios.csproj",
+        "packagesPath": "C:\\Users\\lbautista.DC-DI01\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Repositorios\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\NuGet.Config",
+          "C:\\Users\\lbautista.DC-DI01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://minfinnuget/nuget": {},
+          "http://nexus-desa.minfin.gob.gt/nexus/service/local/nuget/minfin-nuget/": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {},
+          "https://www.nuget.org/api/v2": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj": {
+                "projectPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.123, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Minfin.SSO.Api.Models": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Minfin.SSO.WebApi.Client": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Minfin.SSO.WebApi.Common": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Minfin.SSO.WebApi.Models": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Oracle.ManagedDataAccess.Core": {
+              "target": "Package",
+              "version": "[3.21.100, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.10.0, )"
+            },
+            "System.ServiceModel.Http": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "System.ServiceModel.Primitives": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\WebApi\\WebApi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\WebApi\\WebApi.csproj",
+        "projectName": "WebApi",
+        "projectPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\lbautista.DC-DI01\\.nuget\\packages\\",
+        "outputPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\WebApi\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\NuGet.Config",
+          "C:\\Users\\lbautista.DC-DI01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "http://minfinnuget/nuget": {},
+          "http://nexus-desa.minfin.gob.gt/nexus/service/local/nuget/minfin-nuget/": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.telerik.com/nuget": {},
+          "https://www.nuget.org/api/v2": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj": {
+                "projectPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj"
+              },
+              "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Repositorios\\Repositorios.csproj": {
+                "projectPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Repositorios\\Repositorios.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Exceptionless": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Exceptionless.AspNetCore": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "GlobalExceptionHandler": {
+              "target": "Package",
+              "version": "[4.0.2, )"
+            },
+            "GlobalExceptionHandler.ContentNegotiation.Mvc": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Minfin.SSO.Api.Models": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Minfin.SSO.WebApi.Client": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Minfin.SSO.WebApi.Common": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Minfin.SSO.WebApi.Models": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Scrutor": {
+              "target": "Package",
+              "version": "[4.2.2, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.2.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,352 @@
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\appsettings.Development.json
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\appsettings.json
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\WebApi.exe
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\WebApi.deps.json
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\WebApi.runtimeconfig.json
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\WebApi.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\WebApi.pdb
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Dapper.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Exceptionless.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Exceptionless.AspNetCore.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Exceptionless.Extensions.Hosting.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\FluentValidation.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\GlobalExceptionHandler.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\GlobalExceptionHandler.ContentNegotiation.Mvc.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.DiagnosticAdapter.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.ObjectPool.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Minfin.SSO.Api.Models.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Minfin.SSO.WebApi.Client.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Minfin.SSO.WebApi.Common.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Minfin.SSO.WebApi.Models.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Oracle.ManagedDataAccess.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.DirectoryServices.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.Reflection.Metadata.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.Security.Cryptography.Xml.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.ServiceModel.Http.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.ServiceModel.Primitives.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\cs\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\de\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\es\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\fr\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\it\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\ja\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\ko\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\pl\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\pt-BR\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\ru\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\tr\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\zh-Hans\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\zh-Hant\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\cs\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\de\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\es\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\fr\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\it\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\ja\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\ko\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\pl\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\pt-BR\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\ru\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\tr\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\zh-Hans\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\zh-Hant\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Core.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Repositorios.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Core.pdb
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Repositorios.pdb
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\WebApi.csproj.AssemblyReference.cache
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfoInputs.cache
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfo.cs
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\WebApi.csproj.CoreCompileInputs.cache
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.build.WebApi.props
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApi.props
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.WebApi.props
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\staticwebassets.build.json
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\staticwebassets.development.json
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\scopedcss\bundle\WebApi.styles.css
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\WebApi.csproj.CopyComplete
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\WebApi.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\refint\WebApi.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\WebApi.pdb
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
+D:\Documentos\Projects\Workspaces\Backend\WebApi\obj\Debug\net6.0\ref\WebApi.dll
+D:\Documentos\Projects\Workspaces\Backend\WebApi\bin\Debug\net6.0\Scrutor.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\appsettings.Development.json
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\appsettings.json
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\WebApi.exe
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\WebApi.deps.json
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\WebApi.runtimeconfig.json
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\WebApi.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\WebApi.pdb
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Dapper.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Exceptionless.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Exceptionless.AspNetCore.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Exceptionless.Extensions.Hosting.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\FluentValidation.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\GlobalExceptionHandler.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\GlobalExceptionHandler.ContentNegotiation.Mvc.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.Extensions.DiagnosticAdapter.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.Extensions.ObjectPool.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Minfin.SSO.Api.Models.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Minfin.SSO.WebApi.Client.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Minfin.SSO.WebApi.Common.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Minfin.SSO.WebApi.Models.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Oracle.ManagedDataAccess.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Scrutor.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.DirectoryServices.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.Reflection.Metadata.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.Security.Cryptography.Xml.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.ServiceModel.Http.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.ServiceModel.Primitives.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\cs\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\de\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\es\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\fr\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\it\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\ja\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\ko\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\pl\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\pt-BR\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\ru\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\tr\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\zh-Hans\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\zh-Hant\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\cs\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\de\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\es\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\fr\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\it\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\ja\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\ko\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\pl\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\pt-BR\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\ru\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\tr\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\zh-Hans\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\zh-Hant\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Core.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Repositorios.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Core.pdb
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Repositorios.pdb
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\WebApi.csproj.AssemblyReference.cache
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfoInputs.cache
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfo.cs
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\WebApi.csproj.CoreCompileInputs.cache
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.build.WebApi.props
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApi.props
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.WebApi.props
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\staticwebassets.build.json
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\staticwebassets.development.json
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\scopedcss\bundle\WebApi.styles.css
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\WebApi.csproj.CopyComplete
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\WebApi.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\refint\WebApi.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\WebApi.pdb
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\ref\WebApi.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Documentos\Projects\Plantilla FrontEnd Sistemas Internos\Backend Net Core 6\WebApi\bin\Debug\net6.0\appsettings.qa.json
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\appsettings.Development.json
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\appsettings.json
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\appsettings.qa.json
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\WebApi.exe
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\WebApi.deps.json
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\WebApi.runtimeconfig.json
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\WebApi.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\WebApi.pdb
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Dapper.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Exceptionless.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Exceptionless.AspNetCore.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Exceptionless.Extensions.Hosting.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\FluentValidation.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\GlobalExceptionHandler.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\GlobalExceptionHandler.ContentNegotiation.Mvc.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.DiagnosticAdapter.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.ObjectPool.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.PlatformAbstractions.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.OpenApi.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Minfin.SSO.Api.Models.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Minfin.SSO.WebApi.Client.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Minfin.SSO.WebApi.Common.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Minfin.SSO.WebApi.Models.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Oracle.ManagedDataAccess.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Scrutor.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.Configuration.ConfigurationManager.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.DirectoryServices.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.DirectoryServices.Protocols.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.Drawing.Common.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.Reflection.Metadata.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.Security.Cryptography.Xml.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.Security.Permissions.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.ServiceModel.Http.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.ServiceModel.Primitives.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\System.Windows.Extensions.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\cs\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\de\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\es\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\fr\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\it\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\ja\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\ko\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\pl\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\pt-BR\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\ru\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\tr\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\zh-Hans\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\zh-Hant\System.ServiceModel.Http.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\cs\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\de\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\es\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\fr\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\it\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\ja\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\ko\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\pl\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\pt-BR\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\ru\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\tr\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\zh-Hans\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\zh-Hant\System.ServiceModel.Primitives.resources.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Diagnostics.PerformanceCounter.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\runtimes\linux\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\runtimes\osx\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.DirectoryServices.Protocols.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.Pkcs.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Core.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Repositorios.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Core.pdb
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\bin\Debug\net6.0\Repositorios.pdb
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\WebApi.csproj.AssemblyReference.cache
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\WebApi.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfoInputs.cache
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\WebApi.AssemblyInfo.cs
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\WebApi.csproj.CoreCompileInputs.cache
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cache
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.WebApi.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.build.WebApi.props
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.WebApi.props
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.WebApi.props
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\staticwebassets.pack.json
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\staticwebassets.build.json
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\staticwebassets.development.json
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\scopedcss\bundle\WebApi.styles.css
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\WebApi.csproj.CopyComplete
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\WebApi.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\refint\WebApi.dll
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\WebApi.pdb
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\WebApi.genruntimeconfig.cache
+D:\Documentos\Projects\Expedientes Web 2.0\src\Backend\WebApi\obj\Debug\net6.0\ref\WebApi.dll

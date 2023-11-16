@@ -30,6 +30,7 @@ import { ExpedientesWebLayoutComponent } from './layouts/expedientes-web-layout/
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { LoginComponent } from './layouts/login/login.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -63,7 +64,9 @@ function initializeAppFactory(config: StartupConfigurationService): () => Observ
     BrowserAnimationsModule,
     TabsModule.forRoot(),
     BsDatepickerModule.forRoot(),
-    TooltipModule.forRoot()
+    TooltipModule.forRoot(),    
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [
     provideEnvironmentNgxMask(maskConfig),

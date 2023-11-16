@@ -1,4 +1,4 @@
-﻿using Core.Constantes;
+﻿using Core.Constants;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,25 +7,26 @@ using System.Threading.Tasks;
 
 namespace Core.Models
 {
-    public  class ResultadoHttpModelo
+    public class ResultadoHttpModelo
     {
-        public string? Estado { get; private set; }
-        public string? Icono { get; private set; }
-        public string? Mensaje { get; set; }
-        public string? Titulo { get; set; }
-        public dynamic? Resultado { get; set; }
+        public string? Estado { get; }
+        public string? Mensaje { get; }
+        public string? Titulo { get; }
+        public dynamic? Resultado { get; }
 
         public ResultadoHttpModelo()
         {
             Estado = "";
-            Icono = "";
             Mensaje = "";
             Titulo = "";
         }
-        public ResultadoHttpModelo(EstadoSolicitudHttp estado)
+
+        public ResultadoHttpModelo(EstadoSolicitudHttp estado, string mensaje, string titulo, dynamic? resultado = null)
         {
             Estado = estado.ToString();
-            Icono = estado.ToString();
+            Mensaje = mensaje;
+            Titulo = titulo;
+            Resultado = resultado;
         }
     }
 }

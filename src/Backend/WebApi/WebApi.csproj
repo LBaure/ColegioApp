@@ -7,23 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Exceptionless" Version="6.0.2" />
-    <PackageReference Include="Exceptionless.AspNetCore" Version="6.0.2" />
-    <PackageReference Include="GlobalExceptionHandler" Version="4.0.2" />
-    <PackageReference Include="GlobalExceptionHandler.ContentNegotiation.Mvc" Version="2.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.16" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
-    <PackageReference Include="Minfin.SSO.Api.Models" Version="2.0.0" />
-    <PackageReference Include="Minfin.SSO.WebApi.Client" Version="2.0.0" />
-    <PackageReference Include="Minfin.SSO.WebApi.Common" Version="2.0.0" />
-    <PackageReference Include="Minfin.SSO.WebApi.Models" Version="2.0.0" />
-    <PackageReference Include="Scrutor" Version="4.2.2" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Core\Core.csproj" />
-    <ProjectReference Include="..\Repositorios\Repositorios.csproj" />
-	<PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <ProjectReference Include="..\Repository\Repository.csproj" />
   </ItemGroup>
 
 </Project>

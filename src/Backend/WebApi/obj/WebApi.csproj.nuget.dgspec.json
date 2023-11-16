@@ -1,25 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj": {
+    "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Core\\Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj",
+        "projectUniqueName": "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Core\\Core.csproj",
         "projectName": "Core",
-        "projectPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj",
-        "packagesPath": "C:\\Users\\lbautista.DC-DI01\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\obj\\",
+        "projectPath": "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Core\\Core.csproj",
+        "packagesPath": "C:\\Users\\lbaure\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\NuGet.Config",
-          "C:\\Users\\lbautista.DC-DI01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lbaure\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -28,11 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://minfinnuget/nuget": {},
-          "http://nexus-desa.minfin.gob.gt/nexus/service/local/nuget/minfin-nuget/": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/nuget": {},
-          "https://www.nuget.org/api/v2": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
@@ -49,24 +43,6 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "dependencies": {
-            "Exceptionless": {
-              "target": "Package",
-              "version": "[6.0.2, )"
-            },
-            "FluentValidation.AspNetCore": {
-              "target": "Package",
-              "version": "[11.3.0, )"
-            },
-            "Microsoft.AspNetCore.Http.Abstractions": {
-              "target": "Package",
-              "version": "[2.2.0, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -78,31 +54,43 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Repositorios\\Repositorios.csproj": {
+    "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Repository\\Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Repositorios\\Repositorios.csproj",
-        "projectName": "Repositorios",
-        "projectPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Repositorios\\Repositorios.csproj",
-        "packagesPath": "C:\\Users\\lbautista.DC-DI01\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Repositorios\\obj\\",
+        "projectUniqueName": "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Repository\\Repository.csproj",
+        "projectName": "Repository",
+        "projectPath": "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Repository\\Repository.csproj",
+        "packagesPath": "C:\\Users\\lbaure\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\NuGet.Config",
-          "C:\\Users\\lbautista.DC-DI01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lbaure\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -111,18 +99,14 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://minfinnuget/nuget": {},
-          "http://nexus-desa.minfin.gob.gt/nexus/service/local/nuget/minfin-nuget/": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/nuget": {},
-          "https://www.nuget.org/api/v2": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj": {
-                "projectPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj"
+              "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Core\\Core.csproj"
               }
             }
           }
@@ -139,47 +123,15 @@
           "dependencies": {
             "Dapper": {
               "target": "Package",
-              "version": "[2.0.123, )"
+              "version": "[2.0.151, )"
             },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[7.0.0, )"
             },
-            "Minfin.SSO.Api.Models": {
+            "MySql.Data": {
               "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "Minfin.SSO.WebApi.Client": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "Minfin.SSO.WebApi.Common": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "Minfin.SSO.WebApi.Models": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "Newtonsoft.Json": {
-              "target": "Package",
-              "version": "[13.0.3, )"
-            },
-            "Oracle.ManagedDataAccess.Core": {
-              "target": "Package",
-              "version": "[3.21.100, )"
-            },
-            "System.IdentityModel.Tokens.Jwt": {
-              "target": "Package",
-              "version": "[6.10.0, )"
-            },
-            "System.ServiceModel.Http": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "System.ServiceModel.Primitives": {
-              "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[8.1.0, )"
             }
           },
           "imports": [
@@ -193,31 +145,43 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.25, 6.0.25]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\WebApi\\WebApi.csproj",
-        "packagesPath": "C:\\Users\\lbautista.DC-DI01\\.nuget\\packages\\",
-        "outputPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\WebApi\\obj\\",
+        "projectPath": "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\lbaure\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\NuGet.Config",
-          "C:\\Users\\lbautista.DC-DI01\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lbaure\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -226,22 +190,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
-          "http://minfinnuget/nuget": {},
-          "http://nexus-desa.minfin.gob.gt/nexus/service/local/nuget/minfin-nuget/": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/nuget": {},
-          "https://www.nuget.org/api/v2": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj": {
-                "projectPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Core\\Core.csproj"
+              "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Core\\Core.csproj": {
+                "projectPath": "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Core\\Core.csproj"
               },
-              "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Repositorios\\Repositorios.csproj": {
-                "projectPath": "D:\\Documentos\\Projects\\Expedientes Web 2.0\\src\\Backend\\Repositorios\\Repositorios.csproj"
+              "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Repository\\Repository.csproj": {
+                "projectPath": "C:\\Users\\lbaure\\Documents\\Workspaces\\ColegioApp\\src\\Taller-Back-End-App\\Repository\\Repository.csproj"
               }
             }
           }
@@ -256,53 +215,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Exceptionless": {
-              "target": "Package",
-              "version": "[6.0.2, )"
-            },
-            "Exceptionless.AspNetCore": {
-              "target": "Package",
-              "version": "[6.0.2, )"
-            },
-            "GlobalExceptionHandler": {
-              "target": "Package",
-              "version": "[4.0.2, )"
-            },
-            "GlobalExceptionHandler.ContentNegotiation.Mvc": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[6.0.16, )"
-            },
-            "Microsoft.Extensions.Configuration": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Minfin.SSO.Api.Models": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "Minfin.SSO.WebApi.Client": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "Minfin.SSO.WebApi.Common": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "Minfin.SSO.WebApi.Models": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
-            "Scrutor": {
-              "target": "Package",
-              "version": "[4.2.2, )"
-            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [
@@ -324,7 +239,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
